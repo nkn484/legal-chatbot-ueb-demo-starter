@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "profile": "DEMO_ACCELERATION",
+  "principle": "Simplify infrastructure, not abstraction boundaries.",
+  "demo_blockers": [
+    "validated runtime config",
+    "no secrets in repo/logs",
+    "LLMProviderPort",
+    "working SHINE SHOP adapter",
+    "Claude extension point",
+    "LegalSourcePort",
+    "VBQPPL/VNU/UEB registry",
+    "working read-only VBQPPL integration",
+    "document provenance/versioning",
+    "retrieval/citation traceability",
+    "ANSWER_OR_REFUSAL fail-closed",
+    "multi-turn conversation",
+    "ChannelPort",
+    "normalized Zalo webhook boundary",
+    "end-to-end Zalo demo path",
+    "structured logging",
+    "vertical-slice tests",
+    "Docker/local startup"
+  ],
+  "simplified_for_demo": [
+    "single PostgreSQL",
+    "modular monolith",
+    "bounded retry",
+    "basic audit/logging",
+    "manual ingestion trigger allowed",
+    "single active LLM provider"
+  ],
+  "deferred_after_demo": [
+    "enterprise OIDC",
+    "full RBAC",
+    "service mTLS",
+    "Kubernetes",
+    "HA/DR",
+    "Kafka/RabbitMQ",
+    "full DLQ/replay",
+    "full distributed tracing",
+    "autoscaling",
+    "SBOM enforcement",
+    "chaos/load testing",
+    "VNU live connector",
+    "UEB live connector",
+    "automated evaluation",
+    "feedback/training loop",
+    "provider UI",
+    "automatic multi-provider failover"
+  ]
+}

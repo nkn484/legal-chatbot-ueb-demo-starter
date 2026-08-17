@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+opencode.json
+.demo-run/
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+dist/
+build/
+*.log
+.vscode/
+.idea/

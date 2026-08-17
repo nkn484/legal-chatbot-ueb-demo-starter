@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "systems": [
+    {
+      "id": "VBQPPL",
+      "priority": 1,
+      "lifecycle": "ACTIVE",
+      "demo_implementation": "DEMO_NOW",
+      "transport": "SOAP",
+      "base_url": "https://ws.vbpl.vn/vbqppl.asmx",
+      "access_mode": "READ_ONLY_ALLOWLIST",
+      "notes": "Priority is rollout order, not legal authority ranking."
+    },
+    {
+      "id": "VNU",
+      "priority": 2,
+      "lifecycle": "PLANNED",
+      "demo_implementation": "LATER",
+      "transport": "TBD",
+      "base_url": null,
+      "access_mode": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "UEB",
+      "priority": 3,
+      "lifecycle": "PLANNED",
+      "demo_implementation": "LATER",
+      "transport": "TBD",
+      "base_url": null,
+      "access_mode": "NOT_IMPLEMENTED"
+    }
+  ]
+}

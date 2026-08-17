@@ -1,0 +1,211 @@
+{
+  "pack": "legal-chatbot-ueb-demo-starter",
+  "version": "2026-08-17",
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "03180f4febf331d3427fdc4e3613841901f8f97a0bf40c157bf67135ad8a70f1",
+      "bytes": 494
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "98e2a175f26be9ae337c76299884ed9c2800176e1892fc5bf84218fe0c186723",
+      "bytes": 171
+    },
+    {
+      "path": ".opencode/commands/m00-spike.md",
+      "sha256": "662048709a8695f9ac4cced6eed7584a0463dedad717cef2bedcb88ca06d0e67",
+      "bytes": 1102
+    },
+    {
+      "path": ".opencode/commands/m01-foundation.md",
+      "sha256": "9c4f0f1ee0bad220586d1368a308c891e9b03eee0cd4facf7d7e020a664c93d2",
+      "bytes": 850
+    },
+    {
+      "path": ".opencode/commands/m02-provider.md",
+      "sha256": "75d84f9d33fd2e658d2cd64d5f9cf9179d8ac05ca6b6d3ae3c1182e4330f53f1",
+      "bytes": 851
+    },
+    {
+      "path": ".opencode/commands/m03-source.md",
+      "sha256": "c4875661f471be9b21754b2365f0fc2cbe116be88972bad2e775b40aa7558b58",
+      "bytes": 835
+    },
+    {
+      "path": ".opencode/commands/m04-ingestion.md",
+      "sha256": "f1be12499c8b3ee9ba1893c33790a721a0f496e69c0f163893c204147f54d653",
+      "bytes": 872
+    },
+    {
+      "path": ".opencode/commands/m05-retrieval.md",
+      "sha256": "c97d8c41f98fe0581467c55473705d1404877ed57123314529b2cee85cadd469",
+      "bytes": 844
+    },
+    {
+      "path": ".opencode/commands/m06-chat.md",
+      "sha256": "1c584a9574d16db28a32f85d802dac00a830014d3d7b75973ae7d8f4ba3d7e83",
+      "bytes": 785
+    },
+    {
+      "path": ".opencode/commands/m07-conversation.md",
+      "sha256": "2dc4502613becf53a659a19b025d7e8548b385b385a366706ffb92dc9778b8b7",
+      "bytes": 780
+    },
+    {
+      "path": ".opencode/commands/m08-zalo.md",
+      "sha256": "ac1ccaa6ee6c9b0a1abd49d15c312f0724545af23387239ba46a2e12979f9b20",
+      "bytes": 906
+    },
+    {
+      "path": ".opencode/commands/m09-demo-hardening.md",
+      "sha256": "96be44392d6afb11b105e97bd159494dfa1d0a4378320431276db4b81d6de325",
+      "bytes": 933
+    },
+    {
+      "path": ".opencode/commands/project-status.md",
+      "sha256": "c1e11c95d5bd07d42ece407da0cbde6179aba00402c97ea4c0e7ff261e633b5d",
+      "bytes": 362
+    },
+    {
+      "path": ".opencode/commands/review-milestone.md",
+      "sha256": "f0c6104804774fcdc1276b3cdc3561c926d73478d7fafec54134dbac2601e984",
+      "bytes": 477
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "a81458acc048c1bcea944f561ced319e55eaaf6c1b8ff1e8164c83279b747e75",
+      "bytes": 2384
+    },
+    {
+      "path": "README_FIRST.md",
+      "sha256": "3f9328635ee29417849cd1cdb5960996f65736eec3344f2ed5f3fcc7bb7c0f70",
+      "bytes": 2076
+    },
+    {
+      "path": "contracts/demo-profile.json",
+      "sha256": "c230fd5a3845f20f920578ec3a23579f49f75b8299aa7e4135661692a1c6b7fa",
+      "bytes": 1355
+    },
+    {
+      "path": "contracts/milestones.json",
+      "sha256": "90bcf8595c8ffcdf22538d2ed4e6a61f7b67356d6867265736861dab0dbc6077",
+      "bytes": 1059
+    },
+    {
+      "path": "contracts/source-registry.json",
+      "sha256": "06f648d548f121ba472d6e900d076d73c576db14d2d3a1ab29e1f28097b1d9e1",
+      "bytes": 779
+    },
+    {
+      "path": "docs/00-project-charter.md",
+      "sha256": "deeac4f0482a90dfce99a53fe51a451fe41bd99147fde9f90d66b893929a3ab1",
+      "bytes": 531
+    },
+    {
+      "path": "docs/01-demo-scope.md",
+      "sha256": "9b2dbf05c3c253fa8945eff2134630926bc3840fad39fc1ef41b25013368f60a",
+      "bytes": 430
+    },
+    {
+      "path": "docs/02-architecture.md",
+      "sha256": "60ac9acceb773995ebc001d354e540f13c382e4d8001674341d2c1cb645fcab6",
+      "bytes": 746
+    },
+    {
+      "path": "docs/03-domain-invariants.md",
+      "sha256": "18502330816dcf7a3626a2f60d020ef40caaf5f05d22c3e2d73a4a225dbd71ec",
+      "bytes": 621
+    },
+    {
+      "path": "docs/04-workflows.md",
+      "sha256": "c4cf10aeaa0ea006c9e744f29035715db508254effe3857f50b0ae14499c4662",
+      "bytes": 486
+    },
+    {
+      "path": "docs/05-provider-strategy.md",
+      "sha256": "d1c10c7bd07515b189a27c2b5910324698ad36776af45550ca53552504291591",
+      "bytes": 527
+    },
+    {
+      "path": "docs/06-source-strategy.md",
+      "sha256": "116afd2be492a5b440eed779f50688de970e9f46fc07535f369474c1a6f1408d",
+      "bytes": 367
+    },
+    {
+      "path": "docs/07-zalo-channel.md",
+      "sha256": "fa02b58f04ae20c0d208a2960458836ec3f41d554fa8641b7252647401e22238",
+      "bytes": 518
+    },
+    {
+      "path": "docs/08-development-standards.md",
+      "sha256": "aacf3e468a3f30858f49918fd9f23b404f44661b1d1487089ba9de8df45ae031",
+      "bytes": 523
+    },
+    {
+      "path": "docs/09-testing-security.md",
+      "sha256": "b67cd39cd3db7871098db07204293694a7ca218e36101ee2d2e0324ea900bbca",
+      "bytes": 542
+    },
+    {
+      "path": "docs/10-deferred-production.md",
+      "sha256": "8da5f0b977f43c0ed836470a81fbbe0977760608d1e06dd5974c6f3df88042e6",
+      "bytes": 477
+    },
+    {
+      "path": "docs/11-definition-of-done.md",
+      "sha256": "ae1ec396eb324f42d755f7adbe9d9934a554f6f6a947753098ad961deb55fa1a",
+      "bytes": 564
+    },
+    {
+      "path": "docs/12-opencode-workflow.md",
+      "sha256": "8f9ba26beecf1ada8d41164efe1fb56bcaf3542f575b0b5a080c522abb626b7b",
+      "bytes": 544
+    },
+    {
+      "path": "docs/13-source-references.md",
+      "sha256": "ee92146e47573012ff8395a73bccdc860c43e681c3e3ee86da8e2867039d6b68",
+      "bytes": 834
+    },
+    {
+      "path": "docs/ADR-001-modular-monolith.md",
+      "sha256": "8d6f15b60ba9f68de19a8c96190365b27ca653c6242778cda21c36d06eb84104",
+      "bytes": 301
+    },
+    {
+      "path": "docs/ADR-002-three-ports.md",
+      "sha256": "5e455edd181dd194b63f3ce5c219d5cf35b48f67804c84de4ce1c1c9ee3532ba",
+      "bytes": 250
+    },
+    {
+      "path": "opencode.shineshop.example.json",
+      "sha256": "e2f8cd5e2c747f3b8b822e5293b6359391e6d4d9fc39899696d78e74f9074eee",
+      "bytes": 783
+    },
+    {
+      "path": "prompts/BOOTSTRAP_REPO.md",
+      "sha256": "5b247c16885173b8c0176e4204d25e605e6957d387511b50f21db06ac26298a4",
+      "bytes": 333
+    },
+    {
+      "path": "scripts/demo_gate.py",
+      "sha256": "d51c137db684e9db94c830d5aa376d9b5b4eb51e050d4cec1fcbcf200471a28a",
+      "bytes": 4636
+    },
+    {
+      "path": "scripts/list_shineshop_models.ps1",
+      "sha256": "0000a268979efa3b5785c24c3f4d99ff8800cf8d607fbe8eb2a17687c30c5ecb",
+      "bytes": 612
+    },
+    {
+      "path": "scripts/prepare_opencode_config.py",
+      "sha256": "10ea5b1bf719cf45f6d42a10be7d2e9e754f35ec49d20d016a466f668ec8f2e8",
+      "bytes": 1307
+    },
+    {
+      "path": "scripts/verify_starter_pack.py",
+      "sha256": "03867241b279626155d6cd2c2c5d115246f27c94b0f5f5de1425fae29cf5d698",
+      "bytes": 1287
+    }
+  ]
+}

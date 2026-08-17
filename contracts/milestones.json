@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "milestones": {
+    "M00": {
+      "title": "Integration Feasibility Spike",
+      "depends_on": []
+    },
+    "M01": {
+      "title": "Foundation",
+      "depends_on": [
+        "M00"
+      ]
+    },
+    "M02": {
+      "title": "Provider Abstraction",
+      "depends_on": [
+        "M01"
+      ]
+    },
+    "M03": {
+      "title": "Source Abstraction and VBQPPL",
+      "depends_on": [
+        "M01"
+      ]
+    },
+    "M04": {
+      "title": "Ingestion and Index",
+      "depends_on": [
+        "M03"
+      ]
+    },
+    "M05": {
+      "title": "Retrieval and Citation",
+      "depends_on": [
+        "M04"
+      ]
+    },
+    "M06": {
+      "title": "Grounded Chat",
+      "depends_on": [
+        "M02",
+        "M05"
+      ]
+    },
+    "M07": {
+      "title": "Conversation",
+      "depends_on": [
+        "M06"
+      ]
+    },
+    "M08": {
+      "title": "Zalo Channel",
+      "depends_on": [
+        "M00",
+        "M07"
+      ]
+    },
+    "M09": {
+      "title": "Demo Hardening",
+      "depends_on": [
+        "M08"
+      ]
+    }
+  }
+}
