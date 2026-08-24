@@ -27,7 +27,7 @@ VBQPPL access must use an explicit READ_ONLY allowlist.
 Manual upload must never impersonate official source provenance.
 
 ## Channel
-Demo target is Zalo Personal via an isolated bridge/webhook boundary. Zalo payload/session/cookie/library details never enter Chat or Retrieval domain logic.
+Demo target is the official Zalo Bot Manager / Bot API webhook path. Raw Zalo payloads, bot tokens, webhook secrets, and raw chat/user/message IDs stay inside the channel adapter boundary and never enter Chat or Retrieval domain logic.
 
 ## Conversation
 Support multi-turn chat with bounded recent turns, rolling summary, active legal topic, referenced document IDs, and recent citation IDs. Never resend unlimited history.

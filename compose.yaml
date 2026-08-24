@@ -1,0 +1,205 @@
+x-app-image: &app-image
+  image: legal-chatbot-ueb-demo:local
+  build:
+    context: .
+    dockerfile: Dockerfile
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:?POSTGRES_DB is required}
+      POSTGRES_USER: ${POSTGRES_USER:?POSTGRES_USER is required}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?POSTGRES_PASSWORD is required}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+
+  migrate:
+    <<: *app-image
+    environment:
+      DATABASE_URL: ${DATABASE_URL_DOCKER:?DATABASE_URL_DOCKER is required}
+    command: ["alembic", "upgrade", "head"]
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+
+  api:
+    <<: *app-image
+    environment:
+      DATABASE_URL: ${DATABASE_URL_DOCKER:?DATABASE_URL_DOCKER is required}
+      APP_HOST: 0.0.0.0
+      APP_PORT: "8000"
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      LLM_PROVIDER: ${LLM_PROVIDER:-shineshop}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_MODEL: ${LLM_MODEL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      SHINE_API_KEY: ${SHINE_API_KEY:-}
+      RETRIEVAL_PLANNER_ENABLED: ${RETRIEVAL_PLANNER_ENABLED:-false}
+      RETRIEVAL_LEXICAL_REPAIR_ENABLED: ${RETRIEVAL_LEXICAL_REPAIR_ENABLED:-false}
+      RETRIEVAL_SEMANTIC_HYBRID_ENABLED: ${RETRIEVAL_SEMANTIC_HYBRID_ENABLED:-false}
+      RETRIEVAL_RERANK_ENABLED: ${RETRIEVAL_RERANK_ENABLED:-false}
+      RETRIEVAL_METADATA_REPAIR_ENABLED: ${RETRIEVAL_METADATA_REPAIR_ENABLED:-false}
+      RETRIEVAL_QUALITY_REPAIR_ENABLED: ${RETRIEVAL_QUALITY_REPAIR_ENABLED:-false}
+      RETRIEVAL_QUALITY_TITLE_SEARCH_ENABLED: ${RETRIEVAL_QUALITY_TITLE_SEARCH_ENABLED:-false}
+      RETRIEVAL_QUALITY_HYBRID_FUSION_ENABLED: ${RETRIEVAL_QUALITY_HYBRID_FUSION_ENABLED:-false}
+      RETRIEVAL_QUALITY_QUERY_PLANNER_ENABLED: ${RETRIEVAL_QUALITY_QUERY_PLANNER_ENABLED:-false}
+      RETRIEVAL_QUALITY_DYNAMIC_EVIDENCE_ENABLED: ${RETRIEVAL_QUALITY_DYNAMIC_EVIDENCE_ENABLED:-false}
+      RETRIEVAL_QUALITY_REPAIR_RETRIEVAL_ENABLED: ${RETRIEVAL_QUALITY_REPAIR_RETRIEVAL_ENABLED:-false}
+      RETRIEVAL_QUALITY_STRATEGY: ${RETRIEVAL_QUALITY_STRATEGY:-disabled}
+      RETRIEVAL_PLANNER_MAX_INPUT_CHARS: ${RETRIEVAL_PLANNER_MAX_INPUT_CHARS:-900}
+      RETRIEVAL_PLANNER_MAX_OUTPUT_TOKENS: ${RETRIEVAL_PLANNER_MAX_OUTPUT_TOKENS:-96}
+      RETRIEVAL_PLANNER_TIMEOUT_SECONDS: ${RETRIEVAL_PLANNER_TIMEOUT_SECONDS:-3}
+      RETRIEVAL_PLANNER_MAX_EXPANSION_TERMS: ${RETRIEVAL_PLANNER_MAX_EXPANSION_TERMS:-4}
+      RETRIEVAL_PLANNER_MAX_PHRASES: ${RETRIEVAL_PLANNER_MAX_PHRASES:-2}
+      RETRIEVAL_PLANNER_MAX_QUERY_COUNT: ${RETRIEVAL_PLANNER_MAX_QUERY_COUNT:-2}
+      DEMO_CORPUS_ENABLED: ${DEMO_CORPUS_ENABLED:-false}
+      DEMO_CORPUS_RETRIEVAL_SOURCE_IDS: ${DEMO_CORPUS_RETRIEVAL_SOURCE_IDS:-VBQPPL,VNU,UEB}
+      CHANNEL_ENABLED: ${CHANNEL_ENABLED:-false}
+      ZALO_OFFICIAL_BOT_TOKEN: ${ZALO_OFFICIAL_BOT_TOKEN:-}
+      ZALO_OFFICIAL_BOT_WEBHOOK_SECRET: ${ZALO_OFFICIAL_BOT_WEBHOOK_SECRET:-}
+      CHANNEL_IDENTITY_HMAC_KEY: ${CHANNEL_IDENTITY_HMAC_KEY:-}
+      CHANNEL_MAX_BODY_BYTES: ${CHANNEL_MAX_BODY_BYTES:-65536}
+      CHANNEL_MAX_OUTBOUND_CHARS: ${CHANNEL_MAX_OUTBOUND_CHARS:-1994}
+      CHANNEL_OUTBOUND_MAX_ATTEMPTS: ${CHANNEL_OUTBOUND_MAX_ATTEMPTS:-1}
+      CHANNEL_BINDING_LEASE_SECONDS: ${CHANNEL_BINDING_LEASE_SECONDS:-120}
+      CHANNEL_TIMEOUT_SECONDS: ${CHANNEL_TIMEOUT_SECONDS:-30}
+      SEMANTIC_MODEL_PATH: /models/multilingual-e5-small
+      RERANKER_MODEL_PATH: /models/mmarco-minilm-l12-h384-int8-avx2
+      RERANKER_TIMEOUT_SECONDS: ${RERANKER_TIMEOUT_SECONDS:-5.0}
+    command: ["python", "-m", "legal_chatbot.main"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    volumes:
+      - semantic_model:/models/multilingual-e5-small:ro
+      - reranker_model:/models/mmarco-minilm-l12-h384-int8-avx2:ro
+
+  ingest:
+    <<: *app-image
+    profiles: ["tools"]
+    environment:
+      DATABASE_URL: ${DATABASE_URL_DOCKER:?DATABASE_URL_DOCKER is required}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      SOURCE_REGISTRY_PATH: ${SOURCE_REGISTRY_PATH:-contracts/source-registry.json}
+      VBQPPL_READ_MANIFEST_PATH: ${VBQPPL_READ_MANIFEST_PATH:-contracts/vbqppl-read-manifest.json}
+    command: ["python", "-m", "legal_chatbot.ingestion.cli", "--source", "VBQPPL"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    restart: "no"
+
+  demo-corpus:
+    <<: *app-image
+    profiles: ["tools"]
+    environment:
+      DATABASE_URL: ${DATABASE_URL_DOCKER:?DATABASE_URL_DOCKER is required}
+      DEMO_CORPUS_ENABLED: "true"
+      DEMO_CORPUS_DATA_PATH: demo_data
+      DEMO_CORPUS_DATASET_ID: ${DEMO_CORPUS_DATASET_ID:-demo-data-v1}
+      DEMO_CORPUS_OCR_ENABLED: ${DEMO_CORPUS_OCR_ENABLED:-false}
+      DEMO_CORPUS_OCR_EXECUTABLE: ${DEMO_CORPUS_OCR_EXECUTABLE:-tesseract}
+      DEMO_CORPUS_OCR_LANGUAGE: ${DEMO_CORPUS_OCR_LANGUAGE:-vie+eng}
+      DEMO_CORPUS_PROCESSING_TIMEOUT_SECONDS: ${DEMO_CORPUS_PROCESSING_TIMEOUT_SECONDS:-120}
+    command: ["python", "-m", "legal_chatbot.demo_corpus.cli", "--catalog-only"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    restart: "no"
+
+  semantic-prefetch:
+    <<: *app-image
+    profiles: ["tools"]
+    environment:
+      SEMANTIC_MODEL_PATH: /models/multilingual-e5-small
+      HF_HOME: /tmp/huggingface
+      HF_HUB_DISABLE_XET: "1"
+    command: ["python", "-m", "legal_chatbot.semantic.prefetch_cli"]
+    volumes:
+      - semantic_model:/models/multilingual-e5-small
+    restart: "no"
+
+  reranker-prefetch:
+    <<: *app-image
+    profiles: ["tools"]
+    environment:
+      RERANKER_MODEL_PATH: /models/mmarco-minilm-l12-h384-int8-avx2
+      HF_HOME: /tmp/huggingface
+      HF_HUB_DISABLE_XET: "1"
+    command: ["python", "-m", "legal_chatbot.reranking.prefetch_cli"]
+    volumes:
+      - reranker_model:/models/mmarco-minilm-l12-h384-int8-avx2
+    restart: "no"
+
+  semantic-backfill:
+    <<: *app-image
+    profiles: ["tools"]
+    environment:
+      DATABASE_URL: ${DATABASE_URL_DOCKER:?DATABASE_URL_DOCKER is required}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      SEMANTIC_MODEL_PATH: /models/multilingual-e5-small
+      SEMANTIC_BATCH_SIZE: ${SEMANTIC_BATCH_SIZE:-16}
+      SEMANTIC_THREADS: ${SEMANTIC_THREADS:-2}
+      SEMANTIC_BACKFILL_BATCH_SIZE: ${SEMANTIC_BACKFILL_BATCH_SIZE:-16}
+      SEMANTIC_BACKFILL_SOURCE_IDS: ${SEMANTIC_BACKFILL_SOURCE_IDS:-VBQPPL,VNU,UEB}
+      HF_HUB_OFFLINE: "1"
+    command: ["python", "-m", "legal_chatbot.semantic.backfill_cli"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    volumes:
+      - semantic_model:/models/multilingual-e5-small:ro
+    restart: "no"
+
+  metadata-backfill:
+    <<: *app-image
+    profiles: ["tools"]
+    environment:
+      DATABASE_URL: ${DATABASE_URL_DOCKER:?DATABASE_URL_DOCKER is required}
+    command: ["python", "-m", "legal_chatbot.documents.metadata_backfill_cli"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    restart: "no"
+
+  semantic-stress:
+    <<: *app-image
+    profiles: ["tools"]
+    environment:
+      DATABASE_URL: ${DATABASE_URL_DOCKER:?DATABASE_URL_DOCKER is required}
+      LLM_PROVIDER: ${LLM_PROVIDER:-shineshop}
+      LLM_BASE_URL: ${LLM_BASE_URL:-}
+      LLM_MODEL: ${LLM_MODEL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      SHINE_API_KEY: ${SHINE_API_KEY:-}
+      SEMANTIC_MODEL_PATH: /models/multilingual-e5-small
+      SEMANTIC_BATCH_SIZE: ${SEMANTIC_BATCH_SIZE:-16}
+      SEMANTIC_THREADS: ${SEMANTIC_THREADS:-2}
+      RERANKER_MODEL_PATH: /models/mmarco-minilm-l12-h384-int8-avx2
+      RERANKER_TIMEOUT_SECONDS: ${RERANKER_TIMEOUT_SECONDS:-5.0}
+    command: ["python", "/app/scripts/run_legal_chatbot_stress.py", "--semantic-mode", "semantic", "--rerank-enabled"]
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    volumes:
+      - semantic_model:/models/multilingual-e5-small:ro
+      - reranker_model:/models/mmarco-minilm-l12-h384-int8-avx2:ro
+      - ./scripts:/app/scripts:ro
+      - ./docs:/app/docs
+    restart: "no"
+
+volumes:
+  db_data:
+  semantic_model:
+  reranker_model:

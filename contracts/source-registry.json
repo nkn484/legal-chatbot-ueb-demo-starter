@@ -9,6 +9,16 @@
       "transport": "SOAP",
       "base_url": "https://ws.vbpl.vn/vbqppl.asmx",
       "access_mode": "READ_ONLY_ALLOWLIST",
+      "fallback_transport": "REST_FRONTEND_BACKING_API",
+      "fallback_base_url": "https://vbpl-bientap-gateway.moj.gov.vn/api",
+      "fallback_access_mode": "READ_ONLY_EXACT_PATH_ALLOWLIST",
+      "fallback_lifecycle": "USER_APPROVED_M00_CURRENT_FRONTEND_BACKING_API",
+      "canonical_page_origin": "https://vbpl.vn",
+      "soap_operation_allowlist": [
+        "GetListVanBanByListSKH",
+        "GetVanBanById"
+      ],
+      "fallback_notes": "User-approved for M00 as the current frontend backing API only; no documented SLA or replacement policy is established.",
       "notes": "Priority is rollout order, not legal authority ranking."
     },
     {

@@ -4,6 +4,7 @@ from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 REQ=['README_FIRST.md','AGENTS.md','opencode.shineshop.example.json','contracts/source-registry.json','contracts/demo-profile.json','contracts/milestones.json','scripts/demo_gate.py','.opencode/commands/m00-spike.md','.opencode/commands/m09-demo-hardening.md']
 PAT=[re.compile(r'(?i)(api[_-]?key|token|secret)\s*[:=]\s*["\']?(sk-[A-Za-z0-9_-]{12,})')]
+SKIP={'.git','.venv','node_modules','__pycache__','.pytest_cache','.mypy_cache','.ruff_cache','dist','build'}
 def main()->int:
     err=[]
     for x in REQ:
@@ -12,6 +13,7 @@ def main()->int:
         try: json.loads((R/x).read_text(encoding='utf-8'))
         except Exception as e: err.append(f'Invalid JSON {x}: {e}')
     for p in R.rglob('*'):
+        if any(part in SKIP for part in p.relative_to(R).parts): continue
         if not p.is_file(): continue
         try: t=p.read_text(encoding='utf-8')
         except UnicodeDecodeError: continue

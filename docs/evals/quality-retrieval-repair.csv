@@ -1,0 +1,9 @@
+order,configuration,status,recall_at_20,final_recall,source_coverage,false_insufficient,wrong_docs,latency,db_query_cost
+1,Current default,MEASURED_CONTROL,0/29,0/29,0%,10/10 retrieval-availability proxy,0 (no evidence selected),p50 10.6 ms / p95 93.8 ms,Default lexical control; provider calls 0
+2,Document collapse only,MEASURED_EVALUATION_ONLY,20/29,7/29,92.0% candidate-pool,NOT_MEASURED_PHASE_B,23/30,p50 406.5 ms / p95 8184.4 ms,1 semantic data query/case; exact scan
+3,+ Title/FTS/Semantic hybrid,NO_SELECTION_NEGATIVE_EVIDENCE,20/29 (pool20; pool matrix 15/17/19/20),7/29,96.0% candidate-pool,NOT_MEASURED_PHASE_B,23/30,p50 779.5 ms / p95 8425.5 ms,3 data queries/case; Set A adds EXPLAIN diagnostics
+4,+ Query decomposition,NOT_RUN_GATE_B_BLOCKED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED
+5,+ Dynamic evidence,NOT_RUN_GATE_B_BLOCKED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED
+6,+ Reranker,NOT_RUN_GATE_B_BLOCKED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED
+7,+ Evidence repair,NOT_RUN_GATE_B_BLOCKED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED
+8,Full candidate configuration,NOT_RUN_GATE_B_BLOCKED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED,NOT_MEASURED

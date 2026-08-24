@@ -1,0 +1,248 @@
+{
+  "schema_version": "quality-retrieval-repair-final-v1",
+  "recommendation": "NO_GO",
+  "reviewed_legal_effects": "OFF",
+  "baseline": {
+    "broad_recall": "24/29",
+    "final_recall": "6/29"
+  },
+  "after_phase_b": {
+    "broad_recall_diagnostic_top50": "24/29",
+    "best_release_pool_recall": "20/29",
+    "final_recall": "7/29",
+    "title_expected_hit": 0,
+    "lexical_expected_hit": 0,
+    "semantic_expected_hit": 24,
+    "false_insufficient": "NOT_MEASURED_GATE_B_BLOCKED"
+  },
+  "phase_b_gate": {
+    "status": "NO_GO_PHASE_B",
+    "pass": false,
+    "selected_pool": null,
+    "reason": "NO_SELECTION"
+  },
+  "pool_matrix": [
+    {
+      "pool_size": 8,
+      "candidate_identity_count": 15,
+      "nonexpected_candidate_rate": 0.8125,
+      "p95_latency_ms": 8425.502,
+      "query_count": 3,
+      "set_c_failure_count": 0
+    },
+    {
+      "pool_size": 12,
+      "candidate_identity_count": 17,
+      "nonexpected_candidate_rate": 0.8571428571428571,
+      "p95_latency_ms": 8425.502,
+      "query_count": 3,
+      "set_c_failure_count": 0
+    },
+    {
+      "pool_size": 16,
+      "candidate_identity_count": 19,
+      "nonexpected_candidate_rate": 0.8774193548387097,
+      "p95_latency_ms": 8425.502,
+      "query_count": 3,
+      "set_c_failure_count": 0
+    },
+    {
+      "pool_size": 20,
+      "candidate_identity_count": 20,
+      "nonexpected_candidate_rate": 0.893048128342246,
+      "p95_latency_ms": 8425.502,
+      "query_count": 3,
+      "set_c_failure_count": 0
+    }
+  ],
+  "document_collapse_lift": {
+    "8": {
+      "raw_chunk_budget_hits": 10,
+      "document_collapse_hits": 15,
+      "lift": 5
+    },
+    "20": {
+      "raw_chunk_budget_hits": 16,
+      "document_collapse_hits": 20,
+      "lift": 4
+    },
+    "50": {
+      "raw_chunk_budget_hits": 24,
+      "document_collapse_hits": 24,
+      "lift": 0
+    }
+  },
+  "title_lexical_rescue": {
+    "direct_title_hit_total": 0,
+    "lexical_expected_hit_total": 0,
+    "title_unique_rescue_count": 0,
+    "lexical_unique_rescue_count": 0
+  },
+  "recall_metrics": {
+    "fused_diagnostic_top50_expected_hits": 24,
+    "fused_candidate_expected_hits": {
+      "8": 15,
+      "12": 17,
+      "16": 19,
+      "20": 20
+    },
+    "final_top3_expected_hits": {
+      "8": 7,
+      "12": 7,
+      "16": 7,
+      "20": 7
+    }
+  },
+  "set_b": {
+    "mean_jaccard": 0.412778,
+    "evidence_consistency_rate": 1.0,
+    "semantic_reference_mean_jaccard": 0.412778,
+    "semantic_reference_decision_consistency_rate": 1.0
+  },
+  "set_c_invariant_failures": 0,
+  "citation_invariants": {
+    "scenario_count": 136,
+    "all_resolvable_and_clean": true
+  },
+  "q05_q06_q08": {
+    "Q05": {
+      "broad_top50_hits": 2,
+      "expected_count": 3,
+      "pool20_hits": 0,
+      "final_top3_hits": 0
+    },
+    "Q06": {
+      "broad_top50_hits": 4,
+      "expected_count": 4,
+      "pool20_hits": 4,
+      "final_top3_hits": 1
+    },
+    "Q08": {
+      "broad_top50_hits": 2,
+      "expected_count": 2,
+      "pool20_hits": 1,
+      "final_top3_hits": 0
+    }
+  },
+  "full_text_quality": {
+    "baseline_pass": "4/10",
+    "baseline_average": 5.49,
+    "after_pass": "NOT_RUN_GATE_B_BLOCKED",
+    "after_average": "NOT_RUN_GATE_B_BLOCKED"
+  },
+  "definition_of_done_answers": {
+    "broad_to_final_loss": "Semantic documents were repeatedly duplicated at chunk level; collapse improved early pools, but fixed final top3 and semantic ranking still reduced 24/29 broad to 7/29 final.",
+    "document_collapse_improvement": "+5 expected identities at pool8; +4 at pool20; 0 at diagnostic top50.",
+    "title_lane_rescue": "0 expected identities.",
+    "lexical_lane_zero": true,
+    "candidate_pool_choice": "NO_SELECTION; no pool satisfied frozen Pareto/gate criteria.",
+    "query_decomposition_improvement": "NOT_RUN_GATE_B_BLOCKED",
+    "reranker_promotion_demotion": "NOT_RUN_GATE_B_BLOCKED",
+    "dynamic_evidence_effect": "NOT_RUN_GATE_B_BLOCKED",
+    "false_insufficient_remaining": "NOT_MEASURED_GATE_B_BLOCKED",
+    "full_text_quality_change": "NOT_RUN_GATE_B_BLOCKED",
+    "paraphrase_regression": "Mean Jaccard 0.413, equal to semantic reference; evidence consistency 100%.",
+    "control_regression": "0 Set C invariant failures.",
+    "benchmark_specific_hardcode": "No benchmark-specific production hard-code detected; expected identities were post-score evaluation oracle only."
+  },
+  "configurations": [
+    {
+      "order": 1,
+      "configuration": "Current default",
+      "status": "MEASURED_CONTROL",
+      "recall_at_20": "0/29",
+      "final_recall": "0/29",
+      "source_coverage": "0%",
+      "false_insufficient": "10/10 retrieval-availability proxy",
+      "wrong_docs": "0 (no evidence selected)",
+      "latency": "p50 10.6 ms / p95 93.8 ms",
+      "db_query_cost": "Default lexical control; provider calls 0"
+    },
+    {
+      "order": 2,
+      "configuration": "Document collapse only",
+      "status": "MEASURED_EVALUATION_ONLY",
+      "recall_at_20": "20/29",
+      "final_recall": "7/29",
+      "source_coverage": "92.0% candidate-pool",
+      "false_insufficient": "NOT_MEASURED_PHASE_B",
+      "wrong_docs": "23/30",
+      "latency": "p50 406.5 ms / p95 8184.4 ms",
+      "db_query_cost": "1 semantic data query/case; exact scan"
+    },
+    {
+      "order": 3,
+      "configuration": "+ Title/FTS/Semantic hybrid",
+      "status": "NO_SELECTION_NEGATIVE_EVIDENCE",
+      "recall_at_20": "20/29 (pool20; pool matrix 15/17/19/20)",
+      "final_recall": "7/29",
+      "source_coverage": "96.0% candidate-pool",
+      "false_insufficient": "NOT_MEASURED_PHASE_B",
+      "wrong_docs": "23/30",
+      "latency": "p50 779.5 ms / p95 8425.5 ms",
+      "db_query_cost": "3 data queries/case; Set A adds EXPLAIN diagnostics"
+    },
+    {
+      "order": 4,
+      "configuration": "+ Query decomposition",
+      "status": "NOT_RUN_GATE_B_BLOCKED",
+      "recall_at_20": "NOT_MEASURED",
+      "final_recall": "NOT_MEASURED",
+      "source_coverage": "NOT_MEASURED",
+      "false_insufficient": "NOT_MEASURED",
+      "wrong_docs": "NOT_MEASURED",
+      "latency": "NOT_MEASURED",
+      "db_query_cost": "NOT_MEASURED"
+    },
+    {
+      "order": 5,
+      "configuration": "+ Dynamic evidence",
+      "status": "NOT_RUN_GATE_B_BLOCKED",
+      "recall_at_20": "NOT_MEASURED",
+      "final_recall": "NOT_MEASURED",
+      "source_coverage": "NOT_MEASURED",
+      "false_insufficient": "NOT_MEASURED",
+      "wrong_docs": "NOT_MEASURED",
+      "latency": "NOT_MEASURED",
+      "db_query_cost": "NOT_MEASURED"
+    },
+    {
+      "order": 6,
+      "configuration": "+ Reranker",
+      "status": "NOT_RUN_GATE_B_BLOCKED",
+      "recall_at_20": "NOT_MEASURED",
+      "final_recall": "NOT_MEASURED",
+      "source_coverage": "NOT_MEASURED",
+      "false_insufficient": "NOT_MEASURED",
+      "wrong_docs": "NOT_MEASURED",
+      "latency": "NOT_MEASURED",
+      "db_query_cost": "NOT_MEASURED"
+    },
+    {
+      "order": 7,
+      "configuration": "+ Evidence repair",
+      "status": "NOT_RUN_GATE_B_BLOCKED",
+      "recall_at_20": "NOT_MEASURED",
+      "final_recall": "NOT_MEASURED",
+      "source_coverage": "NOT_MEASURED",
+      "false_insufficient": "NOT_MEASURED",
+      "wrong_docs": "NOT_MEASURED",
+      "latency": "NOT_MEASURED",
+      "db_query_cost": "NOT_MEASURED"
+    },
+    {
+      "order": 8,
+      "configuration": "Full candidate configuration",
+      "status": "NOT_RUN_GATE_B_BLOCKED",
+      "recall_at_20": "NOT_MEASURED",
+      "final_recall": "NOT_MEASURED",
+      "source_coverage": "NOT_MEASURED",
+      "false_insufficient": "NOT_MEASURED",
+      "wrong_docs": "NOT_MEASURED",
+      "latency": "NOT_MEASURED",
+      "db_query_cost": "NOT_MEASURED"
+    }
+  ],
+  "primary_remaining_bottleneck": "Natural-question CONTENT_FTS and TITLE_FTS returned zero expected identities; exact semantic ranking and fixed final selection remain the only effective lane, while exact semantic evaluation exceeded the latency budget.",
+  "next_action": "Stop the approved milestone at Gate B. A new separately approved root-cause investigation is required before any remediation of natural FTS/title behavior or exact semantic cost."
+}

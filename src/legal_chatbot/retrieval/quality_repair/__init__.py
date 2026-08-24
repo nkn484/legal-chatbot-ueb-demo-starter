@@ -1,0 +1,122 @@
+"""Pure Phase-A quality-retrieval contracts; no runtime integration exists yet."""
+
+from .analyzer import (
+    AmbiguityCode,
+    AnalyzerObservation,
+    AnalyzerPolicy,
+    AnalyzerUnit,
+    ConceptQuery,
+    CorpusEligibility,
+    CorpusEligibilityStatus,
+    LegalQuestionAnalyzer,
+    QueryComplexity,
+    SourceAccessStatus,
+    SourceScope,
+    derived_source_scope,
+)
+from .candidate_roles import AuthorityRole, CandidateRoleAssessment, assess_candidate_role
+from .claim_validation import (
+    ClaimValidation,
+    ClaimValidationResult,
+    ClaimValidationStatus,
+    MaterialClaim,
+    validate_material_claims,
+)
+from .coverage import (
+    EvidenceCoverageEntry,
+    EvidenceCoverageMatrix,
+    EvidenceCoverageStatus,
+    build_coverage_matrix,
+)
+from .evidence_budget import EvidenceSelection, evidence_target_count, select_evidence
+from .evidence_pack import (
+    EvidencePackLimitation,
+    QualityRetrievalContext,
+    SelectedLegalAuthority,
+    StructuredEvidencePack,
+    derive_limitations,
+)
+from .models import (
+    CandidateEvidence,
+    CollapsedDocumentCandidate,
+    DocumentIdentity,
+    LaneObservation,
+    OpportunityTag,
+    RetrievalLane,
+    SourceBinding,
+)
+from .ranking import (
+    PoolReferenceSummary,
+    build_lane_document_pool,
+    fused_diagnostic_top50,
+    fused_pool,
+    lane_unique_contributions,
+    merge_chunk_candidates,
+    select_final_top3,
+    select_pareto_pool,
+)
+from .repair import TargetedRepairPlan, plan_targeted_repair
+from .strategy import (
+    QUALITY_ABLATION_PROFILES,
+    QUALITY_REPAIR_PROFILES,
+    QualityRepairStrategy,
+    materialize_strategy,
+)
+from .trace import QualityRepairTrace
+
+__all__ = [
+    "AnalyzerObservation",
+    "AnalyzerPolicy",
+    "AnalyzerUnit",
+    "AmbiguityCode",
+    "AuthorityRole",
+    "CandidateRoleAssessment",
+    "CandidateEvidence",
+    "CollapsedDocumentCandidate",
+    "DocumentIdentity",
+    "LaneObservation",
+    "LegalQuestionAnalyzer",
+    "OpportunityTag",
+    "QUALITY_REPAIR_PROFILES",
+    "QUALITY_ABLATION_PROFILES",
+    "QualityRepairStrategy",
+    "QualityRepairTrace",
+    "EvidenceSelection",
+    "evidence_target_count",
+    "select_evidence",
+    "EvidenceCoverageEntry",
+    "EvidenceCoverageMatrix",
+    "EvidenceCoverageStatus",
+    "build_coverage_matrix",
+    "TargetedRepairPlan",
+    "plan_targeted_repair",
+    "EvidencePackLimitation",
+    "QualityRetrievalContext",
+    "SelectedLegalAuthority",
+    "StructuredEvidencePack",
+    "derive_limitations",
+    "MaterialClaim",
+    "ClaimValidation",
+    "ClaimValidationResult",
+    "ClaimValidationStatus",
+    "validate_material_claims",
+    "assess_candidate_role",
+    "QueryComplexity",
+    "RetrievalLane",
+    "SourceBinding",
+    "SourceAccessStatus",
+    "SourceScope",
+    "ConceptQuery",
+    "CorpusEligibility",
+    "CorpusEligibilityStatus",
+    "derived_source_scope",
+    "materialize_strategy",
+    "build_lane_document_pool",
+    "fused_diagnostic_top50",
+    "fused_pool",
+    "lane_unique_contributions",
+    "merge_chunk_candidates",
+    "PoolReferenceSummary",
+    "select_final_top3",
+    "select_pareto_pool",
+]

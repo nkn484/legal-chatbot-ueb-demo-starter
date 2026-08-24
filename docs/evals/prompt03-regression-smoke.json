@@ -1,0 +1,349 @@
+{
+  "schema_version": "prompt03-regression-smoke-v1",
+  "generated_at": "2026-08-24T06:27:35.380642+00:00",
+  "conclusion": "PASS",
+  "baseline": {
+    "available": true,
+    "path": "docs/Stress_test_Legal_Chatbot_UEB_10_cau_G1_Raw_Default.xlsx",
+    "sha256": "e782008fb870ccfb9a02af6c0ddff7c0e745a847731674e2e207a5a7ca73e426",
+    "provider_class_derivation": "NOT_APPLICABLE derived from zero provider calls and zero citations; legacy baseline has no Provider Output Diagnostics sheet."
+  },
+  "fresh_run": {
+    "temporary_workbook_sha256": "ce69d94d27e778b6f54ebe28544edfd48242f3e4d67ce636633322f5a10bb423",
+    "temporary_workbook_retained": false,
+    "configuration": "CURRENT_DEFAULT"
+  },
+  "configuration_flags": {
+    "planner": false,
+    "lexical_repair": false,
+    "semantic": false,
+    "reranker": false,
+    "metadata_repair": false,
+    "reviewed_legal_effects_runtime_wiring": false
+  },
+  "database_before": {
+    "migration_version": "0012_reviewed_legal_effects",
+    "registry": {
+      "imports": 0,
+      "families": 0,
+      "assertions": 0,
+      "events": 0
+    },
+    "retrieval_runs": 17,
+    "citation_records": 16
+  },
+  "database_after": {
+    "migration_version": "0012_reviewed_legal_effects",
+    "registry": {
+      "imports": 0,
+      "families": 0,
+      "assertions": 0,
+      "events": 0
+    },
+    "retrieval_runs": 17,
+    "citation_records": 16
+  },
+  "verification": {
+    "unit_compose": {
+      "status": "PASS",
+      "passed": 734
+    },
+    "integration": {
+      "status": "PASS",
+      "passed": 6
+    },
+    "migration_lifecycle": {
+      "status": "PASS",
+      "passed": 1
+    },
+    "provider_whitespace": {
+      "status": "PASS",
+      "passed": 117
+    },
+    "ruff": {
+      "status": "PASS"
+    },
+    "diff_check": {
+      "status": "PASS"
+    },
+    "restricted_role": {
+      "status": "PASS",
+      "scenario_count": 7,
+      "privilege_checks_pass": true,
+      "retrieval_citation_unchanged": true,
+      "main_db_touched": false
+    }
+  },
+  "mandatory_checks": {
+    "reviewed_legal_effects_off": true,
+    "registry_zero_before_after": true,
+    "ten_of_ten_executed": true,
+    "retrieval_unchanged": true,
+    "final_evidence_ranking_unchanged": true,
+    "citation_unchanged": true,
+    "answer_state_no_regression": true,
+    "no_reviewed_relation_in_answer_or_citation": true,
+    "restricted_role_checks_pass": true,
+    "provider_whitespace_fix_pass": true,
+    "unit_integration_migration_ruff_pass": true,
+    "unexpected_db_writes_absent": true
+  },
+  "cases": [
+    {
+      "case_id": "Q01",
+      "answer_state_before": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "answer_state_after": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "provider_output_class_before": "NOT_APPLICABLE",
+      "provider_output_class_after": "NOT_APPLICABLE",
+      "retrieved_document_identities_before": [],
+      "retrieved_document_identities_after": [],
+      "final_selected_documents_before": [],
+      "final_selected_documents_after": [],
+      "citation_identities_before": [],
+      "citation_identities_after": [],
+      "retrieval_changed": false,
+      "evidence_changed": false,
+      "citation_changed": false,
+      "reviewed_registry_used": false,
+      "unexpected_db_writes": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "Q02",
+      "answer_state_before": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "answer_state_after": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "provider_output_class_before": "NOT_APPLICABLE",
+      "provider_output_class_after": "NOT_APPLICABLE",
+      "retrieved_document_identities_before": [],
+      "retrieved_document_identities_after": [],
+      "final_selected_documents_before": [],
+      "final_selected_documents_after": [],
+      "citation_identities_before": [],
+      "citation_identities_after": [],
+      "retrieval_changed": false,
+      "evidence_changed": false,
+      "citation_changed": false,
+      "reviewed_registry_used": false,
+      "unexpected_db_writes": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "Q03",
+      "answer_state_before": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "answer_state_after": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "provider_output_class_before": "NOT_APPLICABLE",
+      "provider_output_class_after": "NOT_APPLICABLE",
+      "retrieved_document_identities_before": [],
+      "retrieved_document_identities_after": [],
+      "final_selected_documents_before": [],
+      "final_selected_documents_after": [],
+      "citation_identities_before": [],
+      "citation_identities_after": [],
+      "retrieval_changed": false,
+      "evidence_changed": false,
+      "citation_changed": false,
+      "reviewed_registry_used": false,
+      "unexpected_db_writes": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "Q04",
+      "answer_state_before": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "answer_state_after": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "provider_output_class_before": "NOT_APPLICABLE",
+      "provider_output_class_after": "NOT_APPLICABLE",
+      "retrieved_document_identities_before": [],
+      "retrieved_document_identities_after": [],
+      "final_selected_documents_before": [],
+      "final_selected_documents_after": [],
+      "citation_identities_before": [],
+      "citation_identities_after": [],
+      "retrieval_changed": false,
+      "evidence_changed": false,
+      "citation_changed": false,
+      "reviewed_registry_used": false,
+      "unexpected_db_writes": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "Q05",
+      "answer_state_before": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "answer_state_after": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "provider_output_class_before": "NOT_APPLICABLE",
+      "provider_output_class_after": "NOT_APPLICABLE",
+      "retrieved_document_identities_before": [],
+      "retrieved_document_identities_after": [],
+      "final_selected_documents_before": [],
+      "final_selected_documents_after": [],
+      "citation_identities_before": [],
+      "citation_identities_after": [],
+      "retrieval_changed": false,
+      "evidence_changed": false,
+      "citation_changed": false,
+      "reviewed_registry_used": false,
+      "unexpected_db_writes": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "Q06",
+      "answer_state_before": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "answer_state_after": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "provider_output_class_before": "NOT_APPLICABLE",
+      "provider_output_class_after": "NOT_APPLICABLE",
+      "retrieved_document_identities_before": [],
+      "retrieved_document_identities_after": [],
+      "final_selected_documents_before": [],
+      "final_selected_documents_after": [],
+      "citation_identities_before": [],
+      "citation_identities_after": [],
+      "retrieval_changed": false,
+      "evidence_changed": false,
+      "citation_changed": false,
+      "reviewed_registry_used": false,
+      "unexpected_db_writes": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "Q07",
+      "answer_state_before": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "answer_state_after": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "provider_output_class_before": "NOT_APPLICABLE",
+      "provider_output_class_after": "NOT_APPLICABLE",
+      "retrieved_document_identities_before": [],
+      "retrieved_document_identities_after": [],
+      "final_selected_documents_before": [],
+      "final_selected_documents_after": [],
+      "citation_identities_before": [],
+      "citation_identities_after": [],
+      "retrieval_changed": false,
+      "evidence_changed": false,
+      "citation_changed": false,
+      "reviewed_registry_used": false,
+      "unexpected_db_writes": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "Q08",
+      "answer_state_before": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "answer_state_after": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "provider_output_class_before": "NOT_APPLICABLE",
+      "provider_output_class_after": "NOT_APPLICABLE",
+      "retrieved_document_identities_before": [],
+      "retrieved_document_identities_after": [],
+      "final_selected_documents_before": [],
+      "final_selected_documents_after": [],
+      "citation_identities_before": [],
+      "citation_identities_after": [],
+      "retrieval_changed": false,
+      "evidence_changed": false,
+      "citation_changed": false,
+      "reviewed_registry_used": false,
+      "unexpected_db_writes": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "Q09",
+      "answer_state_before": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "answer_state_after": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "provider_output_class_before": "NOT_APPLICABLE",
+      "provider_output_class_after": "NOT_APPLICABLE",
+      "retrieved_document_identities_before": [],
+      "retrieved_document_identities_after": [],
+      "final_selected_documents_before": [],
+      "final_selected_documents_after": [],
+      "citation_identities_before": [],
+      "citation_identities_after": [],
+      "retrieval_changed": false,
+      "evidence_changed": false,
+      "citation_changed": false,
+      "reviewed_registry_used": false,
+      "unexpected_db_writes": false,
+      "result": "PASS"
+    },
+    {
+      "case_id": "Q10",
+      "answer_state_before": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "answer_state_after": {
+        "outcome": "CLARIFICATION",
+        "reason": "NO_RESULTS"
+      },
+      "provider_output_class_before": "NOT_APPLICABLE",
+      "provider_output_class_after": "NOT_APPLICABLE",
+      "retrieved_document_identities_before": [],
+      "retrieved_document_identities_after": [],
+      "final_selected_documents_before": [],
+      "final_selected_documents_after": [],
+      "citation_identities_before": [],
+      "citation_identities_after": [],
+      "retrieval_changed": false,
+      "evidence_changed": false,
+      "citation_changed": false,
+      "reviewed_registry_used": false,
+      "unexpected_db_writes": false,
+      "result": "PASS"
+    }
+  ],
+  "comparison_limits": {
+    "raw_answer_text_compared": false,
+    "citation_uuid_baseline_available": false,
+    "citation_identity_comparison": "Exact empty-set comparison because citation_count=0 before and after for all cases.",
+    "reviewed_registry_used": false
+  }
+}

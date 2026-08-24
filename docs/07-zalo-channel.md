@@ -1,7 +1,7 @@
-# Zalo Personal Channel
+# Official Zalo Bot Channel
 
-Official Zalo developer surface centers on Official Account APIs/webhooks. Therefore personal-account automation is an experimental bridge boundary.
+M08 uses the official Zalo Bot Manager and Bot API. A user chats from a personal Zalo account with the managed bot; the bot receives official webhook events and replies through `sendMessage`. QR, browser cookies, Personal-account automation and `zca-js` are not used.
 
-Bridge duties only: receive event, normalize, authenticate webhook, send outbound message. It must not perform retrieval, call SHINE, or access legal business DB directly.
+Channel adapter duties only: authenticate and normalize the official webhook, derive opaque identities, call the channel-neutral conversation boundary, format server-owned citations, and send one bounded outbound message. Raw Zalo IDs and credentials never enter Chat/Retrieval/Conversation contracts.
 
-Use a test account for spike/demo; keep session/cookies out of Git/logs. Architecture must allow replacing the bridge with Zalo OA later without changing Chat/Retrieval.
+Use runtime-only bot token/webhook secret and a public HTTPS callback configured through Bot Manager. Do not log or commit tokens, raw payloads, raw IDs, user text, answer text or citations. M00 Bot/ngrok evidence is regression evidence, not proof of M08 durability or retry semantics.

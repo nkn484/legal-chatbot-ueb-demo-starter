@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "policies": [
+    {
+      "policy_id": "vbqppl-exact-number-draft-v1",
+      "version": 1,
+      "owner": "legal-source-governance",
+      "status": "DRAFT",
+      "source_id": "VBQPPL",
+      "access_mode_requirement": "READ_ONLY_POLICY_ALLOWLIST",
+      "effective_from": "2026-01-01T00:00:00Z",
+      "effective_to": "2026-12-31T23:59:59Z",
+      "revocation": {"status": "NOT_REVOKED", "reason_code": null},
+      "authority": {
+        "transport": "SOAP",
+        "host": "ws.vbpl.vn",
+        "endpoint": "/vbqppl.asmx",
+        "action": "GetListVanBanByListSKH"
+      },
+      "tls": {"https_only": true, "verify": true, "allow_redirects": false},
+      "discovery": {
+        "mode": "EXACT_DOCUMENT_NUMBER",
+        "template_id": "vbqppl_soap_exact_number_v1",
+        "exact_document_numbers": ["63/2025/QH15"]
+      },
+      "constraints": {
+        "document_types": {"allow": ["LAW"], "deny": []},
+        "issuers": {"allow": ["NATIONAL_ASSEMBLY"], "deny": []},
+        "jurisdictions": {"allow": ["VN"], "deny": []},
+        "titles": {"allow": ["Luật Tổ chức Chính phủ"], "deny": []},
+        "paths": {"allow": ["/qtdc/public/doc/"], "deny": []},
+        "date_range": {"from": "2025-01-01", "to": "2026-12-31"},
+        "content": {
+          "allow_content_types": ["text/xml"],
+          "deny_content_types": [],
+          "max_decoded_bytes": 1048576,
+          "parser_profiles": ["SOAP_XML_V1"]
+        }
+      },
+      "limits": {
+        "max_calls_per_request": 1,
+        "max_calls_per_policy_window": 8,
+        "max_results_per_discovery": 1,
+        "max_documents_per_request": 1,
+        "max_relation_depth": 1,
+        "max_elapsed_seconds": 5,
+        "request_timeout_seconds": 3,
+        "rate_limit_per_window": 8,
+        "circuit_breaker_failure_threshold": 2,
+        "circuit_breaker_open_seconds": 30
+      }
+    },
+    {
+      "policy_id": "vbqppl-exact-number-registry-blocked-v1",
+      "version": 1,
+      "owner": "legal-source-governance",
+      "status": "ACTIVE",
+      "source_id": "VBQPPL",
+      "access_mode_requirement": "READ_ONLY_POLICY_ALLOWLIST",
+      "effective_from": "2026-01-01T00:00:00Z",
+      "effective_to": "2026-12-31T23:59:59Z",
+      "revocation": {"status": "NOT_REVOKED", "reason_code": null},
+      "authority": {
+        "transport": "SOAP",
+        "host": "ws.vbpl.vn",
+        "endpoint": "/vbqppl.asmx",
+        "action": "GetListVanBanByListSKH"
+      },
+      "tls": {"https_only": true, "verify": true, "allow_redirects": false},
+      "discovery": {
+        "mode": "EXACT_DOCUMENT_NUMBER",
+        "template_id": "vbqppl_soap_exact_number_v1",
+        "exact_document_numbers": ["63/2025/QH15"]
+      },
+      "constraints": {
+        "document_types": {"allow": ["LAW"], "deny": []},
+        "issuers": {"allow": ["NATIONAL_ASSEMBLY"], "deny": []},
+        "jurisdictions": {"allow": ["VN"], "deny": []},
+        "titles": {"allow": ["Luật Tổ chức Chính phủ"], "deny": []},
+        "paths": {"allow": ["/qtdc/public/doc/"], "deny": []},
+        "date_range": {"from": "2025-01-01", "to": "2026-12-31"},
+        "content": {
+          "allow_content_types": ["text/xml"],
+          "deny_content_types": [],
+          "max_decoded_bytes": 1048576,
+          "parser_profiles": ["SOAP_XML_V1"]
+        }
+      },
+      "limits": {
+        "max_calls_per_request": 1,
+        "max_calls_per_policy_window": 8,
+        "max_results_per_discovery": 1,
+        "max_documents_per_request": 1,
+        "max_relation_depth": 1,
+        "max_elapsed_seconds": 5,
+        "request_timeout_seconds": 3,
+        "rate_limit_per_window": 8,
+        "circuit_breaker_failure_threshold": 2,
+        "circuit_breaker_open_seconds": 30
+      }
+    }
+  ]
+}

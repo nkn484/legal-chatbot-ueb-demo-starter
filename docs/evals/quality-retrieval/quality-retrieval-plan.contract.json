@@ -1,0 +1,212 @@
+{
+  "contract_version": "QUALITY-RETRIEVAL-A2-PLAN-1",
+  "status": "EVALUATION_FREEZE_ONLY",
+  "scope": "Offline plan artifacts only; no runtime, retrieval, corpus, legal-effects, or production configuration change is authorized.",
+  "strategy_profile_contract": {
+    "contract_name": "quality_retrieval_a1_profile_names",
+    "contract_version": "A1-A2-RECONCILIATION-1",
+    "ownership": "A1 owns the pure contract registry; A2 is reconciled against its safe names and does not authorize runtime use.",
+    "expected_profile_names": [
+      "quality_retrieval_current_default_v1",
+      "quality_retrieval_document_collapse_v1",
+      "quality_retrieval_hybrid_v1",
+      "quality_retrieval_analyzer_protected_v1",
+      "quality_retrieval_dynamic_evidence_v1",
+      "quality_retrieval_reranker_v1",
+      "quality_retrieval_evidence_repair_v1",
+      "quality_retrieval_full_candidate_v1"
+    ],
+    "reconciliation": "COMPLETE: A1's authoritative ablation registry uses these exact eight names. The current-default row is a non-materializable release control; no profile is production-enabled by this contract."
+  },
+  "frozen_inventory": {
+    "quality_expected_identity_case_occurrences": 29,
+    "quality_expected_identity_inventory_rule": "Prompt-01's 29 retrievable expected identity case-occurrences are the quality denominator. Count each expected identity once per originating case; do not deduplicate across cases and do not count duplicate document versions more than once within a case-occurrence.",
+    "old_report_denominator_explanation": "Older reports may show 26 because they count distinct expected document families. This milestone scores 29 case-occurrences, so 26 and 29 are not interchangeable.",
+    "m2_control_set": {
+      "path": "docs/evals/m2_evaluation_set.json",
+      "canonical_json_sha256": "41b25c2d6561f78405915241a56f654ed9dfcacecbe8a0c61c408e072fdaf6e8",
+      "set_b_count": 30,
+      "set_c_count": 24,
+      "set_c_category_distribution": {
+        "AMBIGUOUS_DOCUMENT_IDENTITY": 3,
+        "GENERAL_ADMINISTRATIVE_NONLEGAL": 4,
+        "NO_EVIDENCE": 4,
+        "SINGLE_SOURCE_SUFFICIENCY": 3,
+        "SYNTHETIC_METADATA_NUMBER": 4,
+        "UEB_MENTION_NO_ALL_SOURCES": 3,
+        "UNRELATED_TO_UEB": 3
+      }
+    }
+  },
+  "frozen_baselines": {
+    "current_default_lexical_safe_control": {
+      "stable_id": "QRRA2-CTRL-LEXICAL-NORESULTS-V1",
+      "result": "NO_RESULTS",
+      "classification": "safety_control_not_quality_baseline"
+    },
+    "prompt01_natural_exact_semantic_top50": {
+      "stable_id": "QRRA2-REF-SEMANTIC-TOP50-V1",
+      "expected_identity_availability": {"numerator": 24, "denominator": 29},
+      "classification": "candidate_reference_nonrelease",
+      "pareto_prior_for_pool8": true
+    },
+    "prompt01_production_equivalent_final_top3": {
+      "stable_id": "QRRA2-REF-FINAL-TOP3-V1",
+      "expected_identity_availability": {"numerator": 6, "denominator": 29},
+      "classification": "requested_milestone_quality_baseline"
+    },
+    "phase4_semantic_rerank_final": {
+      "stable_id": "QRRA2-REF-PHASE4-RERANK-V1",
+      "expected_identity_availability": {"numerator": 8, "denominator": 29},
+      "classification": "final_evaluation_reference_nonrelease"
+    },
+    "m2_metadata_repair_negative_evidence": {
+      "stable_id": "QRRA2-CTRL-M2-METADATA-NEGATIVE-V1",
+      "expected_identity_availability_before_after": {"before": 8, "after": 8, "denominator": 29},
+      "nonexpected_cited_rate_before_after_percent": {"before": 72.4, "after": 73.3},
+      "p50_latency_ms_before_after": {"before": 1160, "after": 2010},
+      "classification": "negative_evidence_nonrelease_cannot_win_ablation",
+      "rule": "This comparator cannot be selected, extended, or declared an ablation winner."
+    }
+  },
+  "capabilities": [
+    "quality_repair_enabled",
+    "document_collapse_enabled",
+    "title_search_enabled",
+    "hybrid_fusion_enabled",
+    "deterministic_analyzer_enabled",
+    "protected_opportunity_enabled",
+    "dynamic_evidence_enabled",
+    "reranker_enabled",
+    "repair_retrieval_enabled"
+  ],
+  "environment_flags": [
+    {"field_name": "quality_repair_enabled", "alias": "RETRIEVAL_QUALITY_REPAIR_ENABLED"},
+    {"field_name": "quality_title_search_enabled", "alias": "RETRIEVAL_QUALITY_TITLE_SEARCH_ENABLED"},
+    {"field_name": "quality_hybrid_fusion_enabled", "alias": "RETRIEVAL_QUALITY_HYBRID_FUSION_ENABLED"},
+    {"field_name": "quality_query_planner_enabled", "alias": "RETRIEVAL_QUALITY_QUERY_PLANNER_ENABLED"},
+    {"field_name": "quality_dynamic_evidence_enabled", "alias": "RETRIEVAL_QUALITY_DYNAMIC_EVIDENCE_ENABLED"},
+    {"field_name": "quality_repair_retrieval_enabled", "alias": "RETRIEVAL_QUALITY_REPAIR_RETRIEVAL_ENABLED"}
+  ],
+  "ablation_configurations": [
+    {
+      "stable_id": "QRRA2-C01",
+      "version": "1",
+      "profile_name": "quality_retrieval_current_default_v1",
+      "name": "Current default",
+      "release_eligible": true,
+      "capabilities": {"quality_repair_enabled": false, "document_collapse_enabled": false, "title_search_enabled": false, "hybrid_fusion_enabled": false, "deterministic_analyzer_enabled": false, "protected_opportunity_enabled": false, "dynamic_evidence_enabled": false, "reranker_enabled": false, "repair_retrieval_enabled": false},
+      "candidate_pool": {"mode": "fixed", "sizes": [3]},
+      "evidence": {"minimum": 3, "maximum": 3},
+      "reranker": "OFF",
+      "repair": "OFF"
+    },
+    {
+      "stable_id": "QRRA2-C02",
+      "version": "1",
+      "profile_name": "quality_retrieval_document_collapse_v1",
+      "name": "Document collapse only",
+      "release_eligible": true,
+      "capabilities": {"quality_repair_enabled": true, "document_collapse_enabled": true, "title_search_enabled": false, "hybrid_fusion_enabled": false, "deterministic_analyzer_enabled": false, "protected_opportunity_enabled": false, "dynamic_evidence_enabled": false, "reranker_enabled": false, "repair_retrieval_enabled": false},
+      "candidate_pool": {"mode": "fixed", "sizes": [8]},
+      "evidence": {"minimum": 3, "maximum": 3},
+      "reranker": "OFF",
+      "repair": "OFF"
+    },
+    {
+      "stable_id": "QRRA2-C03",
+      "version": "1",
+      "profile_name": "quality_retrieval_hybrid_v1",
+      "name": "Title/FTS/Semantic hybrid",
+      "release_eligible": true,
+      "capabilities": {"quality_repair_enabled": true, "document_collapse_enabled": true, "title_search_enabled": true, "hybrid_fusion_enabled": true, "deterministic_analyzer_enabled": false, "protected_opportunity_enabled": false, "dynamic_evidence_enabled": false, "reranker_enabled": false, "repair_retrieval_enabled": false},
+      "candidate_pool": {"mode": "pareto_matrix", "sizes": [8, 12, 16, 20], "subrows": ["QRRA2-C03-P08", "QRRA2-C03-P12", "QRRA2-C03-P16", "QRRA2-C03-P20"]},
+      "evidence": {"minimum": 3, "maximum": 3},
+      "reranker": "OFF",
+      "repair": "OFF"
+    },
+    {
+      "stable_id": "QRRA2-C04",
+      "version": "1",
+      "profile_name": "quality_retrieval_analyzer_protected_v1",
+      "name": "Query decomposition/protected opportunity",
+      "release_eligible": true,
+      "capabilities": {"quality_repair_enabled": true, "document_collapse_enabled": true, "title_search_enabled": true, "hybrid_fusion_enabled": true, "deterministic_analyzer_enabled": true, "protected_opportunity_enabled": true, "dynamic_evidence_enabled": false, "reranker_enabled": false, "repair_retrieval_enabled": false},
+      "candidate_pool": {"mode": "pareto_selected_from_C03", "sizes": [8, 12, 16, 20]},
+      "evidence": {"minimum": 3, "maximum": 3},
+      "reranker": "OFF",
+      "repair": "OFF"
+    },
+    {
+      "stable_id": "QRRA2-C05",
+      "version": "1",
+      "profile_name": "quality_retrieval_dynamic_evidence_v1",
+      "name": "Dynamic evidence",
+      "release_eligible": true,
+      "capabilities": {"quality_repair_enabled": true, "document_collapse_enabled": true, "title_search_enabled": true, "hybrid_fusion_enabled": true, "deterministic_analyzer_enabled": true, "protected_opportunity_enabled": true, "dynamic_evidence_enabled": true, "reranker_enabled": false, "repair_retrieval_enabled": false},
+      "candidate_pool": {"mode": "pareto_selected_from_C03", "sizes": [8, 12, 16, 20]},
+      "evidence": {"minimum": 3, "maximum": 6},
+      "reranker": "OFF",
+      "repair": "OFF"
+    },
+    {
+      "stable_id": "QRRA2-C06",
+      "version": "1",
+      "profile_name": "quality_retrieval_reranker_v1",
+      "name": "Reranker",
+      "release_eligible": true,
+      "capabilities": {"quality_repair_enabled": true, "document_collapse_enabled": true, "title_search_enabled": true, "hybrid_fusion_enabled": true, "deterministic_analyzer_enabled": true, "protected_opportunity_enabled": true, "dynamic_evidence_enabled": true, "reranker_enabled": true, "repair_retrieval_enabled": false},
+      "candidate_pool": {"mode": "pareto_selected_from_C03", "sizes": [8, 12, 16, 20]},
+      "evidence": {"minimum": 3, "maximum": 6},
+      "reranker": "ON_MAX_INPUT_20",
+      "repair": "OFF"
+    },
+    {
+      "stable_id": "QRRA2-C07",
+      "version": "1",
+      "profile_name": "quality_retrieval_evidence_repair_v1",
+      "name": "Evidence repair",
+      "release_eligible": true,
+      "capabilities": {"quality_repair_enabled": true, "document_collapse_enabled": true, "title_search_enabled": true, "hybrid_fusion_enabled": true, "deterministic_analyzer_enabled": true, "protected_opportunity_enabled": true, "dynamic_evidence_enabled": true, "reranker_enabled": false, "repair_retrieval_enabled": true},
+      "candidate_pool": {"mode": "pareto_selected_from_C03", "sizes": [8, 12, 16, 20]},
+      "evidence": {"minimum": 3, "maximum": 6},
+      "reranker": "OFF",
+      "repair": "ONE_ROUND"
+    },
+    {
+      "stable_id": "QRRA2-C08",
+      "version": "1",
+      "profile_name": "quality_retrieval_full_candidate_v1",
+      "name": "Full candidate configuration",
+      "release_eligible": true,
+      "capabilities": {"quality_repair_enabled": true, "document_collapse_enabled": true, "title_search_enabled": true, "hybrid_fusion_enabled": true, "deterministic_analyzer_enabled": true, "protected_opportunity_enabled": true, "dynamic_evidence_enabled": true, "reranker_enabled": true, "repair_retrieval_enabled": true},
+      "candidate_pool": {"mode": "pareto_selected_from_C03", "sizes": [8, 12, 16, 20]},
+      "evidence": {"minimum": 3, "maximum": 6},
+      "reranker": "ON_MAX_INPUT_20",
+      "repair": "ONE_ROUND"
+    }
+  ],
+  "nonrelease_controls": [
+    {"stable_id": "QRRA2-NR01", "version": "1", "name": "Natural exact semantic top50 reference", "profile_name": "quality_retrieval_semantic_reference_v1", "release_eligible": false, "result": "24/29 candidate availability"},
+    {"stable_id": "QRRA2-NR02", "version": "1", "name": "Phase4 semantic-rerank final reference", "profile_name": "quality_retrieval_phase4_rerank_reference_v1", "release_eligible": false, "result": "8/29 final availability"},
+    {"stable_id": "QRRA2-NR03", "version": "1", "name": "M2 metadata repair negative comparator", "profile_name": "quality_retrieval_m2_negative_reference_v1", "release_eligible": false, "result": "8/29 to 8/29; noise and latency worse; cannot win"}
+  ],
+  "frozen_budgets": {
+    "candidate_pool_matrix": [8, 12, 16, 20],
+    "reranker_input_max": 20,
+    "retrieval_end_to_end_p95_ms_max": 2450,
+    "logical_db_query_count_per_case_max": 12,
+    "repair_rounds_max": 1,
+    "final_evidence_min": 3,
+    "final_evidence_max": 6
+  },
+  "frozen_targets": {
+    "broad_expected_recall_min": {"numerator": 27, "denominator": 29},
+    "hybrid_analyzer_continuation_final_recall_min": {"numerator": 12, "denominator": 29, "not_final_pass": true},
+    "final_expected_recall_min": {"numerator": 20, "denominator": 29},
+    "false_insufficiency_max": {"numerator": 0, "denominator": 10},
+    "expert_scores_at_least_7_min": {"numerator": 8, "denominator": 10},
+    "reviewed_legal_effects": "OFF",
+    "production_auto_enable": false
+  }
+}
