@@ -1,0 +1,89 @@
+{
+  "report_schema_version": "p2-set-b-material-subintent-execution-v3",
+  "status": "BLOCKED_PROVIDER_EXECUTION",
+  "manifest": {
+    "oracle_canonical_sha256": "4280261908FC01C57715D63B5981CF5490D975D77D1CEE9F17F5CC40314AE7D8",
+    "evaluation_set_sha256": "BCA94A3D6C6114F6E44C8A21A4A0B8B20D72E0B632CF2D1560679AA4D928CF73",
+    "provider": "shineshop",
+    "model": "gpt-5.6-sol",
+    "analyzer_version": "p2-legal-question-analyzer-v1",
+    "prompt_version": "p2-legal-question-analyzer-prompt-v1",
+    "normalizer_version": "set-b-material-subintent-normalizer-v1",
+    "execution": {
+      "concurrency": 1,
+      "request_timeout_seconds": 45.0,
+      "hard_case_timeout_seconds": 60.0,
+      "retry_limit": 2,
+      "retry_backoff_seconds": 0.5,
+      "output_token_budget": 512
+    },
+    "selected_case_ids": [
+      "B-Q02-01",
+      "B-Q06-01",
+      "B-Q10-01"
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "B-Q02-01",
+      "parent_case_id": "Q02",
+      "status": "INVALID_OUTPUT",
+      "attempts": 1,
+      "generation_duration_ms": 21310.73,
+      "output_tokens": 814,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "PERSONAL_DATA_COLLECTION_COMPLIANCE",
+        "PERSONAL_DATA_SAFEGUARDS_RIGHTS",
+        "PERSONAL_DATA_SHARING_COMPLIANCE",
+        "PERSONAL_DATA_USE_COMPLIANCE"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q06-01",
+      "parent_case_id": "Q06",
+      "status": "INVALID_OUTPUT",
+      "attempts": 1,
+      "generation_duration_ms": 17476.24,
+      "output_tokens": 832,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ASSET_INVENTORY",
+        "ASSET_POST_PURCHASE_MANAGEMENT",
+        "ASSET_PURCHASE_AUTHORITY",
+        "ASSET_PURCHASE_PROCEDURE"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q10-01",
+      "parent_case_id": "Q10",
+      "status": "INVALID_OUTPUT",
+      "attempts": 1,
+      "generation_duration_ms": 29041.82,
+      "output_tokens": 1049,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ACADEMIC_DISMISSAL_GROUNDS",
+        "ACADEMIC_WARNING_DISMISSAL_PROCESS",
+        "ACADEMIC_WARNING_GROUNDS"
+      ],
+      "exact_set_match": null
+    }
+  ],
+  "generation_metrics": {
+    "completed_count": 3,
+    "duration_ms": {
+      "p50": 21310.73,
+      "p95": 29041.82,
+      "max": 29041.82
+    },
+    "output_tokens": {
+      "p50": 832.0,
+      "p95": 1049.0,
+      "max": 1049
+    }
+  },
+  "measurement": null
+}

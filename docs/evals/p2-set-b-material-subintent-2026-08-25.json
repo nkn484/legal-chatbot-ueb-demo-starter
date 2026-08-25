@@ -1,0 +1,415 @@
+{
+  "report_schema_version": "p2-set-b-material-subintent-execution-v2",
+  "status": "BLOCKED_PROVIDER_EXECUTION",
+  "manifest": {
+    "oracle_canonical_sha256": "4280261908FC01C57715D63B5981CF5490D975D77D1CEE9F17F5CC40314AE7D8",
+    "evaluation_set_sha256": "BCA94A3D6C6114F6E44C8A21A4A0B8B20D72E0B632CF2D1560679AA4D928CF73",
+    "provider": "shineshop",
+    "model": "gpt-5.6-sol",
+    "analyzer_version": "p2-legal-question-analyzer-v1",
+    "prompt_version": "p2-legal-question-analyzer-prompt-v1",
+    "normalizer_version": "set-b-material-subintent-normalizer-v1",
+    "execution": {
+      "concurrency": 3,
+      "case_timeout_seconds": 15.0,
+      "retry_limit": 2,
+      "retry_backoff_seconds": 0.5
+    }
+  },
+  "cases": [
+    {
+      "case_id": "B-Q01-01",
+      "parent_case_id": "Q01",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "UNDERGRAD_RETAKE_IMPROVEMENT_CONDITIONS",
+        "UNDERGRAD_STUDY_AHEAD_CONDITIONS"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q01-02",
+      "parent_case_id": "Q01",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "UNDERGRAD_RETAKE_IMPROVEMENT_CONDITIONS",
+        "UNDERGRAD_STUDY_AHEAD_CONDITIONS"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q01-03",
+      "parent_case_id": "Q01",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "UNDERGRAD_RETAKE_IMPROVEMENT_CONDITIONS",
+        "UNDERGRAD_STUDY_AHEAD_CONDITIONS"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q02-01",
+      "parent_case_id": "Q02",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "PERSONAL_DATA_COLLECTION_COMPLIANCE",
+        "PERSONAL_DATA_SAFEGUARDS_RIGHTS",
+        "PERSONAL_DATA_SHARING_COMPLIANCE",
+        "PERSONAL_DATA_USE_COMPLIANCE"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q02-02",
+      "parent_case_id": "Q02",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "PERSONAL_DATA_COLLECTION_COMPLIANCE",
+        "PERSONAL_DATA_SAFEGUARDS_RIGHTS",
+        "PERSONAL_DATA_SHARING_COMPLIANCE",
+        "PERSONAL_DATA_USE_COMPLIANCE"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q02-03",
+      "parent_case_id": "Q02",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "PERSONAL_DATA_COLLECTION_COMPLIANCE",
+        "PERSONAL_DATA_SAFEGUARDS_RIGHTS",
+        "PERSONAL_DATA_SHARING_COMPLIANCE",
+        "PERSONAL_DATA_USE_COMPLIANCE"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q03-01",
+      "parent_case_id": "Q03",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "STAFF_EVALUATION_CRITERIA",
+        "STAFF_EVALUATION_PROCESS"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q03-02",
+      "parent_case_id": "Q03",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "STAFF_EVALUATION_CRITERIA",
+        "STAFF_EVALUATION_PROCESS"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q03-03",
+      "parent_case_id": "Q03",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "STAFF_EVALUATION_CRITERIA",
+        "STAFF_EVALUATION_PROCESS"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q04-01",
+      "parent_case_id": "Q04",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "STATE_SECRET_IDENTIFICATION_CLASSIFICATION",
+        "STATE_SECRET_MANAGEMENT_PROTECTION"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q04-02",
+      "parent_case_id": "Q04",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "STATE_SECRET_IDENTIFICATION_CLASSIFICATION",
+        "STATE_SECRET_MANAGEMENT_PROTECTION"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q04-03",
+      "parent_case_id": "Q04",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "STATE_SECRET_IDENTIFICATION_CLASSIFICATION",
+        "STATE_SECRET_MANAGEMENT_PROTECTION"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q05-01",
+      "parent_case_id": "Q05",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "STRATEGIC_RND_FINANCE",
+        "STRATEGIC_RND_TASK_APPLICABILITY",
+        "STRATEGIC_RND_TASK_MANAGEMENT"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q05-02",
+      "parent_case_id": "Q05",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "STRATEGIC_RND_FINANCE",
+        "STRATEGIC_RND_TASK_APPLICABILITY",
+        "STRATEGIC_RND_TASK_MANAGEMENT"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q05-03",
+      "parent_case_id": "Q05",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "STRATEGIC_RND_FINANCE",
+        "STRATEGIC_RND_TASK_APPLICABILITY",
+        "STRATEGIC_RND_TASK_MANAGEMENT"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q06-01",
+      "parent_case_id": "Q06",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ASSET_INVENTORY",
+        "ASSET_POST_PURCHASE_MANAGEMENT",
+        "ASSET_PURCHASE_AUTHORITY",
+        "ASSET_PURCHASE_PROCEDURE"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q06-02",
+      "parent_case_id": "Q06",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ASSET_INVENTORY",
+        "ASSET_POST_PURCHASE_MANAGEMENT",
+        "ASSET_PURCHASE_AUTHORITY",
+        "ASSET_PURCHASE_PROCEDURE"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q06-03",
+      "parent_case_id": "Q06",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ASSET_INVENTORY",
+        "ASSET_POST_PURCHASE_MANAGEMENT",
+        "ASSET_PURCHASE_AUTHORITY",
+        "ASSET_PURCHASE_PROCEDURE"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q07-01",
+      "parent_case_id": "Q07",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "DOCTORAL_ACADEMIC_RESEARCH_REQUIREMENTS",
+        "DOCTORAL_EVALUATION_DEFENSE_COMPLETION",
+        "DOCTORAL_SUPERVISION_TOPIC_PROGRESS",
+        "DOCTORAL_TRAINING_DURATION_PLAN"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q07-02",
+      "parent_case_id": "Q07",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "DOCTORAL_ACADEMIC_RESEARCH_REQUIREMENTS",
+        "DOCTORAL_EVALUATION_DEFENSE_COMPLETION",
+        "DOCTORAL_SUPERVISION_TOPIC_PROGRESS",
+        "DOCTORAL_TRAINING_DURATION_PLAN"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q07-03",
+      "parent_case_id": "Q07",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "DOCTORAL_ACADEMIC_RESEARCH_REQUIREMENTS",
+        "DOCTORAL_EVALUATION_DEFENSE_COMPLETION",
+        "DOCTORAL_SUPERVISION_TOPIC_PROGRESS",
+        "DOCTORAL_TRAINING_DURATION_PLAN"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q08-01",
+      "parent_case_id": "Q08",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "MASTERS_COMPLETION_GRADUATION",
+        "MASTERS_COURSEWORK_ASSESSMENT",
+        "MASTERS_THESIS_PROJECT_SUPERVISION",
+        "MASTERS_TRAINING_DURATION_PLAN"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q08-02",
+      "parent_case_id": "Q08",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "MASTERS_COMPLETION_GRADUATION",
+        "MASTERS_COURSEWORK_ASSESSMENT",
+        "MASTERS_THESIS_PROJECT_SUPERVISION",
+        "MASTERS_TRAINING_DURATION_PLAN"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q08-03",
+      "parent_case_id": "Q08",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "MASTERS_COMPLETION_GRADUATION",
+        "MASTERS_COURSEWORK_ASSESSMENT",
+        "MASTERS_THESIS_PROJECT_SUPERVISION",
+        "MASTERS_TRAINING_DURATION_PLAN"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q09-01",
+      "parent_case_id": "Q09",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ELECTRONIC_RECORD_ARCHIVING_RETENTION",
+        "ELECTRONIC_RECORD_CREATION",
+        "ELECTRONIC_RECORD_MANAGEMENT"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q09-02",
+      "parent_case_id": "Q09",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ELECTRONIC_RECORD_ARCHIVING_RETENTION",
+        "ELECTRONIC_RECORD_CREATION",
+        "ELECTRONIC_RECORD_MANAGEMENT"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q09-03",
+      "parent_case_id": "Q09",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ELECTRONIC_RECORD_ARCHIVING_RETENTION",
+        "ELECTRONIC_RECORD_CREATION",
+        "ELECTRONIC_RECORD_MANAGEMENT"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q10-01",
+      "parent_case_id": "Q10",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ACADEMIC_DISMISSAL_GROUNDS",
+        "ACADEMIC_WARNING_DISMISSAL_PROCESS",
+        "ACADEMIC_WARNING_GROUNDS"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q10-02",
+      "parent_case_id": "Q10",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ACADEMIC_DISMISSAL_GROUNDS",
+        "ACADEMIC_WARNING_DISMISSAL_PROCESS",
+        "ACADEMIC_WARNING_GROUNDS"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q10-03",
+      "parent_case_id": "Q10",
+      "status": "TIMEOUT",
+      "attempts": 3,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ACADEMIC_DISMISSAL_GROUNDS",
+        "ACADEMIC_WARNING_DISMISSAL_PROCESS",
+        "ACADEMIC_WARNING_GROUNDS"
+      ],
+      "exact_set_match": null
+    }
+  ],
+  "measurement": null
+}

@@ -22,6 +22,7 @@ _DOCUMENT_NUMBER_RE = re.compile(
 )
 _MAX_VALUE_CHARS = 256
 _MAX_SUB_INTENTS = 4
+LEGAL_QUESTION_ANALYZER_VERSION = "p2-legal-question-analyzer-v1"
 
 
 class _FrozenAnalyzerModel(BaseModel):
@@ -155,6 +156,7 @@ class LegalQuestionAnalysisProposal(_FrozenAnalyzerModel):
 
 
 __all__ = [
+    "LEGAL_QUESTION_ANALYZER_VERSION",
     "LegalQuestionAnalysisProposal",
     "LegalQuestionAnalyzerSettings",
     "LegalSubIntentProposal",

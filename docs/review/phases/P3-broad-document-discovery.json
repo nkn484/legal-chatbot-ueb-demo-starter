@@ -1,0 +1,50 @@
+{
+  "phase_id": "P3",
+  "phase_name": "Broad Document Discovery",
+  "implementation_status": "COMPLETE",
+  "files_changed": [
+    "src/legal_chatbot/legal_evidence/discovery/__init__.py",
+    "src/legal_chatbot/legal_evidence/discovery/models.py",
+    "src/legal_chatbot/legal_evidence/discovery/service.py",
+    "tests/unit/test_legal_broad_discovery.py",
+    "docs/review/phases/P3-broad-document-discovery.md",
+    "docs/review/phases/P3-broad-document-discovery.json"
+  ],
+  "tests_run": [
+    {
+      "scope": "P3 lane/collapse/provenance/default-off tests",
+      "result": "5 passed"
+    },
+    {
+      "scope": "full suite with --import-mode=importlib",
+      "result": "896 passed, 39 skipped, 1 non-failing OpenPyXL warning"
+    },
+    {
+      "scope": "ruff check src tests",
+      "result": "passed"
+    },
+    {
+      "scope": "compileall src/legal_chatbot",
+      "result": "passed"
+    },
+    {
+      "scope": "pip check",
+      "result": "passed"
+    }
+  ],
+  "tests_passed": {
+    "p3_targeted": 5,
+    "full_suite": 896
+  },
+  "tests_failed": [],
+  "gate_status": "PASS",
+  "known_limitations": [
+    "P3 reader port is not yet composed with PostgreSQL/embedding infrastructure and remains default-off.",
+    "Candidate recall and lane contribution are diagnostic-only until a configured reader adapter is composed.",
+    "P3 makes no authority, applicability, relation, citation, answer, or legal-quality claim."
+  ],
+  "rollback_status": "NOT_APPLIED; P3 is additive, default-off, and has no migration.",
+  "decision": "KEEP",
+  "next_phase_allowed": true,
+  "engineering_legal_quality_note": "P3 engineering checks do not establish the P12 legal-quality release target."
+}

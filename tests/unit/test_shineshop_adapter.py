@@ -62,6 +62,7 @@ async def test_generate_posts_one_relative_response_request_and_extracts_text() 
             200,
             headers={"x-request-id": "req-1"},
             json={
+                "usage": {"output_tokens": 7},
                 "output": [
                     {
                         "type": "message",
@@ -91,6 +92,7 @@ async def test_generate_posts_one_relative_response_request_and_extracts_text() 
     assert result.model == "model-a"
     assert result.request_id == "req-1"
     assert result.duration_ms >= 0
+    assert result.output_tokens == 7
 
 
 @pytest.mark.asyncio

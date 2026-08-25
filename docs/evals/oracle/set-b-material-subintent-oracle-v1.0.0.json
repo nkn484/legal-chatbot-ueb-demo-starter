@@ -1,0 +1,403 @@
+{
+  "oracle_name": "set-b-material-subintent-oracle",
+  "oracle_version": "1.0.0",
+  "review_date": "2026-08-25",
+  "reviewer_role": "independent_legal_reviewer",
+  "purpose": "Evaluation-only oracle for P2 Legal Question Analyzer; measures Set B paraphrase agreement with parent material legal sub-intents.",
+  "scope": {
+    "set_a_parent_cases": 10,
+    "set_b_expected_paraphrases": 30,
+    "max_material_sub_intents_per_case": 4,
+    "production_access": "FORBIDDEN",
+    "expected_document_ids_included": false,
+    "legal_authority_truth_included": false
+  },
+  "gate": {
+    "metric": "parent_material_subintent_exact_set_agreement",
+    "threshold": 0.9,
+    "minimum_measured_paraphrases": 30,
+    "ordering": "IGNORE",
+    "duplicates_after_normalization": "DEDUPLICATE",
+    "missing_material_subintent": "MISMATCH",
+    "extra_material_subintent": "MISMATCH",
+    "unmapped_output": "MISMATCH",
+    "formula": "matched_paraphrases / measured_paraphrases"
+  },
+  "normalization": {
+    "rule": "Map analyzer material sub-intents to frozen canonical IDs using evaluator-only taxonomy; compare sets exactly after deduplication.",
+    "taxonomy": [
+      {
+        "id": "UNDERGRAD_STUDY_AHEAD_CONDITIONS",
+        "aliases": [
+          "học vượt",
+          "học trước tiến độ",
+          "điều kiện học vượt"
+        ]
+      },
+      {
+        "id": "UNDERGRAD_RETAKE_IMPROVEMENT_CONDITIONS",
+        "aliases": [
+          "học lại",
+          "học cải thiện",
+          "cải thiện điểm",
+          "nâng điểm"
+        ]
+      },
+      {
+        "id": "PERSONAL_DATA_COLLECTION_COMPLIANCE",
+        "aliases": [
+          "thu thập dữ liệu",
+          "thu thập dữ liệu người học",
+          "thu thập thông tin cá nhân"
+        ]
+      },
+      {
+        "id": "PERSONAL_DATA_USE_COMPLIANCE",
+        "aliases": [
+          "sử dụng dữ liệu",
+          "dùng dữ liệu người học",
+          "mục đích xử lý dữ liệu"
+        ]
+      },
+      {
+        "id": "PERSONAL_DATA_SHARING_COMPLIANCE",
+        "aliases": [
+          "chia sẻ dữ liệu",
+          "cung cấp dữ liệu",
+          "chuyển dữ liệu",
+          "tiết lộ dữ liệu"
+        ]
+      },
+      {
+        "id": "PERSONAL_DATA_SAFEGUARDS_RIGHTS",
+        "aliases": [
+          "bảo mật dữ liệu",
+          "an toàn dữ liệu",
+          "quyền dữ liệu cá nhân",
+          "trách nhiệm bảo vệ dữ liệu"
+        ]
+      },
+      {
+        "id": "STAFF_EVALUATION_CRITERIA",
+        "aliases": [
+          "tiêu chí đánh giá viên chức",
+          "căn cứ xếp loại",
+          "tiêu chí xếp loại"
+        ]
+      },
+      {
+        "id": "STAFF_EVALUATION_PROCESS",
+        "aliases": [
+          "quy trình đánh giá viên chức",
+          "trình tự xếp loại",
+          "thẩm quyền đánh giá viên chức"
+        ]
+      },
+      {
+        "id": "STATE_SECRET_IDENTIFICATION_CLASSIFICATION",
+        "aliases": [
+          "xác định bí mật nhà nước",
+          "phân loại bí mật",
+          "độ mật",
+          "danh mục bí mật nhà nước"
+        ]
+      },
+      {
+        "id": "STATE_SECRET_MANAGEMENT_PROTECTION",
+        "aliases": [
+          "quản lý tài liệu mật",
+          "bảo vệ bí mật nhà nước",
+          "lưu giữ tài liệu mật"
+        ]
+      },
+      {
+        "id": "STRATEGIC_RND_TASK_APPLICABILITY",
+        "aliases": [
+          "phạm vi nhiệm vụ công nghệ chiến lược",
+          "xác định loại nhiệm vụ",
+          "điều kiện áp dụng nhiệm vụ chiến lược"
+        ]
+      },
+      {
+        "id": "STRATEGIC_RND_TASK_MANAGEMENT",
+        "aliases": [
+          "quản lý nhiệm vụ khoa học công nghệ",
+          "quản lý nhiệm vụ R&D",
+          "quy trình nhiệm vụ công nghệ chiến lược"
+        ]
+      },
+      {
+        "id": "STRATEGIC_RND_FINANCE",
+        "aliases": [
+          "tài chính nhiệm vụ",
+          "kinh phí nhiệm vụ",
+          "cơ chế tài chính R&D",
+          "thanh quyết toán nhiệm vụ"
+        ]
+      },
+      {
+        "id": "ASSET_PURCHASE_AUTHORITY",
+        "aliases": [
+          "thẩm quyền mua sắm",
+          "ai phê duyệt mua tài sản",
+          "quyết định mua sắm"
+        ]
+      },
+      {
+        "id": "ASSET_PURCHASE_PROCEDURE",
+        "aliases": [
+          "quy trình mua sắm",
+          "thủ tục mua tài sản",
+          "trình tự mua sắm"
+        ]
+      },
+      {
+        "id": "ASSET_POST_PURCHASE_MANAGEMENT",
+        "aliases": [
+          "quản lý tài sản sau mua",
+          "đưa tài sản vào quản lý",
+          "bàn giao tài sản"
+        ]
+      },
+      {
+        "id": "ASSET_INVENTORY",
+        "aliases": [
+          "kiểm kê tài sản",
+          "quy trình kiểm kê",
+          "kiểm kê tài sản công"
+        ]
+      },
+      {
+        "id": "DOCTORAL_TRAINING_DURATION_PLAN",
+        "aliases": [
+          "thời gian đào tạo tiến sĩ",
+          "kế hoạch đào tạo nghiên cứu sinh",
+          "tiến độ đào tạo tiến sĩ"
+        ]
+      },
+      {
+        "id": "DOCTORAL_SUPERVISION_TOPIC_PROGRESS",
+        "aliases": [
+          "người hướng dẫn nghiên cứu sinh",
+          "đề tài luận án",
+          "tiến độ nghiên cứu sinh"
+        ]
+      },
+      {
+        "id": "DOCTORAL_ACADEMIC_RESEARCH_REQUIREMENTS",
+        "aliases": [
+          "yêu cầu học thuật tiến sĩ",
+          "công bố nghiên cứu sinh",
+          "học phần tiến sĩ"
+        ]
+      },
+      {
+        "id": "DOCTORAL_EVALUATION_DEFENSE_COMPLETION",
+        "aliases": [
+          "bảo vệ luận án",
+          "điều kiện tốt nghiệp tiến sĩ",
+          "đánh giá luận án",
+          "công nhận học vị"
+        ]
+      },
+      {
+        "id": "MASTERS_TRAINING_DURATION_PLAN",
+        "aliases": [
+          "thời gian đào tạo thạc sĩ",
+          "kế hoạch đào tạo thạc sĩ",
+          "tiến độ đào tạo thạc sĩ"
+        ]
+      },
+      {
+        "id": "MASTERS_COURSEWORK_ASSESSMENT",
+        "aliases": [
+          "học phần thạc sĩ",
+          "đánh giá học viên cao học",
+          "kết quả học tập thạc sĩ"
+        ]
+      },
+      {
+        "id": "MASTERS_THESIS_PROJECT_SUPERVISION",
+        "aliases": [
+          "luận văn thạc sĩ",
+          "đề án thạc sĩ",
+          "hướng dẫn luận văn"
+        ]
+      },
+      {
+        "id": "MASTERS_COMPLETION_GRADUATION",
+        "aliases": [
+          "tốt nghiệp thạc sĩ",
+          "điều kiện hoàn thành thạc sĩ",
+          "bảo vệ luận văn thạc sĩ"
+        ]
+      },
+      {
+        "id": "ELECTRONIC_RECORD_CREATION",
+        "aliases": [
+          "tạo lập văn bản điện tử",
+          "lập văn bản điện tử",
+          "ký số văn bản"
+        ]
+      },
+      {
+        "id": "ELECTRONIC_RECORD_MANAGEMENT",
+        "aliases": [
+          "quản lý hồ sơ điện tử",
+          "lập hồ sơ điện tử",
+          "nộp lưu hồ sơ điện tử"
+        ]
+      },
+      {
+        "id": "ELECTRONIC_RECORD_ARCHIVING_RETENTION",
+        "aliases": [
+          "lưu trữ điện tử",
+          "thời hạn lưu trữ",
+          "bảo quản hồ sơ điện tử",
+          "lưu trữ số"
+        ]
+      },
+      {
+        "id": "ACADEMIC_WARNING_GROUNDS",
+        "aliases": [
+          "cảnh báo học tập",
+          "điều kiện cảnh báo",
+          "ngưỡng cảnh báo học tập"
+        ]
+      },
+      {
+        "id": "ACADEMIC_DISMISSAL_GROUNDS",
+        "aliases": [
+          "buộc thôi học",
+          "điều kiện thôi học",
+          "căn cứ buộc thôi học"
+        ]
+      },
+      {
+        "id": "ACADEMIC_WARNING_DISMISSAL_PROCESS",
+        "aliases": [
+          "quy trình cảnh báo học tập",
+          "quy trình buộc thôi học",
+          "thẩm quyền buộc thôi học"
+        ]
+      }
+    ]
+  },
+  "annotation_principles": [
+    "Only material legal issues required to answer the parent question are annotated.",
+    "No expected document numbers, titles, source tiers, or retrieval hints are encoded.",
+    "Do not add an issue merely because a known regulation contains it.",
+    "Prefer stable issue-level decomposition over procedural micro-steps.",
+    "Paraphrases inherit their parent gold set."
+  ],
+  "cases": [
+    {
+      "case_id": "Q01",
+      "parent_question": "Sinh viên UEB muốn học vượt và học lại để cải thiện điểm thì phải đáp ứng những điều kiện nào?",
+      "material_sub_intents": [
+        "UNDERGRAD_STUDY_AHEAD_CONDITIONS",
+        "UNDERGRAD_RETAKE_IMPROVEMENT_CONDITIONS"
+      ],
+      "reviewer_rationale": "Hai yêu cầu vật chất độc lập: điều kiện học vượt và điều kiện học lại/học cải thiện."
+    },
+    {
+      "case_id": "Q02",
+      "parent_question": "UEB thu thập, sử dụng và chia sẻ dữ liệu người học thì phải tuân thủ những quy định nào?",
+      "material_sub_intents": [
+        "PERSONAL_DATA_COLLECTION_COMPLIANCE",
+        "PERSONAL_DATA_USE_COMPLIANCE",
+        "PERSONAL_DATA_SHARING_COMPLIANCE",
+        "PERSONAL_DATA_SAFEGUARDS_RIGHTS"
+      ],
+      "reviewer_rationale": "Ba hành vi xử lý dữ liệu được nêu trực tiếp; bảo mật/quyền-trách nhiệm là chiều tuân thủ vật chất bắt buộc."
+    },
+    {
+      "case_id": "Q03",
+      "parent_question": "Cuối năm, viên chức UEB được đánh giá và xếp loại theo những tiêu chí và quy trình nào?",
+      "material_sub_intents": [
+        "STAFF_EVALUATION_CRITERIA",
+        "STAFF_EVALUATION_PROCESS"
+      ],
+      "reviewer_rationale": "Câu hỏi có hai chiều chính: tiêu chí/căn cứ và quy trình; thẩm quyền nằm trong quy trình."
+    },
+    {
+      "case_id": "Q04",
+      "parent_question": "UEB xác định và quản lý tài liệu thuộc bí mật nhà nước trong lĩnh vực giáo dục như thế nào?",
+      "material_sub_intents": [
+        "STATE_SECRET_IDENTIFICATION_CLASSIFICATION",
+        "STATE_SECRET_MANAGEMENT_PROTECTION"
+      ],
+      "reviewer_rationale": "Tách xác định/phân loại bí mật khỏi quản lý và bảo vệ."
+    },
+    {
+      "case_id": "Q05",
+      "parent_question": "Một nhiệm vụ nghiên cứu và phát triển công nghệ chiến lược do UEB thực hiện ở cấp ĐHQGHN phải tuân thủ những quy định nào về quản lý và tài chính?",
+      "material_sub_intents": [
+        "STRATEGIC_RND_TASK_APPLICABILITY",
+        "STRATEGIC_RND_TASK_MANAGEMENT",
+        "STRATEGIC_RND_FINANCE"
+      ],
+      "reviewer_rationale": "Phải xác định phạm vi áp dụng trước, sau đó tách quản lý nhiệm vụ và cơ chế tài chính."
+    },
+    {
+      "case_id": "Q06",
+      "parent_question": "UEB mua sắm một tài sản mới rồi đưa vào quản lý và kiểm kê thì thẩm quyền và quy trình thực hiện như thế nào?",
+      "material_sub_intents": [
+        "ASSET_PURCHASE_AUTHORITY",
+        "ASSET_PURCHASE_PROCEDURE",
+        "ASSET_POST_PURCHASE_MANAGEMENT",
+        "ASSET_INVENTORY"
+      ],
+      "reviewer_rationale": "Chuỗi nghiệp vụ bốn phần: thẩm quyền mua, thủ tục mua, quản lý sau mua, kiểm kê."
+    },
+    {
+      "case_id": "Q07",
+      "parent_question": "Nghiên cứu sinh tại UEB phải tuân thủ những quy định nào trong quá trình đào tạo tiến sĩ?",
+      "material_sub_intents": [
+        "DOCTORAL_TRAINING_DURATION_PLAN",
+        "DOCTORAL_SUPERVISION_TOPIC_PROGRESS",
+        "DOCTORAL_ACADEMIC_RESEARCH_REQUIREMENTS",
+        "DOCTORAL_EVALUATION_DEFENSE_COMPLETION"
+      ],
+      "reviewer_rationale": "Câu hỏi vòng đời tiến sĩ: kế hoạch/thời gian; hướng dẫn-đề tài-tiến độ; yêu cầu học thuật-nghiên cứu; đánh giá-bảo vệ-hoàn thành."
+    },
+    {
+      "case_id": "Q08",
+      "parent_question": "Học viên thạc sĩ tại UEB phải tuân thủ những quy định nào trong quá trình đào tạo?",
+      "material_sub_intents": [
+        "MASTERS_TRAINING_DURATION_PLAN",
+        "MASTERS_COURSEWORK_ASSESSMENT",
+        "MASTERS_THESIS_PROJECT_SUPERVISION",
+        "MASTERS_COMPLETION_GRADUATION"
+      ],
+      "reviewer_rationale": "Câu hỏi vòng đời thạc sĩ: kế hoạch/thời gian; học phần-đánh giá; luận văn/đề án-hướng dẫn; hoàn thành-tốt nghiệp."
+    },
+    {
+      "case_id": "Q09",
+      "parent_question": "Hồ sơ và văn bản điện tử tại UEB phải được lập, quản lý và lưu trữ như thế nào?",
+      "material_sub_intents": [
+        "ELECTRONIC_RECORD_CREATION",
+        "ELECTRONIC_RECORD_MANAGEMENT",
+        "ELECTRONIC_RECORD_ARCHIVING_RETENTION"
+      ],
+      "reviewer_rationale": "Ba giai đoạn vật chất: tạo lập; quản lý/lập hồ sơ; lưu trữ-bảo quản."
+    },
+    {
+      "case_id": "Q10",
+      "parent_question": "Sinh viên UEB bị cảnh báo học tập hoặc xem xét buộc thôi học thì căn cứ và quy trình áp dụng như thế nào?",
+      "material_sub_intents": [
+        "ACADEMIC_WARNING_GROUNDS",
+        "ACADEMIC_DISMISSAL_GROUNDS",
+        "ACADEMIC_WARNING_DISMISSAL_PROCESS"
+      ],
+      "reviewer_rationale": "Tách căn cứ cảnh báo, căn cứ buộc thôi học và quy trình/thẩm quyền."
+    }
+  ],
+  "evaluation_only_controls": {
+    "must_not_be_loaded_by_production_runtime": true,
+    "must_not_be_used_to_construct_retrieval_queries": true,
+    "must_not_be_used_to_select_documents": true,
+    "must_not_be_used_to_train_case_specific_runtime_aliases": true
+  },
+  "canonical_sha256": "4280261908FC01C57715D63B5981CF5490D975D77D1CEE9F17F5CC40314AE7D8"
+}

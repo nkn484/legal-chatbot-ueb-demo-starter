@@ -1,0 +1,31 @@
+{
+  "phase_id": "P5",
+  "phase_name": "Authority Family and Relation Investigation",
+  "implementation_status": "COMPLETE",
+  "files_changed": [
+    "src/legal_chatbot/legal_evidence/relations/__init__.py",
+    "src/legal_chatbot/legal_evidence/relations/models.py",
+    "src/legal_chatbot/legal_evidence/relations/service.py",
+    "tests/unit/test_legal_relation_investigation.py",
+    "docs/review/phases/P5-authority-family-relation-investigation.md",
+    "docs/review/phases/P5-authority-family-relation-investigation.json"
+  ],
+  "tests_run": [
+    {"scope": "P5 relation/family/no-registry tests", "result": "3 passed"},
+    {"scope": "full suite with --import-mode=importlib", "result": "902 passed, 39 skipped, 1 non-failing OpenPyXL warning"},
+    {"scope": "ruff check src tests", "result": "passed"},
+    {"scope": "compileall src/legal_chatbot", "result": "passed"}
+  ],
+  "tests_passed": {"p5_targeted": 3, "full_suite": 902},
+  "tests_failed": [],
+  "gate_status": "PASS",
+  "known_limitations": [
+    "P5 is default-off and no live provider-quality assertion is made.",
+    "A future relation-evidence reader must inspect explicit source text and emit only marker plus locator.",
+    "P5 makes no current-effect, applicability, citation, answer, or legal-quality claim."
+  ],
+  "rollback_status": "NOT_APPLIED; P5 is additive, default-off, and has no migration.",
+  "decision": "KEEP",
+  "next_phase_allowed": true,
+  "engineering_legal_quality_note": "P5 engineering checks do not establish the P12 legal-quality release target."
+}

@@ -73,15 +73,29 @@ class ShineShopAdapter:
         started_at = time.perf_counter()
         request_id: str | None = None
         try:
+            request_body = {
+                "model": self._settings.model,
+                "input": request.input_text,
+                "max_output_tokens": request.max_output_tokens,
+                "stream": False,
+            }
+            if request.structured_output is not None:
+                request_body["text"] = {
+                    "format": {
+                        "type": "json_schema",
+                        "name": request.structured_output.name,
+                        "schema": request.structured_output.json_schema,
+                        "strict": request.structured_output.strict,
+                    }
+                }
+                if request.verbosity is not None:
+                    request_body["text"]["verbosity"] = request.verbosity.value
+            if request.reasoning_effort is not None:
+                request_body["reasoning"] = {"effort": request.reasoning_effort.value}
             async with self._client.stream(
                 "POST",
                 "responses",
-                json={
-                    "model": self._settings.model,
-                    "input": request.input_text,
-                    "max_output_tokens": request.max_output_tokens,
-                    "stream": False,
-                },
+                json=request_body,
             ) as response:
                 request_id = self._safe_request_id(response)
                 if response.status_code != 200:
@@ -90,11 +104,11 @@ class ShineShopAdapter:
                         and await self._has_stable_model_not_found_code(response)
                     )
                     raise self._status_error(response, request_id, model_not_found)
-                text = self._extract_output_text(
-                    await self._read_json_bounded(response, request_id),
-                    request_id,
-                    response.status_code,
-                )
+                payload = await self._read_json_bounded(response, request_id)
+                text = self._extract_output_text(payload, request_id, response.status_code)
+                output_tokens = self._extract_output_tokens(payload)
+                reasoning_tokens = self._extract_reasoning_tokens(payload)
+                finish_reason = self._extract_finish_reason(payload)
         except ProviderError as error:
             self._log("generate", started_at, "failure", request_id, 0, error.retryable)
             raise
@@ -116,6 +130,14 @@ class ShineShopAdapter:
             model=self._settings.model,
             request_id=request_id,
             duration_ms=duration_ms,
+            output_tokens=output_tokens,
+            reasoning_tokens=reasoning_tokens,
+            visible_output_tokens=(
+                None
+                if output_tokens is None or reasoning_tokens is None
+                else max(0, output_tokens - reasoning_tokens)
+            ),
+            finish_reason=finish_reason,
         )
         self._log("generate", started_at, "success", request_id, 0, False)
         return result
@@ -256,6 +278,39 @@ class ShineShopAdapter:
                 request_id=request_id,
             )
         return text
+
+    @staticmethod
+    def _extract_output_tokens(payload: object) -> int | None:
+        """Read optional provider usage without exposing a provider-specific response object."""
+
+        if not isinstance(payload, dict) or not isinstance(payload.get("usage"), dict):
+            return None
+        output_tokens = payload["usage"].get("output_tokens")
+        return output_tokens if isinstance(output_tokens, int) and output_tokens >= 0 else None
+
+    @staticmethod
+    def _extract_reasoning_tokens(payload: object) -> int | None:
+        if not isinstance(payload, dict) or not isinstance(payload.get("usage"), dict):
+            return None
+        details = payload["usage"].get("output_tokens_details")
+        if not isinstance(details, dict):
+            return None
+        reasoning_tokens = details.get("reasoning_tokens")
+        return (
+            reasoning_tokens
+            if isinstance(reasoning_tokens, int) and reasoning_tokens >= 0
+            else None
+        )
+
+    @staticmethod
+    def _extract_finish_reason(payload: object) -> str | None:
+        if not isinstance(payload, dict):
+            return None
+        incomplete = payload.get("incomplete_details")
+        if isinstance(incomplete, dict) and isinstance(incomplete.get("reason"), str):
+            return incomplete["reason"][:128]
+        status = payload.get("status")
+        return status[:128] if isinstance(status, str) else None
 
     def _status_error(
         self, response: httpx.Response, request_id: str | None, model_not_found: bool

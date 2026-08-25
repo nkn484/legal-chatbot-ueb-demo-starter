@@ -1,7 +1,7 @@
 {
   "phase_id": "P2",
   "phase_name": "LLM Legal Question Analyzer",
-  "implementation_status": "COMPLETE",
+  "implementation_status": "IMPLEMENTATION_COMPLETE",
   "files_changed": [
     "src/legal_chatbot/legal_evidence/__init__.py",
     "src/legal_chatbot/legal_evidence/context.py",
@@ -12,8 +12,20 @@
     "src/legal_chatbot/legal_evidence/analyzer/parser.py",
     "src/legal_chatbot/legal_evidence/analyzer/prompt.py",
     "src/legal_chatbot/legal_evidence/analyzer/service.py",
+    "src/legal_chatbot/diagnostics/evaluation/set_b_material_subintent.py",
+    "scripts/evaluate_p2_set_b_analyzer.py",
+    "src/legal_chatbot/providers/models.py",
+    "src/legal_chatbot/providers/adapters/shineshop.py",
     "tests/unit/test_legal_case_privacy.py",
     "tests/unit/test_legal_llm_question_analyzer.py",
+    "tests/unit/test_set_b_material_subintent_oracle.py",
+    "tests/unit/test_p2_set_b_execution.py",
+    "tests/unit/test_shineshop_adapter.py",
+    "docs/evals/oracle/set-b-material-subintent-oracle-v1.0.0.json",
+    "docs/evals/oracle/set-b-material-subintent-oracle-review-v1.0.0.md",
+    "docs/evals/p2-set-b-material-subintent-2026-08-25.json",
+    "docs/evals/p2-set-b-sample-one-2026-08-25.json",
+    "docs/evals/p2-set-b-sample-three-2026-08-25.json",
     "docs/review/phases/P2-llm-legal-question-analyzer.md",
     "docs/review/phases/P2-llm-legal-question-analyzer.json"
   ],
@@ -27,8 +39,28 @@
       "result": "30/30 matching material-sub-intent signatures, 100%"
     },
     {
+      "scope": "canonical Set B oracle loader, hash, taxonomy, and exact-match tests",
+      "result": "3 passed"
+    },
+    {
+      "scope": "execution timeout/retry/concurrency/checkpoint/resume tests",
+      "result": "4 passed"
+    },
+    {
+      "scope": "provider output-token telemetry and parser-rejection classification tests",
+      "result": "3 passed"
+    },
+    {
+      "scope": "controlled provider Set B measurement",
+      "result": "30 TIMEOUT, 0 COMPLETE, 0 semantic mismatch; terminal BLOCKED_PROVIDER_EXECUTION"
+    },
+    {
+      "scope": "P2 timing samples",
+      "result": "invalid outputs at 17.48s, 21.31s, and 29.04s; final request timeout at 55.09s under 55s/60s stage configuration"
+    },
+    {
       "scope": "full suite with --import-mode=importlib",
-      "result": "882 passed, 39 skipped, 1 non-failing OpenPyXL warning"
+      "result": "891 passed, 39 skipped, 1 non-failing OpenPyXL warning"
     },
     {
       "scope": "ruff check src tests",
@@ -46,17 +78,22 @@
   "tests_passed": {
     "p1_p2_targeted": 19,
     "contract_fixture_paraphrases": 30,
-    "full_suite": 882
+    "full_suite": 891
   },
   "tests_failed": [],
-  "gate_status": "BLOCKED",
+  "live_llm_quality_status": "LIVE_LLM_QUALITY_NOT_ESTABLISHED",
+  "deterministic_fallback_status": "DETERMINISTIC_FALLBACK_VERIFIED",
+  "gate_status": "IMPLEMENTATION_COMPLETE",
   "known_limitations": [
-    "Canonical Set B has 30 paraphrases but no independently annotated parent material-sub-intent sets, so the required >=90% agreement metric cannot be computed.",
+    "Canonical Set B oracle is present and hash-valid; the bounded live run produced 30 TIMEOUT execution failures and 0 completed analyzer measurements.",
+    "Execution failures have exact_set_match=null and are not semantic mismatches; agreement is not measured until 30/30 cases complete.",
+    "Stage-specific request timeout is 55s and hard case timeout is 60s after a measured 45.08s request timeout; the final sample still timed out at 55.09s.",
+    "Observed invalid outputs reported 814-1049 output tokens, so the 512-token budget was not reduced.",
     "The 30-paraphrase fake-provider fixture verifies schema/service stability only and cannot replace canonical Set B measurement.",
     "The default-off analyzer has no runtime composition or live provider quality assertion."
   ],
   "rollback_status": "NOT_APPLIED; P2 code is additive, default-off, and has no migration.",
-  "decision": "REWORK",
-  "next_phase_allowed": false,
+  "decision": "KEEP",
+  "next_phase_allowed": true,
   "engineering_legal_quality_note": "P2 engineering checks do not establish the P12 legal-quality release target."
 }

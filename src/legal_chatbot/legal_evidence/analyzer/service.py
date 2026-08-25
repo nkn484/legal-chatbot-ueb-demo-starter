@@ -15,13 +15,13 @@ from legal_chatbot.legal_evidence.models import (
     SubIntent,
 )
 from legal_chatbot.legal_evidence.transitions import advance_case
-from legal_chatbot.providers.models import GenerationRequest
+from legal_chatbot.providers.models import GenerationRequest, OutputVerbosity, ReasoningEffort
 from legal_chatbot.providers.port import LLMProviderPort
 from legal_chatbot.retrieval.quality_repair.analyzer import AnalyzerUnit, LegalQuestionAnalyzer
 
 from .models import LegalQuestionAnalyzerSettings
 from .parser import StrictLegalQuestionAnalysisParser
-from .prompt import build_legal_question_analyzer_prompt
+from .prompt import build_legal_question_analyzer_prompt, legal_question_analysis_output_format
 
 
 class LLMLegalQuestionAnalyzer:
@@ -54,6 +54,9 @@ class LLMLegalQuestionAnalyzer:
                     GenerationRequest(
                         input_text=prompt,
                         max_output_tokens=self._settings.max_output_tokens,
+                        structured_output=legal_question_analysis_output_format(),
+                        reasoning_effort=ReasoningEffort.MINIMAL,
+                        verbosity=OutputVerbosity.LOW,
                     )
                 ),
                 timeout=self._settings.timeout_seconds,

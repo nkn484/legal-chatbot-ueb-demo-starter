@@ -1,0 +1,51 @@
+{
+  "report_schema_version": "p2-set-b-material-subintent-execution-v3",
+  "status": "BLOCKED_PROVIDER_EXECUTION",
+  "manifest": {
+    "oracle_canonical_sha256": "4280261908FC01C57715D63B5981CF5490D975D77D1CEE9F17F5CC40314AE7D8",
+    "evaluation_set_sha256": "BCA94A3D6C6114F6E44C8A21A4A0B8B20D72E0B632CF2D1560679AA4D928CF73",
+    "provider": "shineshop",
+    "model": "gpt-5.6-sol",
+    "analyzer_version": "p2-legal-question-analyzer-v1",
+    "prompt_version": "p2-legal-question-analyzer-prompt-v1",
+    "normalizer_version": "set-b-material-subintent-normalizer-v1",
+    "execution": {
+      "concurrency": 1,
+      "request_timeout_seconds": 55.0,
+      "hard_case_timeout_seconds": 60.0,
+      "retry_limit": 0,
+      "retry_backoff_seconds": 0.5,
+      "output_token_budget": 512
+    },
+    "selected_case_ids": [
+      "B-Q01-01"
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "B-Q01-01",
+      "parent_case_id": "Q01",
+      "status": "TIMEOUT",
+      "attempts": 1,
+      "generation_duration_ms": 55090.68,
+      "output_tokens": null,
+      "invalid_output_reason": null,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "UNDERGRAD_RETAKE_IMPROVEMENT_CONDITIONS",
+        "UNDERGRAD_STUDY_AHEAD_CONDITIONS"
+      ],
+      "exact_set_match": null
+    }
+  ],
+  "generation_metrics": {
+    "completed_count": 1,
+    "duration_ms": {
+      "p50": 55090.68,
+      "p95": 55090.68,
+      "max": 55090.68
+    },
+    "output_tokens": null
+  },
+  "measurement": null
+}

@@ -1,6 +1,7 @@
 """Provider-neutral immutable request, result, and health contracts."""
 
 from enum import StrEnum
+from typing import Any
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
@@ -29,6 +30,22 @@ class _FrozenProviderModel(BaseModel):
     model_config = ConfigDict(frozen=True)
 
 
+class ReasoningEffort(StrEnum):
+    MINIMAL = "minimal"
+
+
+class OutputVerbosity(StrEnum):
+    LOW = "low"
+
+
+class StructuredOutputFormat(_FrozenProviderModel):
+    """Provider-neutral JSON Schema request configuration."""
+
+    name: str = Field(min_length=1, max_length=128, pattern=r"^[A-Za-z][A-Za-z0-9_-]*$")
+    json_schema: dict[str, Any]
+    strict: bool = True
+
+
 def sanitize_request_id(value: str | None) -> str | None:
     """Return only compact printable-ASCII request IDs safe for logs and errors."""
     if value is None:
@@ -49,6 +66,9 @@ class GenerationRequest(_FrozenProviderModel):
 
     input_text: str = Field(min_length=1, max_length=262_144)
     max_output_tokens: int = Field(ge=1, le=4_096)
+    structured_output: StructuredOutputFormat | None = None
+    reasoning_effort: ReasoningEffort | None = None
+    verbosity: OutputVerbosity | None = None
 
 
 class GenerationResult(_FrozenProviderModel):
@@ -59,6 +79,10 @@ class GenerationResult(_FrozenProviderModel):
     model: str = Field(min_length=1, max_length=128)
     request_id: str | None = Field(default=None, max_length=128)
     duration_ms: float = Field(ge=0)
+    output_tokens: int | None = Field(default=None, ge=0)
+    reasoning_tokens: int | None = Field(default=None, ge=0)
+    visible_output_tokens: int | None = Field(default=None, ge=0)
+    finish_reason: str | None = Field(default=None, max_length=128)
 
     _validate_request_id = field_validator("request_id")(_strict_optional_request_id)
 
