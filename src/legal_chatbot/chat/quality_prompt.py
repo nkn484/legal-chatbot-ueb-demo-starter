@@ -32,6 +32,7 @@ _POLICY: Final = "\n".join(
         "State each supplied limitation that materially affects the answer.",
         "Do not infer legal effect, repeal, replacement, currentness, or applicability "
         "beyond supplied evidence.",
+        "State that current applicability and legal effect were not independently verified.",
         "Do not include citations, URLs, UUIDs, source metadata, or evidence tokens.",
         'Output exactly one JSON object with exactly one string key: "answer".',
     )

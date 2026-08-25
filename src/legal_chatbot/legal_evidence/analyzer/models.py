@@ -33,9 +33,10 @@ class LegalQuestionAnalyzerSettings(_FrozenAnalyzerModel):
     """Default-off settings with no environment or runtime composition wiring."""
 
     enabled: bool = False
+    deterministic_first: bool = True
     max_output_tokens: int = Field(default=512, ge=64, le=1_024)
     prompt_max_chars: int = Field(default=8_000, ge=512, le=16_000)
-    timeout_seconds: float = Field(default=5.0, gt=0, le=30)
+    timeout_seconds: float = Field(default=3.0, gt=0, le=30)
 
 
 def _proposal_text(value: str, *, maximum: int = _MAX_VALUE_CHARS) -> str:

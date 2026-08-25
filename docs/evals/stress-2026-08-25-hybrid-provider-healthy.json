@@ -1,0 +1,39 @@
+{
+  "run_date": "2026-08-25",
+  "set": "A",
+  "configuration": {
+    "semantic_mode": "hybrid",
+    "planner_enabled": false,
+    "reranker_enabled": false,
+    "quality_strategy": "disabled"
+  },
+  "answer_production": {
+    "cases": 10,
+    "answer_grounded": 10,
+    "provider_calls": 10,
+    "provider_successes": 10,
+    "provider_failures": 0,
+    "provider_output_validation_failures": 0,
+    "citations_per_case": 3
+  },
+  "performance": {
+    "route_p50_ms": 13419.0,
+    "route_p95_ms": 26033.26,
+    "api_network_errors": 0
+  },
+  "retrieval": {
+    "mean_source_coverage_percent": 58.33,
+    "cases_with_final_expected_document_hit": 5,
+    "not_in_catalog_count": 2,
+    "quarantined_count": 1,
+    "final_evidence_budget": 3
+  },
+  "legal_quality": {
+    "measurement_state": "NOT_MEASURED",
+    "baseline_average": 5.49,
+    "baseline_pass_count": 4,
+    "target_average": 8.5,
+    "target_pass_count": 9,
+    "decision": "NOT_ESTABLISHED_PENDING_INDEPENDENT_REVIEW"
+  }
+}

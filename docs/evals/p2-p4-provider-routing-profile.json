@@ -1,0 +1,103 @@
+{
+  "schema_version": "P2-P4-PROVIDER-ROUTING-1",
+  "routing": {
+    "p2_deterministic_first": true,
+    "p2_model": null,
+    "p2_reasoning_profile": "minimal",
+    "p2_timeout_seconds": 3.0,
+    "p4_model": "gpt-5.6-sol",
+    "p4_reasoning_profile": "minimal",
+    "p4_timeout_seconds": 15.0,
+    "p4_batch_size": 8,
+    "p4_batch_concurrency": 1
+  },
+  "p2": {
+    "deterministic": {
+      "mode": "DETERMINISTIC",
+      "duration_ms": 0.9,
+      "outcome": "FALLBACK_DISABLED",
+      "fallback_used": true,
+      "sub_intent_count": 4
+    },
+    "live": {
+      "mode": "DEFERRED",
+      "reason": "DETERMINISTIC_FIRST_OR_NO_STAGE_MODEL"
+    }
+  },
+  "p4": {
+    "mode": "OPTIONAL_LIVE",
+    "probes": [
+      {
+        "probe": "ONE_CANDIDATE_ONE_SUBINTENT",
+        "candidate_count": 1,
+        "sub_intent_count": 1,
+        "batch_size": 1,
+        "duration_ms": 3334.5,
+        "outcome": "LLM_PROPOSALS",
+        "structured_valid": true,
+        "completed_assessments": 1,
+        "fallback_assessments": 0,
+        "events": [
+          {
+            "duration_ms": 3334.0,
+            "provider_response_received": true,
+            "output_tokens": 50,
+            "reasoning_tokens": 13,
+            "visible_output_tokens": 37,
+            "finish_reason": "completed",
+            "failure_class": null
+          }
+        ]
+      },
+      {
+        "probe": "THREE_CANDIDATES",
+        "candidate_count": 3,
+        "sub_intent_count": 4,
+        "batch_size": 3,
+        "duration_ms": 15009.2,
+        "outcome": "PROVIDER_TIMEOUT",
+        "structured_valid": false,
+        "completed_assessments": 0,
+        "fallback_assessments": 12,
+        "events": [
+          {
+            "duration_ms": 15007.7,
+            "provider_response_received": false,
+            "output_tokens": null,
+            "reasoning_tokens": null,
+            "visible_output_tokens": null,
+            "finish_reason": null,
+            "failure_class": "PROVIDER_TIMEOUT"
+          }
+        ]
+      },
+      {
+        "probe": "REPRESENTATIVE_BATCH",
+        "candidate_count": 8,
+        "sub_intent_count": 4,
+        "batch_size": 8,
+        "duration_ms": 15013.6,
+        "outcome": "PROVIDER_TIMEOUT",
+        "structured_valid": false,
+        "completed_assessments": 0,
+        "fallback_assessments": 32,
+        "events": [
+          {
+            "duration_ms": 15011.3,
+            "provider_response_received": false,
+            "output_tokens": null,
+            "reasoning_tokens": null,
+            "visible_output_tokens": null,
+            "finish_reason": null,
+            "failure_class": "PROVIDER_TIMEOUT"
+          }
+        ]
+      }
+    ]
+  },
+  "recommended_production_profile": {
+    "p2": "DETERMINISTIC_FIRST",
+    "p4": "DETERMINISTIC_CLASSIFIER_FALLBACK_FOR_MULTI_CANDIDATE_MATRIX"
+  },
+  "decision": "ROUTING_PASS"
+}

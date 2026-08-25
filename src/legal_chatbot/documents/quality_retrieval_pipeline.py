@@ -148,7 +148,14 @@ def _best_same_lane(candidates: Iterable[CandidateEvidence]) -> tuple[CandidateE
             ),
         )
         unit_ids = tuple(sorted({unit_id for candidate in group for unit_id in candidate.unit_ids}))
-        merged.append(representative.model_copy(update={"unit_ids": unit_ids}))
+        # Supporting semantic score is query-vector-specific diagnostic data. Once
+        # one chunk is shared by several unit queries it is no longer comparable
+        # across lanes, and must not make strict cross-lane identity merging fail.
+        merged.append(
+            representative.model_copy(
+                update={"unit_ids": unit_ids, "supporting_semantic_score": None}
+            )
+        )
     return tuple(merged)
 
 

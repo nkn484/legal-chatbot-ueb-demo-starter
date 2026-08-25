@@ -1,0 +1,2921 @@
+{
+  "schema_version": "LEGAL-QUALITY-REVIEW-INPUT-1",
+  "runtime_does_not_self_score": true,
+  "rubric": {
+    "correctness_max": 4.0,
+    "authority_applicability_max": 2.5,
+    "completeness_max": 2.5,
+    "traceability_max": 1.0,
+    "total_max": 10.0,
+    "pass_threshold": 7.0,
+    "release_target_average": 8.5,
+    "release_target_pass_count": 9
+  },
+  "cases": [
+    {
+      "case_id": "Q01",
+      "question": "Sinh viên UEB cần đáp ứng điều kiện gì để đăng ký học vượt hoặc học lại nhằm cải thiện điểm?",
+      "terminal_status": "ANSWER_WITH_LIMITATION",
+      "material_sub_intents": [
+        {
+          "code": "GROUNDS_OR_CONDITIONS",
+          "description": "grounds or conditions",
+          "actor_scope": "SINH_VIEN",
+          "object_scope": null
+        }
+      ],
+      "authority_candidates": [
+        {
+          "document_id": "726c57a1-c9af-4fc2-a793-d38d4c89cc7e",
+          "document_version_id": "0b9d5dc6-7b8a-4903-9420-a8c4543ae9f6",
+          "provenance_record_id": "f3d2977a-7bbc-481a-89bb-3234303d9d01",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "dd1f501c-d6c1-432a-b5ee-2e501302fa0e",
+          "document_version_id": "ccf5fff5-55f1-4a8b-b5b4-9e0e7b17b4ba",
+          "provenance_record_id": "6bd1dc50-bebd-4a9d-8e8b-d2ada89db3c1",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ce6e5f56-3cc7-476f-bc55-df3b5b7ebfc7",
+          "document_version_id": "149d71a5-5905-4201-b3b2-096719bd00ac",
+          "provenance_record_id": "7366d6d8-8429-4aa9-ba1f-8dc1335d5e35",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "09948f3b-4611-49b4-b903-f3d3e1626051",
+          "document_version_id": "1448485d-e34c-4225-a675-b0b452963ac7",
+          "provenance_record_id": "54bda2c6-2abc-4755-a513-e7bfe6509650",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "6c4bec65-1762-4af8-b94c-45ca1eac0554",
+          "document_version_id": "f28c6560-056f-447f-a724-91be3d527ba7",
+          "provenance_record_id": "1b56551b-d281-4cc1-b1a1-8b569f1c8327",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "1433fc8c-dbcc-4619-a9f0-47bce516284a",
+          "document_version_id": "11f830f2-eb7a-4cf3-a6ba-153acee68c48",
+          "provenance_record_id": "3e646fd3-14d8-48de-bec6-518946865e00",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "fb4ceebe-c472-4b3f-a79a-16fe4c819942",
+          "document_version_id": "4ccf189f-84f0-4d7b-b621-1ffb1053fec8",
+          "provenance_record_id": "ce8ecece-45da-4b95-a94b-d12217181e6e",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "85f45ec6-c7d4-47af-8299-cfc117a4bcbe",
+          "document_version_id": "2c9e4cf3-63cc-4072-ad4a-807bb9e4607f",
+          "provenance_record_id": "add958a0-5157-42bb-81d9-8cb71037a2ee",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "8882b3a6-f5f3-4c4a-afd5-a546f6897d5c",
+          "document_version_id": "51873af9-30d0-4f4e-8d54-4e56876086c7",
+          "provenance_record_id": "34a29829-13c8-499b-b374-ffdc7117fdc4",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "a74f4e2e-8107-4c03-bed1-4388be7173c5",
+          "document_version_id": "38955632-a97a-4554-8723-36896ab38760",
+          "provenance_record_id": "ade6c6d1-1ac6-47e4-a329-f5a6a1aca340",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "f9a589b2-2194-438a-9474-83711f8b1b8c",
+          "document_version_id": "667187fe-3f39-4c43-9746-00521cd051eb",
+          "provenance_record_id": "e953a40a-a85a-4212-81e3-3982aa7aa378",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "4867ea55-b24c-4187-8fcd-84ef58ddfe3a",
+          "document_version_id": "1b52f520-31aa-40bc-8e5d-114ca2d5bfe0",
+          "provenance_record_id": "9771d87c-c7b0-4a17-8146-d045ea753b7a",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "c7e02196-1cf0-4b36-8c9c-01c84e781ebd",
+          "document_version_id": "183163cc-bc0a-4197-95a3-d822a6d6c2bf",
+          "provenance_record_id": "af945610-0774-40dd-91e9-0a1be7bd09cb",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "4950357d-91e7-4ba3-ac55-c1d418eecf71",
+          "document_version_id": "be782223-9fda-42f1-8864-2d88e8bb7139",
+          "provenance_record_id": "0629a8dc-47c6-4e24-8f9c-9dd7833e4314",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "2a3ed1f5-8c4f-408d-8276-872534883911",
+          "document_version_id": "fd60067a-032a-4a08-ac3f-136f0880a99b",
+          "provenance_record_id": "07158cce-ed8f-4665-ae0e-29a08eeddced",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ab4f3cbb-c714-4b81-b5d7-b70d617ded6c",
+          "document_version_id": "e4c43ebe-1900-41e3-9a44-45d1b1149599",
+          "provenance_record_id": "0a26fbde-97e2-4f8c-b9aa-39f7db4d72ad",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "324d1354-856a-4132-9a23-718f2f3b8f58",
+          "document_version_id": "c0aa5fae-9bb9-4269-bb6d-5d32fd2100df",
+          "provenance_record_id": "199796e5-b45b-4f6e-bb22-e37d5a431585",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "209adf90-3b08-4087-8e74-64e6608ae52e",
+          "document_version_id": "cab93407-777b-4c14-be44-4211a0365c4a",
+          "provenance_record_id": "17385fda-5c8d-42b9-acbb-27465c94a54a",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "1e9d4b82-6a5c-42f2-af92-ea962126a531",
+          "document_version_id": "9619dcb2-fbfc-4820-8dab-b610aecb8aa7",
+          "provenance_record_id": "dd08824d-21e7-4a6f-939b-474e61160db8",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "092398a0-2906-4a5a-8181-9ae72bc8299b",
+          "document_version_id": "61ec745c-317f-45b9-ab64-67b0de04b96c",
+          "provenance_record_id": "73252373-482b-4eff-a448-8d09fdf29b6c",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "d3f1ac8a-1883-45dc-8f35-6127ad183668",
+          "document_version_id": "934ca6b2-7564-4e2f-92a4-9bcf7d79a880",
+          "provenance_record_id": "5a427ead-c749-4ec5-ae43-117fceb2694b",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "521b4aed-166b-4ef2-b0e2-0ecbbe2268d8",
+          "document_version_id": "7e2996cc-1d07-4fdd-9d6c-933da9dd36df",
+          "provenance_record_id": "0dfa9f81-0ab5-4b9a-9b8c-e17e745ca86e",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "9ba8d6e2-56ad-4432-8dad-62b854a013e9",
+          "document_version_id": "8845aed2-0715-4c93-a119-92a963fa5c6d",
+          "provenance_record_id": "c5b0d160-03d0-495d-a051-d96f4f944f12",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        }
+      ],
+      "final_pinpoint_evidence": [],
+      "coverage_matrix": [
+        {
+          "sub_intent_id": "b1a2ff39-f33f-40d1-aa18-10270bc3ea85",
+          "state": "UNSUPPORTED",
+          "governing_authority_present": false,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        }
+      ],
+      "final_p9_evidence": [],
+      "p10_final_answer": "Evidence-bound diagnostic draft Issue 1: coverage=UNSUPPORTED; selected evidence locators=none. Limitations: this draft reports only retrieved evidence and retained coverage gaps.",
+      "claim_to_evidence_map": [
+        {
+          "claim_index": 0,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            0
+          ],
+          "evidence_indices": []
+        }
+      ],
+      "independent_reviewer_score": null,
+      "independent_reviewer_decision": null
+    },
+    {
+      "case_id": "Q02",
+      "question": "Khi thu thập, dùng hoặc chia sẻ dữ liệu người học, UEB phải tuân theo quy định nào?",
+      "terminal_status": "ANSWER",
+      "material_sub_intents": [
+        {
+          "code": "GENERAL_LEGAL_ISSUE",
+          "description": "general legal issue",
+          "actor_scope": null,
+          "object_scope": null
+        }
+      ],
+      "authority_candidates": [
+        {
+          "document_id": "139eff13-b434-4ab2-a789-932adfe5f416",
+          "document_version_id": "428f1819-54ef-48c9-8a90-117d0b4c6e48",
+          "provenance_record_id": "8a963403-0b1b-45bd-b97a-b71ef9d18f08",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "3ffbfa15-9ba8-4c1f-9d18-b9abe1784b93",
+          "document_version_id": "f372b725-992a-4401-a48f-41c6cbbbb471",
+          "provenance_record_id": "444bbb9a-a220-4022-ba4b-1210fe2e182b",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "c7e13ce1-c9d5-44ec-af88-25ee9c27d447",
+          "document_version_id": "576cebe3-9bad-42ac-b284-afa458c46ca6",
+          "provenance_record_id": "5a817006-70db-427a-a347-e94d041d4734",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "d3f1ac8a-1883-45dc-8f35-6127ad183668",
+          "document_version_id": "934ca6b2-7564-4e2f-92a4-9bcf7d79a880",
+          "provenance_record_id": "5a427ead-c749-4ec5-ae43-117fceb2694b",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "21f6e129-9ffd-4f5f-99bc-626bf1a89dcf",
+          "document_version_id": "d9adfab5-ef10-413b-91a4-925186b77b24",
+          "provenance_record_id": "d60d4fd6-2f78-4cd9-97c5-0a6ceda22b8c",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "29314177-3a02-44ff-8ec0-cef93630dcb4",
+          "document_version_id": "952787a6-582a-4007-a731-6a07ec9e520f",
+          "provenance_record_id": "d5ab9f8a-092b-49bb-8aa9-7b52bf816a0f",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "768d82b8-9a87-40b3-89fb-0e48da30b646",
+          "document_version_id": "33b4b3da-09f2-4aec-985c-9761602da143",
+          "provenance_record_id": "bbb33b14-f74c-4738-831e-70c019fa697b",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "09948f3b-4611-49b4-b903-f3d3e1626051",
+          "document_version_id": "1448485d-e34c-4225-a675-b0b452963ac7",
+          "provenance_record_id": "54bda2c6-2abc-4755-a513-e7bfe6509650",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "38d68eb0-7cb4-4e00-bd3d-32c6f67bd031",
+          "document_version_id": "ffa579f1-ad6e-4bfa-89e5-88653f683695",
+          "provenance_record_id": "2bfc159c-161c-42b9-b7eb-de75a55a1930",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "85f45ec6-c7d4-47af-8299-cfc117a4bcbe",
+          "document_version_id": "2c9e4cf3-63cc-4072-ad4a-807bb9e4607f",
+          "provenance_record_id": "add958a0-5157-42bb-81d9-8cb71037a2ee",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "fd689961-d056-4539-b631-a3e41ca6357e",
+          "document_version_id": "2e5cea8b-2aae-45d5-bfda-5d9ad9d8e681",
+          "provenance_record_id": "a8555c8a-c619-4b26-a122-57a12a0d7989",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "deace765-1f91-4e8f-9eba-ef4b455302f7",
+          "document_version_id": "3c99599a-a7a1-40cc-a23c-f8d8609d1435",
+          "provenance_record_id": "a5a70e91-26a4-4387-9d0f-c8f024f5bc21",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ce6e5f56-3cc7-476f-bc55-df3b5b7ebfc7",
+          "document_version_id": "149d71a5-5905-4201-b3b2-096719bd00ac",
+          "provenance_record_id": "7366d6d8-8429-4aa9-ba1f-8dc1335d5e35",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "8e991765-2caa-4f75-b81d-13264a83e458",
+          "document_version_id": "7b4ee493-6a6d-4ba7-b1f1-4869a13ed49c",
+          "provenance_record_id": "b48b5a9b-5baa-4681-bc1a-ba4461c94ca5",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "08009821-5612-4a62-b31a-ba88dbcb56d1",
+          "document_version_id": "77dc7bc1-d016-4491-995c-d9faed8f0256",
+          "provenance_record_id": "d5987b71-0997-4c98-adf5-7c961d634ada",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        }
+      ],
+      "final_pinpoint_evidence": [
+        {
+          "document_id": "21f6e129-9ffd-4f5f-99bc-626bf1a89dcf",
+          "document_version_id": "d9adfab5-ef10-413b-91a4-925186b77b24",
+          "provenance_record_id": "d60d4fd6-2f78-4cd9-97c5-0a6ceda22b8c",
+          "source_id": "UEB",
+          "chunk_id": "6e47cca7-7692-4e8a-b37e-12549987fdc9",
+          "locator": "chunk:7",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "c831c478-fadb-4f4d-99b4-c40106d93194"
+          ],
+          "content_excerpt": "GƯỜI HOC Điều 11. Trách nhiệm bảo dam an toàn và bảo mật hồ so, dữ liệu người học àN 5 @ 1. Các đơn vị chức năng lưu giữ, quản lý hô sơ, dit liệu người học, chịu trách nhiệm về về sự an toàn và bảo mật các hồ sơ, đữ liệu người học theo chức năng được giao. : Hy e 2. Các đơn vị thuộc Trường được cung cấp, khai thác dữ liệu người học phục vụ TẾ công việc của Trường, phải chịu trách nhiệm bảo đảm phù hợp các quy định của pháp _< luật về bí mật, quyền riêng tư các thông tin cá nhân người học. A 3. Don vị, cá nhân được giao quan lý, sử dụng hồ sơ, dữ liệu người học có trách nhiệm bảo mật thông tin, dữ liệu cá nhân của người học. Trường hợp sửa đổi, cung cấp, sử dụng hồ sơ, dữ liệu người học không đúng quy định sẽ chịu trách nhiệm trước pháp luật và Quy định của Trường. Điều 12. Việc cung cấp, sử dụng hồ sơ, dữ liệu người học 1. Các đơn vị chức năng quản lý các hồ so, tài liệu, dữ liệu về người học và người học đã tốt nghiệp chỉ được cung cấp thông tin cho các đơn vị liên quan của Trường trong việc phối thực hiện nhiệm vụ hoặc khi được cấp có thâm quyên yêu câu, cho phép. 2. Các trường hợp khác, chỉ được cung cấp, sử dụng khi có sự đồng ý của người học hoặc theo yêu cầu của cơ quan Nhà n"
+        },
+        {
+          "document_id": "29314177-3a02-44ff-8ec0-cef93630dcb4",
+          "document_version_id": "952787a6-582a-4007-a731-6a07ec9e520f",
+          "provenance_record_id": "d5ab9f8a-092b-49bb-8aa9-7b52bf816a0f",
+          "source_id": "VNU",
+          "chunk_id": "ffbcfb14-ec9a-48ff-85c0-05612d955d32",
+          "locator": "chunk:10",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "c831c478-fadb-4f4d-99b4-c40106d93194"
+          ],
+          "content_excerpt": "h, không đầy đủ, không đúng thẩm quyền hoặc đã hết thời hiệu. 3. Xây dựng, sử dụng các hệ thống thông tin, cơ sở dữ liệu cản trở việc thống nhất và liên thông dữ liệu, vi phạm nguyên tắc nhập một lần.\n\n4 4. Chia sẻ thông tin đăng nhập, mật khẩu hoặc các phương thức xác thực cho tổ chức, cá nhân không đúng thẩm quyền. 5. Cản trở việc vận hành thông suốt, an toàn Hệ thống VNU-MIS. Chương II DỮ LIỆU TRÊN HỆ THỐNG THÔNG TIN QUẢN LÝ Điều 7. Phân loại dữ liệu 1. Dữ liệu trên Hệ thống VNU-MIS được phân loại dựa trên yêu cầu quản trị, xử lý, bảo vệ dữ liệu, bao gồm: a) Phân loại theo tính chất chia sẻ dữ liệu gồm: dữ liệu dùng chung, dữ liệu dùng riêng, dữ liệu mở. b) Phân loại theo tính chất quan trọng của dữ liệu gồm: dữ liệu cốt lõi, dữ liệu quan trọng, dữ liệu khác. 2. Văn phòng ĐHQGHN và các Ban chức năng có trách nhiệm phân loại dữ liệu theo quy định tại điểm a, khoản 1 Điều này. 3. Các đơn vị thuộc ĐHQGHN có trách nhiệm phân loại dữ liệu do mình là chủ sở hữu theo quy định tại điểm b, khoản 1 Điều này và được phân loại dữ liệu theo các tiêu chí khác nếu ĐHQGHN chưa có quy định. 4. Văn phòng ĐHQGHN trình Giám đốc ĐHQGHN ban hành tiêu chí xác định dữ liệu cốt lõi, dữ liệu quan trọng c"
+        },
+        {
+          "document_id": "29314177-3a02-44ff-8ec0-cef93630dcb4",
+          "document_version_id": "952787a6-582a-4007-a731-6a07ec9e520f",
+          "provenance_record_id": "d5ab9f8a-092b-49bb-8aa9-7b52bf816a0f",
+          "source_id": "VNU",
+          "chunk_id": "016848ae-0171-4a4a-be33-01aeed7f2f46",
+          "locator": "chunk:18",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "c831c478-fadb-4f4d-99b4-c40106d93194"
+          ],
+          "content_excerpt": "dữ liệu chung (tài liệu và công cụ kỹ thuật định nghĩa thống nhất tên gọi, mô tả, định dạng, đơn vị tính, mối liên kết và cách sử dụng của các trường dữ liệu) sử dụng giữa các đơn vị trong ĐHQGH N nhằm bảo đảm kết nối, liên thông và chia sẻ dữ liệu hiệu quả. 2. Chất lượng dữ liệu thể hiện ở tính đầy đủ, chính xác, kịp thời, hợp pháp, bảo mật và khả năng truy xuất của dữ liệu, được kiểm tra bằng chức năng kiểm tra ràng buộc tự động của Hệ thống VNU-MIS và thông qua quy trình rà soát, đối chiếu của chủ quản dữ liệu. 3. Lịch sử hiệu chỉnh, thay đổi dữ liệu phải được ghi lại trong nhật ký hoạt động Hệ thống VNU-MIS để bảo đảm minh bạch và khả năng truy vết. 4. Văn phòng ĐHQGHN định kỳ hằng năm hoặc đột xuất đánh giá hoạt động dữ liệu trong ĐHQGHN đáp ứng yêu cầu về chất lượng dữ liệu trong toàn bộ vòng đời dữ liệu. Điều 16. Thu thập, cập nhật dữ liệu 1. Việc thu thập, cung cấp và cập nhật, hiệu chỉnh dữ liệu phải tuân thủ các quy định của pháp luật và của ĐHQGHN. 2. Các đơn vị thuộc ĐHQGHN là chủ sở hữu dữ liệu, chủ quản dữ liệu có trách nhiệm: a) Thu thập, cung cấp và cập nhật, hiệu chỉnh dữ liệu quy định tại các Điều 8, 9, 10, 11, 12 và 13 của Quy chế này lên Hệ thống VNU-MIS. b) Bảo"
+        }
+      ],
+      "coverage_matrix": [
+        {
+          "sub_intent_id": "c831c478-fadb-4f4d-99b4-c40106d93194",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        }
+      ],
+      "final_p9_evidence": [
+        {
+          "document_version_id": "d9adfab5-ef10-413b-91a4-925186b77b24",
+          "chunk_id": "6e47cca7-7692-4e8a-b37e-12549987fdc9",
+          "locator": "chunk:7",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "952787a6-582a-4007-a731-6a07ec9e520f",
+          "chunk_id": "ffbcfb14-ec9a-48ff-85c0-05612d955d32",
+          "locator": "chunk:10",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "952787a6-582a-4007-a731-6a07ec9e520f",
+          "chunk_id": "016848ae-0171-4a4a-be33-01aeed7f2f46",
+          "locator": "chunk:18",
+          "authority_role": "GOVERNING"
+        }
+      ],
+      "p10_final_answer": "Evidence-bound diagnostic draft Issue 1: coverage=SUPPORTED; selected evidence locators=chunk:7, chunk:10, chunk:18. Limitations: this draft reports only retrieved evidence and retained coverage gaps.",
+      "claim_to_evidence_map": [
+        {
+          "claim_index": 0,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            0
+          ],
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "independent_reviewer_score": null,
+      "independent_reviewer_decision": null
+    },
+    {
+      "case_id": "Q03",
+      "question": "Viên chức UEB được đánh giá, xếp loại cuối năm dựa trên tiêu chí và quy trình nào?",
+      "terminal_status": "ANSWER_WITH_LIMITATION",
+      "material_sub_intents": [
+        {
+          "code": "PROCEDURE",
+          "description": "procedure",
+          "actor_scope": null,
+          "object_scope": null
+        },
+        {
+          "code": "GROUNDS_OR_CONDITIONS",
+          "description": "grounds or conditions",
+          "actor_scope": null,
+          "object_scope": null
+        }
+      ],
+      "authority_candidates": [
+        {
+          "document_id": "726c57a1-c9af-4fc2-a793-d38d4c89cc7e",
+          "document_version_id": "0b9d5dc6-7b8a-4903-9420-a8c4543ae9f6",
+          "provenance_record_id": "f3d2977a-7bbc-481a-89bb-3234303d9d01",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "265d3c8e-8a97-4c98-90cd-b3404a474d32",
+          "document_version_id": "5d99c13f-8484-4d1a-bd69-18206133e4f0",
+          "provenance_record_id": "b63132f0-b729-411e-8fc1-0eca742ec2bd",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "dd1f501c-d6c1-432a-b5ee-2e501302fa0e",
+          "document_version_id": "ccf5fff5-55f1-4a8b-b5b4-9e0e7b17b4ba",
+          "provenance_record_id": "6bd1dc50-bebd-4a9d-8e8b-d2ada89db3c1",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ce6e5f56-3cc7-476f-bc55-df3b5b7ebfc7",
+          "document_version_id": "149d71a5-5905-4201-b3b2-096719bd00ac",
+          "provenance_record_id": "7366d6d8-8429-4aa9-ba1f-8dc1335d5e35",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "c7e13ce1-c9d5-44ec-af88-25ee9c27d447",
+          "document_version_id": "576cebe3-9bad-42ac-b284-afa458c46ca6",
+          "provenance_record_id": "5a817006-70db-427a-a347-e94d041d4734",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "09948f3b-4611-49b4-b903-f3d3e1626051",
+          "document_version_id": "1448485d-e34c-4225-a675-b0b452963ac7",
+          "provenance_record_id": "54bda2c6-2abc-4755-a513-e7bfe6509650",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "06f3a25d-4528-44f3-ae1f-939c473451ba",
+          "document_version_id": "85411e5f-3242-4710-899e-66a520ca6640",
+          "provenance_record_id": "f52f0cf2-7528-4177-8ce9-23f5a84f34f2",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "6c4bec65-1762-4af8-b94c-45ca1eac0554",
+          "document_version_id": "f28c6560-056f-447f-a724-91be3d527ba7",
+          "provenance_record_id": "1b56551b-d281-4cc1-b1a1-8b569f1c8327",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "bc788156-98d1-46f2-8062-e0a02daed4a6",
+          "document_version_id": "2d83f45e-a5bc-40da-9acb-253c5086adce",
+          "provenance_record_id": "2fad9409-15b3-4684-a61b-50f63247dfb4",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "1433fc8c-dbcc-4619-a9f0-47bce516284a",
+          "document_version_id": "11f830f2-eb7a-4cf3-a6ba-153acee68c48",
+          "provenance_record_id": "3e646fd3-14d8-48de-bec6-518946865e00",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "4950357d-91e7-4ba3-ac55-c1d418eecf71",
+          "document_version_id": "be782223-9fda-42f1-8864-2d88e8bb7139",
+          "provenance_record_id": "0629a8dc-47c6-4e24-8f9c-9dd7833e4314",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "fb4ceebe-c472-4b3f-a79a-16fe4c819942",
+          "document_version_id": "4ccf189f-84f0-4d7b-b621-1ffb1053fec8",
+          "provenance_record_id": "ce8ecece-45da-4b95-a94b-d12217181e6e",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "2eeb43ca-4d6f-4626-9724-99f635bb6eef",
+          "document_version_id": "ffd5a370-f47a-4940-8ce7-e925d9c5c23e",
+          "provenance_record_id": "7ff855cf-8c11-4490-8bb6-a8958db3c0cc",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "85f45ec6-c7d4-47af-8299-cfc117a4bcbe",
+          "document_version_id": "2c9e4cf3-63cc-4072-ad4a-807bb9e4607f",
+          "provenance_record_id": "add958a0-5157-42bb-81d9-8cb71037a2ee",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "5e6fa607-3f8b-4bc3-8092-6a260c8a96ea",
+          "document_version_id": "4ed77c7a-4639-44aa-9b36-7d61adbcc510",
+          "provenance_record_id": "2285aa70-e937-4c8f-8a90-4caeffbbddcf",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "8882b3a6-f5f3-4c4a-afd5-a546f6897d5c",
+          "document_version_id": "51873af9-30d0-4f4e-8d54-4e56876086c7",
+          "provenance_record_id": "34a29829-13c8-499b-b374-ffdc7117fdc4",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "815094d4-382b-4c02-bebd-040edda59519",
+          "document_version_id": "abff412a-0d8f-49c3-af0f-930a3dfdfb7d",
+          "provenance_record_id": "ff004dd4-ea71-425b-9673-468d205e484d",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "a74f4e2e-8107-4c03-bed1-4388be7173c5",
+          "document_version_id": "38955632-a97a-4554-8723-36896ab38760",
+          "provenance_record_id": "ade6c6d1-1ac6-47e4-a329-f5a6a1aca340",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "59184833-7d9a-493a-85ec-dbd4f1d55c6f",
+          "document_version_id": "7dbd812e-95d1-4076-9f45-f88c316b7be8",
+          "provenance_record_id": "a9624009-0d56-4222-bb96-17944813fdc4",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "f9a589b2-2194-438a-9474-83711f8b1b8c",
+          "document_version_id": "667187fe-3f39-4c43-9746-00521cd051eb",
+          "provenance_record_id": "e953a40a-a85a-4212-81e3-3982aa7aa378",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "055507b7-9420-4181-b229-282ed0ec272a",
+          "document_version_id": "01407940-c5f5-4998-b515-ec0d1dd69f8a",
+          "provenance_record_id": "d577928c-17fb-44e6-bdfa-8ba430b8eee4",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "4867ea55-b24c-4187-8fcd-84ef58ddfe3a",
+          "document_version_id": "1b52f520-31aa-40bc-8e5d-114ca2d5bfe0",
+          "provenance_record_id": "9771d87c-c7b0-4a17-8146-d045ea753b7a",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "c7e02196-1cf0-4b36-8c9c-01c84e781ebd",
+          "document_version_id": "183163cc-bc0a-4197-95a3-d822a6d6c2bf",
+          "provenance_record_id": "af945610-0774-40dd-91e9-0a1be7bd09cb",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "c611af54-92f3-49e3-aa1b-120432412011",
+          "document_version_id": "4d87379e-6323-4a38-93d8-e7dd68413258",
+          "provenance_record_id": "c01552bf-4ff1-46e5-a608-7a6c081706c3",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "2a3ed1f5-8c4f-408d-8276-872534883911",
+          "document_version_id": "fd60067a-032a-4a08-ac3f-136f0880a99b",
+          "provenance_record_id": "07158cce-ed8f-4665-ae0e-29a08eeddced",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ab4f3cbb-c714-4b81-b5d7-b70d617ded6c",
+          "document_version_id": "e4c43ebe-1900-41e3-9a44-45d1b1149599",
+          "provenance_record_id": "0a26fbde-97e2-4f8c-b9aa-39f7db4d72ad",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "537d3c32-f6ff-46a3-a50c-e09323c56ccb",
+          "document_version_id": "97ea042c-6529-443f-aba9-2206097d342b",
+          "provenance_record_id": "543ed97b-a2dc-4c08-8b3c-29c4aca830e2",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "324d1354-856a-4132-9a23-718f2f3b8f58",
+          "document_version_id": "c0aa5fae-9bb9-4269-bb6d-5d32fd2100df",
+          "provenance_record_id": "199796e5-b45b-4f6e-bb22-e37d5a431585",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "011ee8dc-bf1c-459f-bc0a-9a0a2c950bd8",
+          "document_version_id": "46f2e3fd-21bf-4b1e-ad69-9611d7c10937",
+          "provenance_record_id": "c6c0e28c-f726-4381-83ad-1132aa890dbd",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "906e26fc-48c0-4e20-a1a7-7de079bd1068",
+          "document_version_id": "ded6ff6e-ced5-47c7-a7ac-fefda1ccbc1e",
+          "provenance_record_id": "17f1acab-eeeb-4ea2-8a12-08f4c295ac76",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        }
+      ],
+      "final_pinpoint_evidence": [],
+      "coverage_matrix": [
+        {
+          "sub_intent_id": "43d65f9e-7b8a-415c-b7a8-0a4224bdd6b8",
+          "state": "UNSUPPORTED",
+          "governing_authority_present": false,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        },
+        {
+          "sub_intent_id": "2104659d-fcdf-4660-b36d-d35fa148cd64",
+          "state": "UNSUPPORTED",
+          "governing_authority_present": false,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        }
+      ],
+      "final_p9_evidence": [],
+      "p10_final_answer": "Evidence-bound diagnostic draft Issue 1: coverage=UNSUPPORTED; selected evidence locators=none. Issue 2: coverage=UNSUPPORTED; selected evidence locators=none. Limitations: this draft reports only retrieved evidence and retained coverage gaps.",
+      "claim_to_evidence_map": [
+        {
+          "claim_index": 0,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            0
+          ],
+          "evidence_indices": []
+        },
+        {
+          "claim_index": 1,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            1
+          ],
+          "evidence_indices": []
+        }
+      ],
+      "independent_reviewer_score": null,
+      "independent_reviewer_decision": null
+    },
+    {
+      "case_id": "Q04",
+      "question": "UEB nhận diện và quản lý tài liệu bí mật nhà nước trong lĩnh vực giáo dục ra sao?",
+      "terminal_status": "ANSWER",
+      "material_sub_intents": [
+        {
+          "code": "MANAGEMENT",
+          "description": "management",
+          "actor_scope": null,
+          "object_scope": null
+        }
+      ],
+      "authority_candidates": [
+        {
+          "document_id": "fb4ceebe-c472-4b3f-a79a-16fe4c819942",
+          "document_version_id": "4ccf189f-84f0-4d7b-b621-1ffb1053fec8",
+          "provenance_record_id": "ce8ecece-45da-4b95-a94b-d12217181e6e",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "8edd6eac-6b93-4005-a52a-a81b33727143",
+          "document_version_id": "f4485d0c-a4f9-42de-86e4-840fd3e67193",
+          "provenance_record_id": "817faca7-981e-49c4-815b-c8a4cb57bab0",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ecf5721d-0dc5-46b9-9e73-8a5bf605c058",
+          "document_version_id": "a6bab9bc-6f79-4431-8dac-26bf500511da",
+          "provenance_record_id": "8b0b1c92-2709-4f25-9987-ec24d3f84f36",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "c2184fd2-5ad5-419c-bd82-391bfde59780",
+          "document_version_id": "e4b18402-4d11-48f9-918e-cca6971ef6c4",
+          "provenance_record_id": "3939f797-9ecd-4f18-8f7b-eee6c1626db8",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "295775ae-8a0a-43d6-90ce-8073147021b6",
+          "document_version_id": "58300c50-4dc3-406c-b192-13443553bd9e",
+          "provenance_record_id": "2a57baa1-3a28-4449-a7e5-d32ddb72000b",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "dc8caece-bd04-4851-9ef9-25c69381c9f6",
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "provenance_record_id": "1e98f56e-7195-4780-87ec-4c36c40fcf51",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "8882b3a6-f5f3-4c4a-afd5-a546f6897d5c",
+          "document_version_id": "51873af9-30d0-4f4e-8d54-4e56876086c7",
+          "provenance_record_id": "34a29829-13c8-499b-b374-ffdc7117fdc4",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "29314177-3a02-44ff-8ec0-cef93630dcb4",
+          "document_version_id": "952787a6-582a-4007-a731-6a07ec9e520f",
+          "provenance_record_id": "d5ab9f8a-092b-49bb-8aa9-7b52bf816a0f",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "98ed5f80-9851-463d-8194-12ae043bba5c",
+          "document_version_id": "748217a5-e028-4643-8247-589bbaa6e9ff",
+          "provenance_record_id": "95d20014-2725-4ac7-a650-ec3584a4fb6d",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "24125a02-7c57-411b-8dc9-6406fb109dd1",
+          "document_version_id": "ad7bf493-bd5d-4df8-a31c-fd76fc68131e",
+          "provenance_record_id": "5e62edde-c3cb-4463-aacc-384f7ab0ea58",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "60e62616-aa44-4268-af1d-acd567a371ff",
+          "document_version_id": "82e410d8-f65a-4f12-92db-f48fbdf79a22",
+          "provenance_record_id": "8c456847-efe4-4eb1-af5d-ccc74bbf4d0a",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "0a62652f-f56a-4b19-a2e0-d404b28b79a9",
+          "document_version_id": "43d550fe-c5e6-4a57-bc2c-1617681dde6c",
+          "provenance_record_id": "3f2a2b8e-f6d3-4e5d-aa19-0e847702f4c2",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "4950357d-91e7-4ba3-ac55-c1d418eecf71",
+          "document_version_id": "be782223-9fda-42f1-8864-2d88e8bb7139",
+          "provenance_record_id": "0629a8dc-47c6-4e24-8f9c-9dd7833e4314",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        }
+      ],
+      "final_pinpoint_evidence": [
+        {
+          "document_id": "dc8caece-bd04-4851-9ef9-25c69381c9f6",
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "provenance_record_id": "1e98f56e-7195-4780-87ec-4c36c40fcf51",
+          "source_id": "VNU",
+          "chunk_id": "c14b4e75-f248-421b-91f6-5ea41a3bfdeb",
+          "locator": "chunk:18",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "99ed4f23-0a6f-4a7c-b0b9-37d241e6e885"
+          ],
+          "content_excerpt": "Quản lý dự án thực hiện theo quy định của Nhà nước và ĐHQGHN. 2. Hằng năm, Ban Quản lý dự án c ó trách nhiệm lập dự toán thu, chi b áo cáo ĐHQGHN phê duyệt và tổ chức thực hiện sau khi được phê duyệt.\n\n7 Giám đốc Ban Quản lý dự án hoặc ủy quyền cho Phó Giám đốc Thường trực Ban Quản lý dự án là chủ tài khoản của Ban Quản lý dự án, chịu trách nhiệm quản lý các nguồn thu, chi của Ban Quản lý dự án. 3. Ban Quản lý dự án có Kế toán trưởng do Giám đốc ĐHQGHN bổ nhiệm, miễn nhiệm. Giám đốc Ban Quản lý dự án và Kế toán trưởng của Ban Quản lý dự án chịu trách nhiệm trước pháp luật và trước Giám đốc ĐHQGHN về công tác kế toán, tài chính của Ban Quản lý dự án. Điều 12. Quản lý và sử dụng cơ sở vật chất, tài sản 1. Cơ sở vật chất, tài sản của Ban Quản lý dự án gồm: quyền sử dụng đất, nhà cửa, công trình xây dựng (nếu có); tài sản có được từ hoạt động tư vấn, dịch vụ; tài liệu, các trang thiết bị và những tài sản khác được Nhà nước và ĐHQGHN giao cho Ban Quản lý dự án quản lý và sử dụng hoặc do Ban Quản lý dự án tự mua sắm, xây dựng từ các nguồn thu sự nghiệp và các nguồn khác của đơn vị; các khoản kinh phí có được từ ngân sách nhà nước, hoạt động tư vấn, dịch vụ của Ban Quản lý dự án, đóng góp"
+        },
+        {
+          "document_id": "dc8caece-bd04-4851-9ef9-25c69381c9f6",
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "provenance_record_id": "1e98f56e-7195-4780-87ec-4c36c40fcf51",
+          "source_id": "VNU",
+          "chunk_id": "43b91698-4892-46bb-8532-524ccb154e43",
+          "locator": "chunk:14",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "99ed4f23-0a6f-4a7c-b0b9-37d241e6e885"
+          ],
+          "content_excerpt": "dự án gồm: Giám đốc và các Phó Giám đốc Ban Quản lý dự án. 2. Giám đốc Ban Quản lý dự án là người đại diện pháp luật của Ban Quản lý dự án trong quan hệ với ĐHQGHN, các tổ chức, cá nhân ở trong và ngoài nước; chịu trách nhiệm trước pháp luật và Giám đốc ĐHQGHN về tất cả các hoạt động của Ban Quản lý dự án. 3. Phó Giám đốc Ban Quản lý dự án giúp việc cho Giám đốc Ban Quản lý dự án, được thay mặt Giám đốc Ban Quản lý dự án chỉ đạo, điều hành một hoặc một số lĩnh vực công tác thuộc phạm vi được Giám đốc Ban Quản lý dự án giao và chịu trách nhiệm trước pháp luật và Giám đốc Ban Quản lý dự án về các lĩnh vực công tác đó. Phó Giám đốc Thường trực Ban Quản lý dự án được giao điều hành các hoạt động thường xuyên và ủy quyền là chủ tài khoản của Ban Quản lý dự án. 4. Giám đốc, Phó Giám đốc Ban Quản lý dự án do Giám đốc ĐHQGHN quyết định bổ nhiệm, miễn nhiệm. Việc bổ nhiệm, miễn nhiệm Giám đốc, Phó Giám đốc Ban Quản lý dự án thực hiện theo quy định của pháp luật và ĐHQGHN. Điều 8. Các phòng chuyên ngành và chuyên môn dùng chung 1. Các phòng chuyên ngành và chuyên môn dùng chung (sau đây gọi chung là phòng) của Ban Quản lý dự án có nhiệm vụ thực hiện các công việc theo chức năng, nhiệm vụ đư"
+        },
+        {
+          "document_id": "fb4ceebe-c472-4b3f-a79a-16fe4c819942",
+          "document_version_id": "4ccf189f-84f0-4d7b-b621-1ffb1053fec8",
+          "provenance_record_id": "ce8ecece-45da-4b95-a94b-d12217181e6e",
+          "source_id": "VNU",
+          "chunk_id": "b58fb467-a60d-458b-b516-d6a46c1c0c43",
+          "locator": "chunk:57",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "99ed4f23-0a6f-4a7c-b0b9-37d241e6e885"
+          ],
+          "content_excerpt": "Language || Ngôn ngữ Pháp French Language || | | 68 | Ngôn ngữ Trung Quốc Chinese Language mg | Nhat Ban hoc Japanese Studies/Japan Studies man Phân tích dữ liệu kinh doanh Business Data Analytics ||\n\n4 Tên tiếng Việt của ngành đào tạo | Tên tiếng Anh của ngành đào tạo Quan hệ công chúng Public Relations | [oun Minton Quan ly dat dai Land Management || Quản lí giải tri va sự kiện Leisure and Event Management || Quản lý giáo dục Education Management | | Quản lý phát triên đô thị và bat Urban Development Management TỔ | ons động sản and Real Estate 79 | Quản lý tài nguyên và môi trườn Management of Natural Resources y uy © | and Environment | 80 | Quan ly thông tin Information Management ma Quản trị chất lượng giáo dục Education Quality Management || Ai abu ta ¬- Educational Technology 2 3 =— = &mundng TA | | Quản trị dịch vụ du lịch và lữ hành _ | Tourism and Travel Management |} 84 Quản trị đô thị thông minh và bên Smart and Sustainable Urban vững Managerment pone ne + | Management of Enterprise Quan trị doanh nghiệp va công nghệ &Technolosy Quản trị Nhân lực và Nhân tài Management of Human and Talent max | 89 | Quản trị tài nguyên di sản Heritage Resources Management max | Quản t"
+        }
+      ],
+      "coverage_matrix": [
+        {
+          "sub_intent_id": "99ed4f23-0a6f-4a7c-b0b9-37d241e6e885",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        }
+      ],
+      "final_p9_evidence": [
+        {
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "chunk_id": "c14b4e75-f248-421b-91f6-5ea41a3bfdeb",
+          "locator": "chunk:18",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "chunk_id": "43b91698-4892-46bb-8532-524ccb154e43",
+          "locator": "chunk:14",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "4ccf189f-84f0-4d7b-b621-1ffb1053fec8",
+          "chunk_id": "b58fb467-a60d-458b-b516-d6a46c1c0c43",
+          "locator": "chunk:57",
+          "authority_role": "GOVERNING"
+        }
+      ],
+      "p10_final_answer": "Evidence-bound diagnostic draft Issue 1: coverage=SUPPORTED; selected evidence locators=chunk:18, chunk:14, chunk:57. Limitations: this draft reports only retrieved evidence and retained coverage gaps.",
+      "claim_to_evidence_map": [
+        {
+          "claim_index": 0,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            0
+          ],
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "independent_reviewer_score": null,
+      "independent_reviewer_decision": null
+    },
+    {
+      "case_id": "Q05",
+      "question": "Nhiệm vụ nghiên cứu và phát triển công nghệ chiến lược cấp ĐHQGHN do UEB thực hiện cần tuân thủ quy định quản lý, tài chính nào?",
+      "terminal_status": "ANSWER",
+      "material_sub_intents": [
+        {
+          "code": "MANAGEMENT",
+          "description": "management",
+          "actor_scope": null,
+          "object_scope": null
+        },
+        {
+          "code": "FINANCIAL_REQUIREMENTS",
+          "description": "financial requirements",
+          "actor_scope": null,
+          "object_scope": "financial requirements"
+        },
+        {
+          "code": "RESEARCH_MANAGEMENT",
+          "description": "research management",
+          "actor_scope": null,
+          "object_scope": "research task"
+        }
+      ],
+      "authority_candidates": [
+        {
+          "document_id": "2db045d2-129b-433d-9ca6-7b53678b8a4e",
+          "document_version_id": "225a9f06-8cea-4ebc-b601-1e1f238b1381",
+          "provenance_record_id": "fdb2a1bc-eccb-4d12-a68b-4b94589062c9",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "68e7a07e-107d-4a8b-a870-904b86ee4a82",
+          "document_version_id": "3aa50cf6-ba70-4dbf-a303-6af40b14ba40",
+          "provenance_record_id": "ef9f584e-9921-45cf-8e5f-54f895f71474",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "fb4ceebe-c472-4b3f-a79a-16fe4c819942",
+          "document_version_id": "4ccf189f-84f0-4d7b-b621-1ffb1053fec8",
+          "provenance_record_id": "ce8ecece-45da-4b95-a94b-d12217181e6e",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "2a8d1ca3-b779-4821-8b1e-f96fbb75951a",
+          "document_version_id": "0fca189e-f9af-4ecd-9d87-d2bea2ae6770",
+          "provenance_record_id": "753c8b89-ea5c-49e2-a9d7-123305d37883",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "2fd940be-9004-4d23-ae12-9fbaf97bd4a8",
+          "document_version_id": "453bc2ee-45c9-4ad2-872c-25189b7c4940",
+          "provenance_record_id": "76621e51-f063-4cae-af64-8e0f1d117750",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "370df05c-274b-4a33-8de4-da54d1710756",
+          "document_version_id": "b7af3a3b-f5b1-4e76-a7cd-741e32434744",
+          "provenance_record_id": "0a5923ad-4f26-4c2c-a80e-48d240107ffe",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "8edd6eac-6b93-4005-a52a-a81b33727143",
+          "document_version_id": "f4485d0c-a4f9-42de-86e4-840fd3e67193",
+          "provenance_record_id": "817faca7-981e-49c4-815b-c8a4cb57bab0",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "5e8ce690-9336-43a5-a098-04a1fac3b60e",
+          "document_version_id": "bd704245-dfcf-4c6a-89df-6d4e059613b5",
+          "provenance_record_id": "32e918ae-b6b6-476d-99b7-a13974b310f3",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "6a09da0a-45d3-44ef-86ae-6ba1a7eaebc2",
+          "document_version_id": "f56582f2-d808-4f3c-bee1-2bade40f9162",
+          "provenance_record_id": "a5b1c38b-5432-4f8f-abd2-4cd6c33ece4e",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "1f9b2c72-2462-4042-b876-4ee6aa55cfc1",
+          "document_version_id": "25506881-a874-45e6-8c82-af85d55213a1",
+          "provenance_record_id": "37de8419-f3c5-46cf-954a-2c437328652b",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ecf5721d-0dc5-46b9-9e73-8a5bf605c058",
+          "document_version_id": "a6bab9bc-6f79-4431-8dac-26bf500511da",
+          "provenance_record_id": "8b0b1c92-2709-4f25-9987-ec24d3f84f36",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "e57963db-9a8f-4c93-9b0b-e4a754955058",
+          "document_version_id": "c1bcc69f-9647-442e-a878-460e01cfdbe2",
+          "provenance_record_id": "9733142a-fd0a-4650-a177-d997e794fee1",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "ae5c2994-f1e8-4f45-89e2-3e6f5e49453b",
+          "document_version_id": "74288f2b-af36-43e8-9fea-438094b8e9c5",
+          "provenance_record_id": "63ead57b-5322-4719-9f20-8d5525ecf08e",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "c2184fd2-5ad5-419c-bd82-391bfde59780",
+          "document_version_id": "e4b18402-4d11-48f9-918e-cca6971ef6c4",
+          "provenance_record_id": "3939f797-9ecd-4f18-8f7b-eee6c1626db8",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "7516cded-33c4-4e4c-bf49-284314d28ff0",
+          "document_version_id": "315791d4-b41f-43cf-80fa-df270ef08861",
+          "provenance_record_id": "ac8841be-282e-4b24-97cc-8de5bf723d6c",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "312eb90a-40dc-41ea-aa2b-6c14c8b6861f",
+          "document_version_id": "b739eb7e-68a4-47e8-b9c0-f29b98abbb75",
+          "provenance_record_id": "f487aded-8883-4bb7-a103-b961f5045726",
+          "source_id": "VNU",
+          "role": "IMPLEMENTING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "96a5b63e-6ead-42ef-8a36-c67cbde389e5",
+          "document_version_id": "32875e4b-eb35-49a4-827f-5ccca8b12e0d",
+          "provenance_record_id": "41344bef-59ee-4f19-a4e0-e241519ff2df",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "0a62652f-f56a-4b19-a2e0-d404b28b79a9",
+          "document_version_id": "43d550fe-c5e6-4a57-bc2c-1617681dde6c",
+          "provenance_record_id": "3f2a2b8e-f6d3-4e5d-aa19-0e847702f4c2",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "4395fff2-53d9-4353-8b8f-667f22d82000",
+          "document_version_id": "d64ff753-09e7-4f64-a195-72e7a52e2250",
+          "provenance_record_id": "2a85301c-f835-4ec2-93cb-2dd69c286c91",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "3ce767ec-fb64-4ce3-ad94-0fd3944acf0a",
+          "document_version_id": "235f5ba7-60bd-4450-87f1-916975739ffc",
+          "provenance_record_id": "caad6d67-4517-4c85-84aa-37c90968778b",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "295775ae-8a0a-43d6-90ce-8073147021b6",
+          "document_version_id": "58300c50-4dc3-406c-b192-13443553bd9e",
+          "provenance_record_id": "2a57baa1-3a28-4449-a7e5-d32ddb72000b",
+          "source_id": "VNU",
+          "role": "IMPLEMENTING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "e1bf5cbf-a40a-4e83-9d0d-90df14447fd8",
+          "document_version_id": "94983469-290d-456b-92ff-ff8b3a0f9066",
+          "provenance_record_id": "d6ede914-57b4-46d5-8bb3-ea834f1fd900",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "0b9f8c93-8501-4898-827c-52e5130800f0",
+          "document_version_id": "a9d23c26-55e4-43e9-944a-3f027ad1f278",
+          "provenance_record_id": "66763550-5487-4a25-8c20-21ad8487cc1a",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "f3c4897b-fe04-45e1-b01f-12594a3f6c5a",
+          "document_version_id": "9c5647c9-8f35-4601-9f10-ac19f76723c2",
+          "provenance_record_id": "1eb38803-c8ec-4222-aa2d-15b384113f0f",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "3b91fb97-7e97-47b3-bc49-08b6ec0ea7be",
+          "document_version_id": "be8a2507-d940-47f9-9273-22e1614555e4",
+          "provenance_record_id": "2206a43d-3cb6-4f18-ac2a-96dfd387d4ae",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "06bc2a1e-c015-4f2b-b09a-537448064cd6",
+          "document_version_id": "41925cc6-7641-4916-abf3-77982e386304",
+          "provenance_record_id": "422916ee-c3b3-438b-9a95-e3d21f680a4e",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "48cc8525-ae9e-4486-a893-b7cdc3c62d41",
+          "document_version_id": "78ca4f20-9613-449f-9083-44898ed0ae3b",
+          "provenance_record_id": "3092e14d-646a-480d-99df-af800f815335",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "24125a02-7c57-411b-8dc9-6406fb109dd1",
+          "document_version_id": "ad7bf493-bd5d-4df8-a31c-fd76fc68131e",
+          "provenance_record_id": "5e62edde-c3cb-4463-aacc-384f7ab0ea58",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "dc8caece-bd04-4851-9ef9-25c69381c9f6",
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "provenance_record_id": "1e98f56e-7195-4780-87ec-4c36c40fcf51",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "89feaf5f-4bcf-4a0e-9869-86dd67d72dcc",
+          "document_version_id": "81679a73-e602-43f3-b590-235c11a6a502",
+          "provenance_record_id": "cdac957d-6975-4d9c-9ac8-761e6a25b826",
+          "source_id": "UEB",
+          "role": "IMPLEMENTING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        }
+      ],
+      "final_pinpoint_evidence": [
+        {
+          "document_id": "dc8caece-bd04-4851-9ef9-25c69381c9f6",
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "provenance_record_id": "1e98f56e-7195-4780-87ec-4c36c40fcf51",
+          "source_id": "VNU",
+          "chunk_id": "c14b4e75-f248-421b-91f6-5ea41a3bfdeb",
+          "locator": "chunk:18",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "d80c8f00-317b-46e5-b43a-2a01d9ddf8b4"
+          ],
+          "content_excerpt": "Quản lý dự án thực hiện theo quy định của Nhà nước và ĐHQGHN. 2. Hằng năm, Ban Quản lý dự án c ó trách nhiệm lập dự toán thu, chi b áo cáo ĐHQGHN phê duyệt và tổ chức thực hiện sau khi được phê duyệt.\n\n7 Giám đốc Ban Quản lý dự án hoặc ủy quyền cho Phó Giám đốc Thường trực Ban Quản lý dự án là chủ tài khoản của Ban Quản lý dự án, chịu trách nhiệm quản lý các nguồn thu, chi của Ban Quản lý dự án. 3. Ban Quản lý dự án có Kế toán trưởng do Giám đốc ĐHQGHN bổ nhiệm, miễn nhiệm. Giám đốc Ban Quản lý dự án và Kế toán trưởng của Ban Quản lý dự án chịu trách nhiệm trước pháp luật và trước Giám đốc ĐHQGHN về công tác kế toán, tài chính của Ban Quản lý dự án. Điều 12. Quản lý và sử dụng cơ sở vật chất, tài sản 1. Cơ sở vật chất, tài sản của Ban Quản lý dự án gồm: quyền sử dụng đất, nhà cửa, công trình xây dựng (nếu có); tài sản có được từ hoạt động tư vấn, dịch vụ; tài liệu, các trang thiết bị và những tài sản khác được Nhà nước và ĐHQGHN giao cho Ban Quản lý dự án quản lý và sử dụng hoặc do Ban Quản lý dự án tự mua sắm, xây dựng từ các nguồn thu sự nghiệp và các nguồn khác của đơn vị; các khoản kinh phí có được từ ngân sách nhà nước, hoạt động tư vấn, dịch vụ của Ban Quản lý dự án, đóng góp"
+        },
+        {
+          "document_id": "370df05c-274b-4a33-8de4-da54d1710756",
+          "document_version_id": "b7af3a3b-f5b1-4e76-a7cd-741e32434744",
+          "provenance_record_id": "0a5923ad-4f26-4c2c-a80e-48d240107ffe",
+          "source_id": "UEB",
+          "chunk_id": "332a3933-b5fa-43b4-bedf-55229d96795e",
+          "locator": "chunk:77",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "c38bff7d-9252-462b-ae8f-645a75eb85a0"
+          ],
+          "content_excerpt": "i tượng công khai tài chính bao gồm: | a) Quy định, quy chế nội bộ có liên quan đến quản ly tài chính, tài sản của Trường (bao gồm cả Quy chế chỉ tiêu nội bộ, Quy chế Quản lý, sử dụng tài sản); | | 23\n\nb) Kế hoạch tài chính; dự toán ngân sách hàng năm; c) Kế hoạch mua sắm tài sản và các tài liệu pháp lý khác có liên quan đến việc thực hiện đấu thầu mua sắm tài sản, quyết định của cơ quan có thẩm quyền về góp vốn, đầu tư, liên doanh liên kết; cho thuê, thanh lý, nhượng bán tài sản; d) Báo cáo kiểm toán; báo cáo quyết toán và báo cáo tài chính hàng năm; | đ) Các đối tượng khác cần công khai tài chính theo quy định của pháp luật. | 3. Nội dung công khai tài chính bao gồm: | a) Nguồn tài chính và việc quản lý, sử dụng các nguồn tài chính; | b) Nhiệm vụ chỉ và việc quản lý hoạt động chỉ tiêu nội bộ; | c) Việc trích lập, quản lý và sử dụng các quỹ; | d) Việc huy động vốn và quản lý, sử dụng các nguồn vốn; | đ) Việc tạo lập, quản lý và sử dụng các loại tài sản; | ` | e) Các nội dung khác cần công khai theo quy định của pháp luật. | 4. Hình thức công khai tài chính: | a) Phát hành văn bản báo cáo, giải trình gửi cho các bên liên quan; i 3 | b) Đăng tải thông tin, tài liệu cần công khai trê"
+        },
+        {
+          "document_id": "2fd940be-9004-4d23-ae12-9fbaf97bd4a8",
+          "document_version_id": "453bc2ee-45c9-4ad2-872c-25189b7c4940",
+          "provenance_record_id": "76621e51-f063-4cae-af64-8e0f1d117750",
+          "source_id": "UEB",
+          "chunk_id": "92002879-9d66-4464-8aa1-1f1d4c1241db",
+          "locator": "chunk:16",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "50262b2d-7288-4f29-aa18-6fac23f55819"
+          ],
+          "content_excerpt": "m phỏ biến và ứng dụng rộng rãi các kết quả nghiên cứu vào thực tiễn. b) Nghiên cứu viên chính (hạng II) - Mã số: V.05.01.02 ~ Chủ tri thực hiện các nhiệm vụ khoa học và công nghệ cấp bộ. cấp tỉnh hoặc tham gia thực hiện nhiệm vụ khoa học và công nghệ cấp quốc gia; - Chủ trì tổ chức các nhóm nghiên cứu và hướng dẫn chuyên môn đối với các nghiên cứu viên, trợ lý nghiên cứu, cộng tác viên thực hiện nội dung nghiên cứu khoa học và phát ] triển công nghệ; - Chịu trách nhiệm giải quyết các vấn đề chủ yếu trong nhiệm vụ khoa học và công nghệ được giao; viết các báo cáo kết quả nghiên cứu, quy trình ứng dụng, biên soạn các tài liệu nhằm phổ biến và áp dụng rộng rãi, hiệu quả các kết quả nghiên cứu phục vụ sản xuất và đời sống; tổ chức hướng dẫn, theo dõi, đánh giá việc áp dụng kết quả nghiên cứu vào thực tiễn; . - Tham gia xây dựng các chủ trương, kế hoạch và biện pháp triển khai hoạt động khoa học và công nghệ của bộ. ngành, địa phương và của đơn vị; tham gia tổ chức các hội nghị khoa học và các sinh hoạt học thuật chuyên ngành; tham gia tư vấn các nhiệm vụ khoa học và công nghệ; tham gia giảng dạy và hướng dẫn khoa học cho các học viên cao học, sinh viên đại học ở các cơ sở đào tao. c)"
+        }
+      ],
+      "coverage_matrix": [
+        {
+          "sub_intent_id": "d80c8f00-317b-46e5-b43a-2a01d9ddf8b4",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        },
+        {
+          "sub_intent_id": "c38bff7d-9252-462b-ae8f-645a75eb85a0",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        },
+        {
+          "sub_intent_id": "50262b2d-7288-4f29-aa18-6fac23f55819",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        }
+      ],
+      "final_p9_evidence": [
+        {
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "chunk_id": "c14b4e75-f248-421b-91f6-5ea41a3bfdeb",
+          "locator": "chunk:18",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "b7af3a3b-f5b1-4e76-a7cd-741e32434744",
+          "chunk_id": "332a3933-b5fa-43b4-bedf-55229d96795e",
+          "locator": "chunk:77",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "453bc2ee-45c9-4ad2-872c-25189b7c4940",
+          "chunk_id": "92002879-9d66-4464-8aa1-1f1d4c1241db",
+          "locator": "chunk:16",
+          "authority_role": "GOVERNING"
+        }
+      ],
+      "p10_final_answer": "Evidence-bound diagnostic draft Issue 1: coverage=SUPPORTED; selected evidence locators=chunk:18. Issue 2: coverage=SUPPORTED; selected evidence locators=chunk:77. Issue 3: coverage=SUPPORTED; selected evidence locators=chunk:16. Limitations: this draft reports only retrieved evidence and retained coverage gaps.",
+      "claim_to_evidence_map": [
+        {
+          "claim_index": 0,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            0
+          ],
+          "evidence_indices": [
+            0
+          ]
+        },
+        {
+          "claim_index": 1,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            1
+          ],
+          "evidence_indices": [
+            1
+          ]
+        },
+        {
+          "claim_index": 2,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            2
+          ],
+          "evidence_indices": [
+            2
+          ]
+        }
+      ],
+      "independent_reviewer_score": null,
+      "independent_reviewer_decision": null
+    },
+    {
+      "case_id": "Q06",
+      "question": "Sau khi mua tài sản mới, UEB thực hiện quản lý và kiểm kê theo thẩm quyền, quy trình nào?",
+      "terminal_status": "ANSWER",
+      "material_sub_intents": [
+        {
+          "code": "PURCHASE_AUTHORITY",
+          "description": "purchase authority",
+          "actor_scope": null,
+          "object_scope": "asset purchase"
+        },
+        {
+          "code": "PURCHASE_PROCEDURE",
+          "description": "purchase procedure",
+          "actor_scope": null,
+          "object_scope": "asset purchase"
+        },
+        {
+          "code": "POST_PURCHASE_MANAGEMENT",
+          "description": "post-purchase asset management",
+          "actor_scope": null,
+          "object_scope": "asset management"
+        },
+        {
+          "code": "INVENTORY",
+          "description": "asset inventory",
+          "actor_scope": null,
+          "object_scope": "asset inventory"
+        }
+      ],
+      "authority_candidates": [
+        {
+          "document_id": "d390c0e5-00f4-4961-a42a-4bb904ecdfe4",
+          "document_version_id": "7e82f79b-00b4-4da7-8d6b-494060b51649",
+          "provenance_record_id": "cc3421f5-1893-4930-80ce-603b77502155",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "89feaf5f-4bcf-4a0e-9869-86dd67d72dcc",
+          "document_version_id": "81679a73-e602-43f3-b590-235c11a6a502",
+          "provenance_record_id": "cdac957d-6975-4d9c-9ac8-761e6a25b826",
+          "source_id": "UEB",
+          "role": "IMPLEMENTING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "b52c17cb-9239-4b0e-a93b-f25c58b20fe3",
+          "document_version_id": "98ec9571-32af-426d-9647-ce09e324ed2a",
+          "provenance_record_id": "cd1aa31a-9912-4cb3-8bf8-a19909fe3c29",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "370df05c-274b-4a33-8de4-da54d1710756",
+          "document_version_id": "b7af3a3b-f5b1-4e76-a7cd-741e32434744",
+          "provenance_record_id": "0a5923ad-4f26-4c2c-a80e-48d240107ffe",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "6212742f-b688-4ed5-aa3f-5799d9c7aa0c",
+          "document_version_id": "9bff3c5b-4e8e-45a7-a7eb-97bba3fcc93b",
+          "provenance_record_id": "bad8e77e-3b53-4a8c-adcd-6c6ea45fc06c",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "a69486f6-741f-436e-97ea-28300af0e2c5",
+          "document_version_id": "4757cf23-0850-4cd2-b9d8-3035940b9460",
+          "provenance_record_id": "d3ca016a-b87e-4c98-a987-df2ba4186ef9",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "959aaa14-b9fb-4148-8dc5-550c2d7e3693",
+          "document_version_id": "67fb0be7-bfc4-4eca-9ae4-7a366147671f",
+          "provenance_record_id": "948bdea2-b42c-40e8-992e-4474ed5f458a",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "8a76a0ee-112a-4d5c-903e-34e6e8fcc2b8",
+          "document_version_id": "caa11316-c29a-4923-96a1-041727cfdda0",
+          "provenance_record_id": "d248fd84-8bd3-49f1-af95-57482bb03837",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "2bf60fbe-e268-4cdd-a3ea-73615a37940c",
+          "document_version_id": "a0801a5f-6438-48f7-b465-009080c8358c",
+          "provenance_record_id": "69274bb1-1ef0-4371-8b7a-8aaf79b571d6",
+          "source_id": "VBQPPL",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "417d9a24-d2d9-4bc9-814d-84d7af6792ea",
+          "document_version_id": "19c1745f-a9a8-459e-afd7-1a7853264da3",
+          "provenance_record_id": "9ee14f71-132e-48e5-adda-47f539ad6d72",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "43b942bb-4433-4199-9f62-25aeeb7744ac",
+          "document_version_id": "27f127f7-802e-4a22-b3b9-8df35f31d66d",
+          "provenance_record_id": "5560479a-e705-4136-aa90-a2b996a71545",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "1433fc8c-dbcc-4619-a9f0-47bce516284a",
+          "document_version_id": "11f830f2-eb7a-4cf3-a6ba-153acee68c48",
+          "provenance_record_id": "3e646fd3-14d8-48de-bec6-518946865e00",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "6a09da0a-45d3-44ef-86ae-6ba1a7eaebc2",
+          "document_version_id": "f56582f2-d808-4f3c-bee1-2bade40f9162",
+          "provenance_record_id": "a5b1c38b-5432-4f8f-abd2-4cd6c33ece4e",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "60e62616-aa44-4268-af1d-acd567a371ff",
+          "document_version_id": "82e410d8-f65a-4f12-92db-f48fbdf79a22",
+          "provenance_record_id": "8c456847-efe4-4eb1-af5d-ccc74bbf4d0a",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "521b4aed-166b-4ef2-b0e2-0ecbbe2268d8",
+          "document_version_id": "7e2996cc-1d07-4fdd-9d6c-933da9dd36df",
+          "provenance_record_id": "0dfa9f81-0ab5-4b9a-9b8c-e17e745ca86e",
+          "source_id": "VNU",
+          "role": "SUPPLEMENTARY",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "df4d1871-5a70-48c4-89d3-e61a81a962dd",
+          "document_version_id": "5bd5fbe5-8895-4a51-9d2f-446bd00a7ffb",
+          "provenance_record_id": "0c350824-a245-47f7-bab3-37ba8e7b23ff",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "06bc2a1e-c015-4f2b-b09a-537448064cd6",
+          "document_version_id": "41925cc6-7641-4916-abf3-77982e386304",
+          "provenance_record_id": "422916ee-c3b3-438b-9a95-e3d21f680a4e",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "7ea54d73-2343-4b23-903f-1b9ab34154b5",
+          "document_version_id": "62e7659a-7c9d-4ddf-95df-8ea1dd2171a4",
+          "provenance_record_id": "b4264d20-f147-4dfb-84e6-d7bac9e8a573",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ed2cdd48-e30b-4427-aef9-ac6609ec7840",
+          "document_version_id": "4dd5ac71-3660-40b7-99d7-39765cc7dc55",
+          "provenance_record_id": "e6787e9f-5677-498b-ae4f-bc293345b593",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "1d15be3e-f9da-4303-aa31-b6bfbb1087dd",
+          "document_version_id": "50033bc2-9b76-4116-8609-98d365fbf15e",
+          "provenance_record_id": "b8d3183a-bf59-4671-a3ad-b1cfb1c1acaf",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        }
+      ],
+      "final_pinpoint_evidence": [
+        {
+          "document_id": "b52c17cb-9239-4b0e-a93b-f25c58b20fe3",
+          "document_version_id": "98ec9571-32af-426d-9647-ce09e324ed2a",
+          "provenance_record_id": "cd1aa31a-9912-4cb3-8bf8-a19909fe3c29",
+          "source_id": "VNU",
+          "chunk_id": "0698df25-2f5e-4ff2-83f6-54671923a324",
+          "locator": "chunk:25",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "24d2a95c-160f-4a60-866b-0767e7d6fcb2"
+          ],
+          "content_excerpt": "QGHN. 7. Trình tự, thủ tục khai thác tài sản công: Đơn vị quản lý, sử dụng tài sản công lập hồ sơ đề nghị khai thác tài sản công báo cáo Giám đốc ĐHQGHN xem xét, quyết định việc khai thác tài sản công\n\n11 8. Các Đơn vị có trách nhiệm cấp hóa đơn bán hàng cho các tổ chức, cá nhân theo quy định của pháp luật về hóa đơn, chứng từ. Số tiền thu được từ khai thác tài sản công, sau khi trừ đi các chi phí có liên quan, thực hiện nghĩa vụ tài chính với Nhà nước, phần còn lại là nguồn thu của đơn vị sự nghiệp công lập được quản lý, sử dụng theo quy định của Chính phủ về cơ chế tự chủ tài chính của đơn vị sự nghiệp công lập. Điều 7. Mua sắm tài sản công 1. Hằng năm, các đơn vị thuộc ĐHQGHN được sử dụng nguồn kinh phí được giao để mua sắm tài sản (nếu có); nguồn kinh phí của ĐHQGHN trực tiếp mua sắm, giao cho đơn vị quản lý, sử dụng; nguồn kinh phí hợp pháp của đơn vị để mua sắm tài sản. Việc mua sắm tài sản phải phù hợp với tiêu chuẩn, định mức sử dụng, thực hiện đúng trình tự, thủ tục đảm bảo công khai, tiết kiệm và có hiệu quả. Việc mua sắm, quản lý, sử dụng tài sản công là vật tiêu hao phục vụ hoạt động của đơn vị bao gồm nguyên nhiên liệu, vật tư, vật liệu, văn phòng phẩm và các vật khác"
+        },
+        {
+          "document_id": "b52c17cb-9239-4b0e-a93b-f25c58b20fe3",
+          "document_version_id": "98ec9571-32af-426d-9647-ce09e324ed2a",
+          "provenance_record_id": "cd1aa31a-9912-4cb3-8bf8-a19909fe3c29",
+          "source_id": "VNU",
+          "chunk_id": "2a7fde1e-8aef-48e5-a685-ab9605c438de",
+          "locator": "chunk:47",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "c1b1191f-5e40-4101-99d8-76c80b7ec7aa"
+          ],
+          "content_excerpt": "hông tư số 144/2017/TT-BTC hoặc in từ cơ sở dữ liệu về tài sản công thông qua phần mềm Quản lý đăng ký tài sản công (nếu có) (chủng loại, số lượng, diện tích; tình trạng; nguyên giá, giá trị còn lại theo sổ kế toán; hình thức thanh lý; lý do thanh lý). b) Đơn vị có tài sản thanh lý tổ chức thanh lý tài sản công theo quy định tại Điều 30 và Điều 31 Nghị định số 151/2017/NĐ-CP. c) Sau khi hoàn thành việc thanh lý tài sản, đơn vị có tài sản thanh lý hạch toán giảm tài sản theo quy định của pháp luật về kế toán; báo cáo kê khai biến động tài sản theo quy định tại Điều 125 và Điều 126 Nghị định số 151/2017/NĐ-CP. 4. Quản lý, sử dụng tiền thu được từ thanh lý tài sản công a) Số tiền thu được từ thanh lý tài sản công trong năm tài chính, sau khi trừ đi chi phí hợp lý quy định tại điểm b khoản 4 Điều này, các đơn vị thực hiện bổ sung vào Quỹ phát triển hoạt động sự nghiệp của đơn vị hoặc trả nợ đối với tài sản được đầu tư, mua sắm từ nguồn vốn huy động (nếu có). b) Chi phí hợp lý liên quan đến việc thanh lý tài sản công gồm: Chi phí kiểm kê tài sản; Chi phí phá đỡ, hủ y bỏ tài sản; Chi phí định giá và thẩm định giá tài sản; Chi phí tổ chức bán đấu giá; Các chi phí khác có liên quan. c) Mức"
+        },
+        {
+          "document_id": "b52c17cb-9239-4b0e-a93b-f25c58b20fe3",
+          "document_version_id": "98ec9571-32af-426d-9647-ce09e324ed2a",
+          "provenance_record_id": "cd1aa31a-9912-4cb3-8bf8-a19909fe3c29",
+          "source_id": "VNU",
+          "chunk_id": "591a63a3-b537-42a5-9a5f-25fa1a3252db",
+          "locator": "chunk:20",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "bbd15216-7de4-4e84-a826-0b317dfa06c5"
+          ],
+          "content_excerpt": "công; Ki ểm kê; Ki ểm tra; Đánh giá l ại tài s ản công; Báo cáo và công khai tài sản công theo quy định. Giao lại tài sản công cho Nhà nước khi có quyết định thu hồi của cơ quan, người có thẩm quyền.\n\n9 c) Chịu sự thanh tra, kiểm tra, giám sát của cơ quan nhà nước có thẩm quyền; giám sát của cán bộ, công chức, viên chức trong quản lý, sử dụng tài sản công thuộc phạm vi quản lý theo quy định của pháp luật. d) Thực hiện nghĩa vụ tài chính trong sử dụng tài sản công theo quy định của pháp luật. đ) Thực hiện các nghĩa vụ khác theo quy định của pháp luật. Điều 5. Quyền và nghĩa vụ của người đứng đầu cơ quan, đơn vị trong việc quản lý, sử dụng tài sản công 1. Tổ chức thực hiện quản lý, sử dụng tài sản công để thực hiện chức năng, nhiệm vụ được nhà nước giao. 2. Giám sát, kiểm tra việc quản lý, sử dụng tài sản công được giao quản lý, sử dụng. 3. Xử lý theo thẩm quyền hoặc trình cơ quan, người có thẩm quyền xử lý các hành vi vi phạm pháp luật về quản lý, sử dụng tài sản công. 4. Ban hành và tổ chức thực hiện Quy chế quản lý, sử dụng tài sản công được nhà nước giao. 5. Chấp hành quy định của Luật Quản lý tài sản công và các văn bản khác có liên quan, đảm bảo sử dụng tài sản công đúng mục đ"
+        },
+        {
+          "document_id": "a69486f6-741f-436e-97ea-28300af0e2c5",
+          "document_version_id": "4757cf23-0850-4cd2-b9d8-3035940b9460",
+          "provenance_record_id": "d3ca016a-b87e-4c98-a987-df2ba4186ef9",
+          "source_id": "VNU",
+          "chunk_id": "a24ec82e-d771-44d8-adba-d235344935d1",
+          "locator": "chunk:13",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "5e801c22-0838-4226-982b-e9b621992018"
+          ],
+          "content_excerpt": "ên và trực thuộc; + Ban Tài chính và Đầu tư; các đơn vị thuộc phạm vi quản lý của ĐHQGHN. 7. Thực hiện việc báo cáo kết quả tổng kiểm kê tài sản công. a) Đối với đơn vị thành viên và trực thuộc ĐHQGHN\n\n3 - Lập báo cáo kết quả tổng kiểm kê tài sản công tại đơn vị mình đảm bảo đúng quy định; - Thời hạn gửi về ĐHQGHN (Ban Tài chính và Đầu tư): Trước ngày 31/03/2026. b) Ban Tài chính và Đầu tư và Tổ giúp việc Ban chỉ đạo tổng kiểm kê tài sản công; - Tổng hợp, xây dựng báo cáo kết quả tổng kiểm kê tài sản thuộc phạm vi quản lý; - Báo cáo Ban chỉ đạo tổng kiểm kê tài sản công. c) Ban chỉ đạo tổng kiểm kê tài sản công: xem xét, báo cáo Lãnh đạo ĐHQGHN, ký báo cáo kết quả tổng kiểm kê của ĐHQGHN gửi Bộ Tài chính trước ngày 31/5/2026. III. PHÂN CÔNG MỘT SỐ NHIỆM VỤ CỤ THỂ 1. Các đơn vị thành viên và trực thuộc ĐHQGHN: - Tổ chức tập huấn, tuyên truyền, phổ biến các quy định cho các bộ phận, các cá nhân có liên quan biết và thực hiện; - Thành lập Tổ kiểm kê và tổ chức thực hiện kiểm kê tài sản thuộc phạm vi kiểm kê do mình trực tiếp quản lý/tạm quản lý theo danh mục quy định tại Phụ lục kèm theo Quyết định số 213/QĐ-TTg; - Đôn đốc, hướng dẫn Tổ kiểm kê thực hiện kiểm kê thực hiện; - Tổng hợp"
+        }
+      ],
+      "coverage_matrix": [
+        {
+          "sub_intent_id": "24d2a95c-160f-4a60-866b-0767e7d6fcb2",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        },
+        {
+          "sub_intent_id": "c1b1191f-5e40-4101-99d8-76c80b7ec7aa",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        },
+        {
+          "sub_intent_id": "bbd15216-7de4-4e84-a826-0b317dfa06c5",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        },
+        {
+          "sub_intent_id": "5e801c22-0838-4226-982b-e9b621992018",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        }
+      ],
+      "final_p9_evidence": [
+        {
+          "document_version_id": "98ec9571-32af-426d-9647-ce09e324ed2a",
+          "chunk_id": "0698df25-2f5e-4ff2-83f6-54671923a324",
+          "locator": "chunk:25",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "98ec9571-32af-426d-9647-ce09e324ed2a",
+          "chunk_id": "2a7fde1e-8aef-48e5-a685-ab9605c438de",
+          "locator": "chunk:47",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "98ec9571-32af-426d-9647-ce09e324ed2a",
+          "chunk_id": "591a63a3-b537-42a5-9a5f-25fa1a3252db",
+          "locator": "chunk:20",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "4757cf23-0850-4cd2-b9d8-3035940b9460",
+          "chunk_id": "a24ec82e-d771-44d8-adba-d235344935d1",
+          "locator": "chunk:13",
+          "authority_role": "GOVERNING"
+        }
+      ],
+      "p10_final_answer": "Evidence-bound diagnostic draft Issue 1: coverage=SUPPORTED; selected evidence locators=chunk:25. Issue 2: coverage=SUPPORTED; selected evidence locators=chunk:47. Issue 3: coverage=SUPPORTED; selected evidence locators=chunk:20. Issue 4: coverage=SUPPORTED; selected evidence locators=chunk:13. Limitations: this draft reports only retrieved evidence and retained coverage gaps.",
+      "claim_to_evidence_map": [
+        {
+          "claim_index": 0,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            0
+          ],
+          "evidence_indices": [
+            0
+          ]
+        },
+        {
+          "claim_index": 1,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            1
+          ],
+          "evidence_indices": [
+            1
+          ]
+        },
+        {
+          "claim_index": 2,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            2
+          ],
+          "evidence_indices": [
+            2
+          ]
+        },
+        {
+          "claim_index": 3,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            3
+          ],
+          "evidence_indices": [
+            3
+          ]
+        }
+      ],
+      "independent_reviewer_score": null,
+      "independent_reviewer_decision": null
+    },
+    {
+      "case_id": "Q07",
+      "question": "Trong thời gian học tiến sĩ tại UEB, nghiên cứu sinh phải tuân thủ các quy định nào?",
+      "terminal_status": "ANSWER",
+      "material_sub_intents": [
+        {
+          "code": "GENERAL_LEGAL_ISSUE",
+          "description": "general legal issue",
+          "actor_scope": null,
+          "object_scope": null
+        }
+      ],
+      "authority_candidates": [
+        {
+          "document_id": "16b98c3b-4a5f-48cf-ad60-2e8f923d2bab",
+          "document_version_id": "7e51b170-d4c6-46db-9729-d5d8a24ed3a8",
+          "provenance_record_id": "1d1ff2a4-cec4-45e5-bbb1-266632258eec",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "2fd940be-9004-4d23-ae12-9fbaf97bd4a8",
+          "document_version_id": "453bc2ee-45c9-4ad2-872c-25189b7c4940",
+          "provenance_record_id": "76621e51-f063-4cae-af64-8e0f1d117750",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "f6923427-c209-4a0b-b081-9c3b1dd1b7cf",
+          "document_version_id": "61da8c94-311f-493b-8a63-33b0630caf61",
+          "provenance_record_id": "221624ab-a914-495c-abf5-e721b778ef44",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "e28831bf-1e88-4c35-8fe2-761870d7319d",
+          "document_version_id": "c1df2175-958d-4c60-9173-cbd938ff8ced",
+          "provenance_record_id": "36b8d221-b535-49bd-8ff1-a9b85a68b598",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "1433fc8c-dbcc-4619-a9f0-47bce516284a",
+          "document_version_id": "11f830f2-eb7a-4cf3-a6ba-153acee68c48",
+          "provenance_record_id": "3e646fd3-14d8-48de-bec6-518946865e00",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "bc788156-98d1-46f2-8062-e0a02daed4a6",
+          "document_version_id": "2d83f45e-a5bc-40da-9acb-253c5086adce",
+          "provenance_record_id": "2fad9409-15b3-4684-a61b-50f63247dfb4",
+          "source_id": "UEB",
+          "role": "IMPLEMENTING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "647cd12a-e2ee-4aa6-9afc-b67e74b3c892",
+          "document_version_id": "6511e4d8-6326-48b3-8ccf-8f5933910b07",
+          "provenance_record_id": "1a6911a2-da0d-45f5-bfa0-08774e0abd49",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ddc4a713-824b-4545-9209-f07a6daa89c6",
+          "document_version_id": "1c8fd53d-4513-4956-ad8c-26f5cfc91d0b",
+          "provenance_record_id": "c0c29416-1bbb-4b16-80ae-bb4d14a3754c",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "7a3ce0c2-e56f-4dcc-be03-aed921f0ed08",
+          "document_version_id": "6e6c28f9-cbce-4f8b-ab0e-9b0ff6a993df",
+          "provenance_record_id": "67e7dd14-ee9e-44d2-8899-7e0f87a79a6f",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "7ea54d73-2343-4b23-903f-1b9ab34154b5",
+          "document_version_id": "62e7659a-7c9d-4ddf-95df-8ea1dd2171a4",
+          "provenance_record_id": "b4264d20-f147-4dfb-84e6-d7bac9e8a573",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "3af9c006-f150-4501-a298-9c3936a54352",
+          "document_version_id": "8c9df3c7-45ed-4042-aa89-407b6f0abea8",
+          "provenance_record_id": "2d46b608-5937-4043-b409-34363090acb4",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "bd283a61-fc85-41af-bbe9-e9d03d634363",
+          "document_version_id": "366741ca-ba2a-4619-8ae5-57a5044de932",
+          "provenance_record_id": "d86143cd-2bf9-4f19-94e8-9d57e6efa3f4",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "4a938ce2-1d85-4c4b-9e15-3218634c366f",
+          "document_version_id": "1e379e38-ba02-4bf0-b1c0-48f7ca828d22",
+          "provenance_record_id": "f680721e-b333-41bd-abbf-d395e49ca32b",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "556b2136-4d08-4eaf-bc46-de307a357e9d",
+          "document_version_id": "7b620eac-6fcf-4716-93ea-fda1a2431397",
+          "provenance_record_id": "d43a63fe-0291-4e13-bbd1-a2e680b92ba8",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "6c0cb5eb-f5a3-40a7-8fa3-0d8a68546c64",
+          "document_version_id": "b5768093-0ce7-4d65-ad99-b07b6cb9fe02",
+          "provenance_record_id": "1267c18a-29b6-4ff2-bff1-631663d45b47",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "7b47d90a-3f8e-4293-bd84-68b95e24f2a9",
+          "document_version_id": "6ac79432-8007-42fe-b198-cdaaf17e4d91",
+          "provenance_record_id": "669478a1-7b2a-457d-b6a6-bde6c9ce3497",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        }
+      ],
+      "final_pinpoint_evidence": [
+        {
+          "document_id": "7a3ce0c2-e56f-4dcc-be03-aed921f0ed08",
+          "document_version_id": "6e6c28f9-cbce-4f8b-ab0e-9b0ff6a993df",
+          "provenance_record_id": "67e7dd14-ee9e-44d2-8899-7e0f87a79a6f",
+          "source_id": "VNU",
+          "chunk_id": "2f11c086-1bd8-4fa8-bbcc-3ab6afb2a871",
+          "locator": "chunk:52",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "2f0b7af5-3fd1-4d47-b8b1-290c53a1edaf"
+          ],
+          "content_excerpt": "hời gian nghỉ học tạm thời và thời gian kéo dài (nếu có) không được vượt quá tổng thời gian đào tạo chuẩn và thời gian đào tạo kéo dai tối đa được quy định tại khoản 3 và khoản 4, Điều 19 của Quy chế này. Thời gian nghiên cứu sinh được điều động vào lực lượng vũ trang và nghỉ thai sản không tính trong tông thời gian này. 4. Nếu nghiên cứu sinh không có khả năng hoàn thành chương trình dao tạo đúng thời hạn quy định, thì chậm nhất 01 tháng trước khi hết hạn phải có đơn xin phép kéo dài thời gian đào tạo, có ý kiến của cơ quan cử di học (nếu có) | và được cán bộ hướng dẫn đồng ý. Việc kéo dai thời gian dao tạo chỉ giải quyết | khi có lý do chính đáng và đảm bảo trong thời gian kéo dài nghiên cứu sinh | hoàn thành được nhiệm vu học tập, nghiên cứu. 5. Sau khi nghiên cứu sinh hết thời gian đào tạo (kề cả thời gian kéo dài (nếu có)) hoặc đã hoàn thành chương trình dao tạo, thủ trưởng đơn vị dao tạo có văn bản thông báo cho đơn vị cử nghiên cứu sinh đi học biết và có đánh giá về ket quả học tập, nghiên cứu, thai độ của nghiên cứu sinh trong quá trình học tập tại đơn vị. 6. Nghiên cứu sinh được thôi học nếu có đơn xin thôi học và được thủ trưởng đơn vị đào tạo đồng ý. 7. Nghiên cứu sinh b"
+        },
+        {
+          "document_id": "7a3ce0c2-e56f-4dcc-be03-aed921f0ed08",
+          "document_version_id": "6e6c28f9-cbce-4f8b-ab0e-9b0ff6a993df",
+          "provenance_record_id": "67e7dd14-ee9e-44d2-8899-7e0f87a79a6f",
+          "source_id": "VNU",
+          "chunk_id": "94c116d7-02fa-4d10-90c0-b824e2a6c7ee",
+          "locator": "chunk:51",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "2f0b7af5-3fd1-4d47-b8b1-290c53a1edaf"
+          ],
+          "content_excerpt": "kiểm tra kiến thức, năng lực nghiên cứu, năng lực ngoại ngữ dé có thé đáp ứng yêu cau của đơn vị đào tao tiếp nhận nghiên cứu sinh. c) Nghiên cứu sinh là người nước ngoài hoặc người Việt Nam dang học\n\n19 tại một đơn vị dao tạo ở nước ngoài đã được kiểm định chất lượng và có uy tin có thể được xét chuyền về học tại Đại học Quốc gia Hà Nội khi có đủ các điều kiện quy định tại điểm b, khoản 2, Điều này và nộp day đủ hồ sơ khi làm thủ tục chuyển đơn vị đào tạo. Các điều kiện về trình độ tiếng Việt hoặc ngoại ngữ liên quan áp dụng như quy định tuyển sinh đối với người nước ngoài vào học tại Đại học Quốc gia Hà Nội. d) Nghiên cứu sinh chuyền đơn vị dao tạo được bảo lưu điểm và số tín chỉ của học phần theo quy định tại khoản 2, Điều 24 của Quy chế này. 3. Nghiên cứu sinh được phép nghỉ học tạm thời và bảo lưu kết quả đã học. Đơn vị đào tạo chỉ giải quyết cho nghỉ học tạm thời đối với nghiên cứu sinh đã học tối thiểu một học kỳ tại đơn vi dao tạo và không bi kỷ luật. Tổng thời gian đào tạo, thời gian nghỉ học tạm thời và thời gian kéo dài (nếu có) không được vượt quá tổng thời gian đào tạo chuẩn và thời gian đào tạo kéo dai tối đa được quy định tại khoản 3 và khoản 4, Điều 19 của Quy chế"
+        },
+        {
+          "document_id": "7a3ce0c2-e56f-4dcc-be03-aed921f0ed08",
+          "document_version_id": "6e6c28f9-cbce-4f8b-ab0e-9b0ff6a993df",
+          "provenance_record_id": "67e7dd14-ee9e-44d2-8899-7e0f87a79a6f",
+          "source_id": "VNU",
+          "chunk_id": "ef3fa8e6-5498-4100-ad1e-055b2d9b86d7",
+          "locator": "chunk:27",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "2f0b7af5-3fd1-4d47-b8b1-290c53a1edaf"
+          ],
+          "content_excerpt": "goài làm nghiên cứu sinh tại Đại học Quốc gia Hà Nội được thực hiện theo quy định riêng. Chương III CHƯƠNG TRÌNH ĐÀO TẠO Điều 16. Cấu trúc của chương trình đào tạo tiến sĩ 1. Chương trình đào tạo tiến sĩ của Đại học Quốc gia Hà Nội gồm tối thiểu 90 tin chỉ dối với nghiên cứu sinh đã có bằng thạc sĩ và 120 tín chỉ đối với nghiên cứu sinh có bằng đại học, bao gồm các phần: a) Phần 1: Các học phần bỏ sung (dành cho nghiên cứu sinh chưa có bằng thạc sĩ) - Các học phần bồ sung là các học phan giúp nghiên cứu sinh có đủ kiến thức và trình độ chuyên môn để thực hiện nhiệm vụ của nghiên cứu sinh; - Nghiên cứu sinh chưa có bằng thạc sĩ phải tích lũy tối thiêu 30 tín chỉ các học phần bỗ sung bắt buộc và tự chọn. Các học phần bỏ sung bao gdm các học phần của chương trình dao tạo thạc sĩ tương ứng, trừ học phần ngoại ngữ và luận văn. b) Phần 2: Các học phan trong chương trình dao tạo tiến sĩ với tổng số tối đa 16 tín chỉ. - Các học phần thuộc chương trình dao tạo tiến sĩ giúp nghiên cứu sinh nâng cao trình độ lý thuyết, phương pháp nghiên cứu và khả năng ứng dụng các phương pháp nghiên cứu. Các học phần thuộc chương trình đào tạo tiến sĩ bao gôm những học phan bắt buộc và những học phần tự chọ"
+        }
+      ],
+      "coverage_matrix": [
+        {
+          "sub_intent_id": "2f0b7af5-3fd1-4d47-b8b1-290c53a1edaf",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        }
+      ],
+      "final_p9_evidence": [
+        {
+          "document_version_id": "6e6c28f9-cbce-4f8b-ab0e-9b0ff6a993df",
+          "chunk_id": "2f11c086-1bd8-4fa8-bbcc-3ab6afb2a871",
+          "locator": "chunk:52",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "6e6c28f9-cbce-4f8b-ab0e-9b0ff6a993df",
+          "chunk_id": "94c116d7-02fa-4d10-90c0-b824e2a6c7ee",
+          "locator": "chunk:51",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "6e6c28f9-cbce-4f8b-ab0e-9b0ff6a993df",
+          "chunk_id": "ef3fa8e6-5498-4100-ad1e-055b2d9b86d7",
+          "locator": "chunk:27",
+          "authority_role": "GOVERNING"
+        }
+      ],
+      "p10_final_answer": "Evidence-bound diagnostic draft Issue 1: coverage=SUPPORTED; selected evidence locators=chunk:52, chunk:51, chunk:27. Limitations: this draft reports only retrieved evidence and retained coverage gaps.",
+      "claim_to_evidence_map": [
+        {
+          "claim_index": 0,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            0
+          ],
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "independent_reviewer_score": null,
+      "independent_reviewer_decision": null
+    },
+    {
+      "case_id": "Q08",
+      "question": "Học viên cao học tại UEB phải tuân thủ những quy định nào trong quá trình học?",
+      "terminal_status": "ANSWER",
+      "material_sub_intents": [
+        {
+          "code": "GENERAL_LEGAL_ISSUE",
+          "description": "general legal issue",
+          "actor_scope": null,
+          "object_scope": null
+        }
+      ],
+      "authority_candidates": [
+        {
+          "document_id": "63aae265-1071-4bab-9fdb-26bc6fc7ff2f",
+          "document_version_id": "7aff14f2-fa3b-4a33-911d-a6f41bb696c8",
+          "provenance_record_id": "5f1b8154-e1ed-4a2f-92c7-14f5a0b4f2c9",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "1433fc8c-dbcc-4619-a9f0-47bce516284a",
+          "document_version_id": "11f830f2-eb7a-4cf3-a6ba-153acee68c48",
+          "provenance_record_id": "3e646fd3-14d8-48de-bec6-518946865e00",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "10e158bc-622a-4ce5-94c3-d8585bca8880",
+          "document_version_id": "ca245ede-a197-4907-b9d6-cb6cd57ff1fb",
+          "provenance_record_id": "5d391492-0ed1-4827-8692-e86dd6931d9b",
+          "source_id": "UEB",
+          "role": "BACKGROUND",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "e28831bf-1e88-4c35-8fe2-761870d7319d",
+          "document_version_id": "c1df2175-958d-4c60-9173-cbd938ff8ced",
+          "provenance_record_id": "36b8d221-b535-49bd-8ff1-a9b85a68b598",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "3af9c006-f150-4501-a298-9c3936a54352",
+          "document_version_id": "8c9df3c7-45ed-4042-aa89-407b6f0abea8",
+          "provenance_record_id": "2d46b608-5937-4043-b409-34363090acb4",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "16b98c3b-4a5f-48cf-ad60-2e8f923d2bab",
+          "document_version_id": "7e51b170-d4c6-46db-9729-d5d8a24ed3a8",
+          "provenance_record_id": "1d1ff2a4-cec4-45e5-bbb1-266632258eec",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "7ea54d73-2343-4b23-903f-1b9ab34154b5",
+          "document_version_id": "62e7659a-7c9d-4ddf-95df-8ea1dd2171a4",
+          "provenance_record_id": "b4264d20-f147-4dfb-84e6-d7bac9e8a573",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "1d15be3e-f9da-4303-aa31-b6bfbb1087dd",
+          "document_version_id": "50033bc2-9b76-4116-8609-98d365fbf15e",
+          "provenance_record_id": "b8d3183a-bf59-4671-a3ad-b1cfb1c1acaf",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "485ae20a-8181-4900-99f8-d141ff2b1d7a",
+          "document_version_id": "e36022f1-302c-4f87-a93f-5eb1fbeedc6c",
+          "provenance_record_id": "6599e541-251f-4477-b90b-0b24f7224331",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "556b2136-4d08-4eaf-bc46-de307a357e9d",
+          "document_version_id": "7b620eac-6fcf-4716-93ea-fda1a2431397",
+          "provenance_record_id": "d43a63fe-0291-4e13-bbd1-a2e680b92ba8",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "631db9bc-10dc-4f57-bada-77a2ffb4ce93",
+          "document_version_id": "58348080-2c92-47a7-a1a0-f609259151f7",
+          "provenance_record_id": "edf608ec-f22e-4139-9471-e83b2787a53f",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "4f39a4d5-0070-4971-895a-e4961fba9cbc",
+          "document_version_id": "777228ee-3aea-43f4-a8f2-a71eaefbb687",
+          "provenance_record_id": "4d2ae4fb-67b1-496b-b4c2-13f2b3b809ac",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "27aef685-715c-400c-95e9-9d93f5b278c2",
+          "document_version_id": "83986da3-9625-47c6-936d-a62fd7e74aea",
+          "provenance_record_id": "8b5e1f07-9048-418c-864e-8282cc63c878",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "2b3b6e22-33e8-4d2d-94f0-04b9fc1b206b",
+          "document_version_id": "02f6aa19-befb-431d-a7dd-beb87086b21a",
+          "provenance_record_id": "b5d06c17-d039-428a-adba-351dfc18f96b",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        }
+      ],
+      "final_pinpoint_evidence": [
+        {
+          "document_id": "63aae265-1071-4bab-9fdb-26bc6fc7ff2f",
+          "document_version_id": "7aff14f2-fa3b-4a33-911d-a6f41bb696c8",
+          "provenance_record_id": "5f1b8154-e1ed-4a2f-92c7-14f5a0b4f2c9",
+          "source_id": "UEB",
+          "chunk_id": "5a073162-2cdb-4e60-987e-415ab1c80b1e",
+          "locator": "chunk:2",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "cf6f96a2-debd-44a2-8ae8-4100888d5c7b"
+          ],
+          "content_excerpt": "n chịu trách nhiệm thi hành Quyết định này./. Nơi nhận: - Như Điều 3; - Ban Giám hiệu; - Các đơn vị thuộc/trực thuộc (để t/h); - Đoàn TN/Hội SV (để t/h); - Lưu: VT, CT&CTSV. HIỆU TRƯỞNG Nguyễn Trúc Lê\n\n1 ĐẠI HỌC QUỐC GIA HÀ NỘI TRƯỜNG ĐẠI HỌC KINH TẾ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc QUY ĐỊNH Quản lý và sử dụng quyển UEB Visa tại Trường Đại học Kinh tế - ĐHQGHN (Ban hành kèm theo Quyết định số: /QĐ-ĐHKT ngày tháng năm 2022 của Hiệu trưởng Trường Đại học Kinh tế - ĐHQGHN) Chương I QUY ĐỊNH CHUNG Điều 1. Phạm vi, đối tượng áp dụng Quyển UEB Visa áp dụng cho sinh viên hệ đại học chính quy, sinh viên hệ đào tạo liên kết quốc tế (gọi chung là sinh viên) đang học tập tại Trường Đại học Kinh tế - ĐHQGHN. Điều 2. Mục đích, ý nghĩa 1. Mục đích: a) Quyển UEB Visa được phát hành nhằm mục đích ghi nhận, lưu lại minh chứng kết quả sinh viên tham gia các hoạt động, sự kiện (thuộc danh mục được ghi nhận) và các thành tích mà sinh viên đạt được trong suốt quá trình học tập tại Trường. b) Nâng cao vai trò, ý thức và trách nhiệm của sinh viên trong việc chủ động tham gia các hoạt động, rèn luyện và phát triển bản thân, phấn đấu đạt thành tích học tập, nghiên cứu, đồng th"
+        },
+        {
+          "document_id": "63aae265-1071-4bab-9fdb-26bc6fc7ff2f",
+          "document_version_id": "7aff14f2-fa3b-4a33-911d-a6f41bb696c8",
+          "provenance_record_id": "5f1b8154-e1ed-4a2f-92c7-14f5a0b4f2c9",
+          "source_id": "UEB",
+          "chunk_id": "a334cd9f-8af1-4afe-abf3-d5d82d6896c2",
+          "locator": "chunk:4",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "cf6f96a2-debd-44a2-8ae8-4100888d5c7b"
+          ],
+          "content_excerpt": "g tác sinh viên (Phòng CT&CTSV) làm đầu mối phối hợp với các Khoa, Viện QTKD, Trung tâm Đào tạo và Giáo dục Quốc tế cấp phát, quản lý và hướng dẫn sử dụng UEB Visa cho sinh viên. 2. Đối với sinh viên:\n\n2 a) Mỗi sinh viên hệ chính quy, hệ đào tạo liên kết quốc tế của Trường được cấp 01 quyển UEB Visa. Sinh viên tự bảo quản, sử dụng quyển UEB Visa theo hướng dẫn sử dụng và hướng dẫn từ Phòng CT&CTSV. b) Sinh viên tham dự các hoạt động, sự kiện của Nhà trường sẽ được ký xác nhận tham gia và đóng dấu của Trường (nếu sinh viên có nhu cầu). Điều 4. Cách thức sử dụng quyển UEB Visa 1. Trong quyển UEB Visa có 5 mục và cách ghi nhận sinh viên tại các mục như sau: a) Mục Trí Tuệ: Ghi nhận sinh viên đạt học bổng, tham gia và đạt giải các cuộc thi về trí tuệ. b) Mục Công dân toàn cầu: Ghi nhận tham gia Trao đổi sinh viên quốc tế, trong nước, tham gia Hội nghị, Hội thảo, sự kiện Seminar, Workshop. c) Mục Nhân ái: Ghi nhận sinh viên tha m gia các hoạt động tình nguyện , trách nhiệm xã hội. d) Mục Nhiệt huyết: Ghi nhận sinh viên tham gia các hoạt động Sứ giả sinh viên, Đoàn Thanh niên, Hội sinh viên, Câu lạc bộ. e) Mục khác: Ghi nhận đóng góp của sinh viên ngoài các mục trên. 2. Cách thức ghi nhậ"
+        },
+        {
+          "document_id": "63aae265-1071-4bab-9fdb-26bc6fc7ff2f",
+          "document_version_id": "7aff14f2-fa3b-4a33-911d-a6f41bb696c8",
+          "provenance_record_id": "5f1b8154-e1ed-4a2f-92c7-14f5a0b4f2c9",
+          "source_id": "UEB",
+          "chunk_id": "20f01b9d-e2e1-4eeb-a62b-369de68f9f29",
+          "locator": "chunk:3",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "cf6f96a2-debd-44a2-8ae8-4100888d5c7b"
+          ],
+          "content_excerpt": "tại Trường. b) Nâng cao vai trò, ý thức và trách nhiệm của sinh viên trong việc chủ động tham gia các hoạt động, rèn luyện và phát triển bản thân, phấn đấu đạt thành tích học tập, nghiên cứu, đồng thời biết cách quản lý và sử dụng quyển UEB Visa. c) Quyển UEB Visa là một sản phẩm khác biệt, là minh chứng cho các tổ chức, doanh nghiệp, cá nhân nhận biết được kết quả tham gia các hoạt động của sinh viên trong quá trình học tập tại Trường. Sinh viên của Trường sẽ có thêm nhiều lợi thế hơn trong quá trình tham gia tuyển dụng, làm việc và các hoạt động khác. 2. Ý nghĩa: a) Quyển UEB Visa là tài sản của Trường Đại học Kinh tế - ĐHQGHN và chỉ cấp cho sinh viên của Nhà trường. b) Người sở hữu quyển UEB Visa là đại sứ khẳng định cam kết của Trường Đại học Kinh tế - ĐHQGHN về chất lượng đào tạo và nghiên cứu khoa học chuẩn quốc tế. Chương II CÔNG TÁC QUẢN LÝ VÀ SỬ DỤNG QUYỂN UEB VISA Điều 3. Công tác quản lý 1. Đối với đơn vị quản lý: Phòng Chính trị và Công tác sinh viên (Phòng CT&CTSV) làm đầu mối phối hợp với các Khoa, Viện QTKD, Trung tâm Đào tạo và Giáo dục Quốc tế cấp phát, quản lý và hướng dẫn sử dụng UEB Visa cho sinh viên. 2. Đối với sinh viên:"
+        }
+      ],
+      "coverage_matrix": [
+        {
+          "sub_intent_id": "cf6f96a2-debd-44a2-8ae8-4100888d5c7b",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        }
+      ],
+      "final_p9_evidence": [
+        {
+          "document_version_id": "7aff14f2-fa3b-4a33-911d-a6f41bb696c8",
+          "chunk_id": "5a073162-2cdb-4e60-987e-415ab1c80b1e",
+          "locator": "chunk:2",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "7aff14f2-fa3b-4a33-911d-a6f41bb696c8",
+          "chunk_id": "a334cd9f-8af1-4afe-abf3-d5d82d6896c2",
+          "locator": "chunk:4",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "7aff14f2-fa3b-4a33-911d-a6f41bb696c8",
+          "chunk_id": "20f01b9d-e2e1-4eeb-a62b-369de68f9f29",
+          "locator": "chunk:3",
+          "authority_role": "GOVERNING"
+        }
+      ],
+      "p10_final_answer": "Evidence-bound diagnostic draft Issue 1: coverage=SUPPORTED; selected evidence locators=chunk:2, chunk:4, chunk:3. Limitations: this draft reports only retrieved evidence and retained coverage gaps.",
+      "claim_to_evidence_map": [
+        {
+          "claim_index": 0,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            0
+          ],
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "independent_reviewer_score": null,
+      "independent_reviewer_decision": null
+    },
+    {
+      "case_id": "Q09",
+      "question": "UEB phải lập, quản lý và lưu trữ hồ sơ cùng văn bản điện tử như thế nào?",
+      "terminal_status": "ANSWER",
+      "material_sub_intents": [
+        {
+          "code": "MANAGEMENT",
+          "description": "management",
+          "actor_scope": null,
+          "object_scope": null
+        }
+      ],
+      "authority_candidates": [
+        {
+          "document_id": "fb4ceebe-c472-4b3f-a79a-16fe4c819942",
+          "document_version_id": "4ccf189f-84f0-4d7b-b621-1ffb1053fec8",
+          "provenance_record_id": "ce8ecece-45da-4b95-a94b-d12217181e6e",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "8edd6eac-6b93-4005-a52a-a81b33727143",
+          "document_version_id": "f4485d0c-a4f9-42de-86e4-840fd3e67193",
+          "provenance_record_id": "817faca7-981e-49c4-815b-c8a4cb57bab0",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ecf5721d-0dc5-46b9-9e73-8a5bf605c058",
+          "document_version_id": "a6bab9bc-6f79-4431-8dac-26bf500511da",
+          "provenance_record_id": "8b0b1c92-2709-4f25-9987-ec24d3f84f36",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "c2184fd2-5ad5-419c-bd82-391bfde59780",
+          "document_version_id": "e4b18402-4d11-48f9-918e-cca6971ef6c4",
+          "provenance_record_id": "3939f797-9ecd-4f18-8f7b-eee6c1626db8",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "295775ae-8a0a-43d6-90ce-8073147021b6",
+          "document_version_id": "58300c50-4dc3-406c-b192-13443553bd9e",
+          "provenance_record_id": "2a57baa1-3a28-4449-a7e5-d32ddb72000b",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "dc8caece-bd04-4851-9ef9-25c69381c9f6",
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "provenance_record_id": "1e98f56e-7195-4780-87ec-4c36c40fcf51",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "8882b3a6-f5f3-4c4a-afd5-a546f6897d5c",
+          "document_version_id": "51873af9-30d0-4f4e-8d54-4e56876086c7",
+          "provenance_record_id": "34a29829-13c8-499b-b374-ffdc7117fdc4",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "29314177-3a02-44ff-8ec0-cef93630dcb4",
+          "document_version_id": "952787a6-582a-4007-a731-6a07ec9e520f",
+          "provenance_record_id": "d5ab9f8a-092b-49bb-8aa9-7b52bf816a0f",
+          "source_id": "VNU",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "98ed5f80-9851-463d-8194-12ae043bba5c",
+          "document_version_id": "748217a5-e028-4643-8247-589bbaa6e9ff",
+          "provenance_record_id": "95d20014-2725-4ac7-a650-ec3584a4fb6d",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "24125a02-7c57-411b-8dc9-6406fb109dd1",
+          "document_version_id": "ad7bf493-bd5d-4df8-a31c-fd76fc68131e",
+          "provenance_record_id": "5e62edde-c3cb-4463-aacc-384f7ab0ea58",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "60e62616-aa44-4268-af1d-acd567a371ff",
+          "document_version_id": "82e410d8-f65a-4f12-92db-f48fbdf79a22",
+          "provenance_record_id": "8c456847-efe4-4eb1-af5d-ccc74bbf4d0a",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "0a62652f-f56a-4b19-a2e0-d404b28b79a9",
+          "document_version_id": "43d550fe-c5e6-4a57-bc2c-1617681dde6c",
+          "provenance_record_id": "3f2a2b8e-f6d3-4e5d-aa19-0e847702f4c2",
+          "source_id": "UEB",
+          "role": "GOVERNING",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "4950357d-91e7-4ba3-ac55-c1d418eecf71",
+          "document_version_id": "be782223-9fda-42f1-8864-2d88e8bb7139",
+          "provenance_record_id": "0629a8dc-47c6-4e24-8f9c-9dd7833e4314",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        }
+      ],
+      "final_pinpoint_evidence": [
+        {
+          "document_id": "dc8caece-bd04-4851-9ef9-25c69381c9f6",
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "provenance_record_id": "1e98f56e-7195-4780-87ec-4c36c40fcf51",
+          "source_id": "VNU",
+          "chunk_id": "c14b4e75-f248-421b-91f6-5ea41a3bfdeb",
+          "locator": "chunk:18",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "96dcb282-1637-4308-a738-16f7a0f4e95b"
+          ],
+          "content_excerpt": "Quản lý dự án thực hiện theo quy định của Nhà nước và ĐHQGHN. 2. Hằng năm, Ban Quản lý dự án c ó trách nhiệm lập dự toán thu, chi b áo cáo ĐHQGHN phê duyệt và tổ chức thực hiện sau khi được phê duyệt.\n\n7 Giám đốc Ban Quản lý dự án hoặc ủy quyền cho Phó Giám đốc Thường trực Ban Quản lý dự án là chủ tài khoản của Ban Quản lý dự án, chịu trách nhiệm quản lý các nguồn thu, chi của Ban Quản lý dự án. 3. Ban Quản lý dự án có Kế toán trưởng do Giám đốc ĐHQGHN bổ nhiệm, miễn nhiệm. Giám đốc Ban Quản lý dự án và Kế toán trưởng của Ban Quản lý dự án chịu trách nhiệm trước pháp luật và trước Giám đốc ĐHQGHN về công tác kế toán, tài chính của Ban Quản lý dự án. Điều 12. Quản lý và sử dụng cơ sở vật chất, tài sản 1. Cơ sở vật chất, tài sản của Ban Quản lý dự án gồm: quyền sử dụng đất, nhà cửa, công trình xây dựng (nếu có); tài sản có được từ hoạt động tư vấn, dịch vụ; tài liệu, các trang thiết bị và những tài sản khác được Nhà nước và ĐHQGHN giao cho Ban Quản lý dự án quản lý và sử dụng hoặc do Ban Quản lý dự án tự mua sắm, xây dựng từ các nguồn thu sự nghiệp và các nguồn khác của đơn vị; các khoản kinh phí có được từ ngân sách nhà nước, hoạt động tư vấn, dịch vụ của Ban Quản lý dự án, đóng góp"
+        },
+        {
+          "document_id": "dc8caece-bd04-4851-9ef9-25c69381c9f6",
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "provenance_record_id": "1e98f56e-7195-4780-87ec-4c36c40fcf51",
+          "source_id": "VNU",
+          "chunk_id": "43b91698-4892-46bb-8532-524ccb154e43",
+          "locator": "chunk:14",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "96dcb282-1637-4308-a738-16f7a0f4e95b"
+          ],
+          "content_excerpt": "dự án gồm: Giám đốc và các Phó Giám đốc Ban Quản lý dự án. 2. Giám đốc Ban Quản lý dự án là người đại diện pháp luật của Ban Quản lý dự án trong quan hệ với ĐHQGHN, các tổ chức, cá nhân ở trong và ngoài nước; chịu trách nhiệm trước pháp luật và Giám đốc ĐHQGHN về tất cả các hoạt động của Ban Quản lý dự án. 3. Phó Giám đốc Ban Quản lý dự án giúp việc cho Giám đốc Ban Quản lý dự án, được thay mặt Giám đốc Ban Quản lý dự án chỉ đạo, điều hành một hoặc một số lĩnh vực công tác thuộc phạm vi được Giám đốc Ban Quản lý dự án giao và chịu trách nhiệm trước pháp luật và Giám đốc Ban Quản lý dự án về các lĩnh vực công tác đó. Phó Giám đốc Thường trực Ban Quản lý dự án được giao điều hành các hoạt động thường xuyên và ủy quyền là chủ tài khoản của Ban Quản lý dự án. 4. Giám đốc, Phó Giám đốc Ban Quản lý dự án do Giám đốc ĐHQGHN quyết định bổ nhiệm, miễn nhiệm. Việc bổ nhiệm, miễn nhiệm Giám đốc, Phó Giám đốc Ban Quản lý dự án thực hiện theo quy định của pháp luật và ĐHQGHN. Điều 8. Các phòng chuyên ngành và chuyên môn dùng chung 1. Các phòng chuyên ngành và chuyên môn dùng chung (sau đây gọi chung là phòng) của Ban Quản lý dự án có nhiệm vụ thực hiện các công việc theo chức năng, nhiệm vụ đư"
+        },
+        {
+          "document_id": "fb4ceebe-c472-4b3f-a79a-16fe4c819942",
+          "document_version_id": "4ccf189f-84f0-4d7b-b621-1ffb1053fec8",
+          "provenance_record_id": "ce8ecece-45da-4b95-a94b-d12217181e6e",
+          "source_id": "VNU",
+          "chunk_id": "b58fb467-a60d-458b-b516-d6a46c1c0c43",
+          "locator": "chunk:57",
+          "authority_role": "GOVERNING",
+          "sub_intent_ids": [
+            "96dcb282-1637-4308-a738-16f7a0f4e95b"
+          ],
+          "content_excerpt": "Language || Ngôn ngữ Pháp French Language || | | 68 | Ngôn ngữ Trung Quốc Chinese Language mg | Nhat Ban hoc Japanese Studies/Japan Studies man Phân tích dữ liệu kinh doanh Business Data Analytics ||\n\n4 Tên tiếng Việt của ngành đào tạo | Tên tiếng Anh của ngành đào tạo Quan hệ công chúng Public Relations | [oun Minton Quan ly dat dai Land Management || Quản lí giải tri va sự kiện Leisure and Event Management || Quản lý giáo dục Education Management | | Quản lý phát triên đô thị và bat Urban Development Management TỔ | ons động sản and Real Estate 79 | Quản lý tài nguyên và môi trườn Management of Natural Resources y uy © | and Environment | 80 | Quan ly thông tin Information Management ma Quản trị chất lượng giáo dục Education Quality Management || Ai abu ta ¬- Educational Technology 2 3 =— = &mundng TA | | Quản trị dịch vụ du lịch và lữ hành _ | Tourism and Travel Management |} 84 Quản trị đô thị thông minh và bên Smart and Sustainable Urban vững Managerment pone ne + | Management of Enterprise Quan trị doanh nghiệp va công nghệ &Technolosy Quản trị Nhân lực và Nhân tài Management of Human and Talent max | 89 | Quản trị tài nguyên di sản Heritage Resources Management max | Quản t"
+        }
+      ],
+      "coverage_matrix": [
+        {
+          "sub_intent_id": "96dcb282-1637-4308-a738-16f7a0f4e95b",
+          "state": "SUPPORTED",
+          "governing_authority_present": true,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        }
+      ],
+      "final_p9_evidence": [
+        {
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "chunk_id": "c14b4e75-f248-421b-91f6-5ea41a3bfdeb",
+          "locator": "chunk:18",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "1a5e117d-2539-480f-8dff-ec9f62030cd7",
+          "chunk_id": "43b91698-4892-46bb-8532-524ccb154e43",
+          "locator": "chunk:14",
+          "authority_role": "GOVERNING"
+        },
+        {
+          "document_version_id": "4ccf189f-84f0-4d7b-b621-1ffb1053fec8",
+          "chunk_id": "b58fb467-a60d-458b-b516-d6a46c1c0c43",
+          "locator": "chunk:57",
+          "authority_role": "GOVERNING"
+        }
+      ],
+      "p10_final_answer": "Evidence-bound diagnostic draft Issue 1: coverage=SUPPORTED; selected evidence locators=chunk:18, chunk:14, chunk:57. Limitations: this draft reports only retrieved evidence and retained coverage gaps.",
+      "claim_to_evidence_map": [
+        {
+          "claim_index": 0,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            0
+          ],
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "independent_reviewer_score": null,
+      "independent_reviewer_decision": null
+    },
+    {
+      "case_id": "Q10",
+      "question": "Sinh viên UEB bị cảnh báo học tập hoặc bị xem xét buộc thôi học theo căn cứ, thủ tục nào?",
+      "terminal_status": "ANSWER_WITH_LIMITATION",
+      "material_sub_intents": [
+        {
+          "code": "WARNING_GROUNDS",
+          "description": "academic warning grounds",
+          "actor_scope": "SINH_VIEN",
+          "object_scope": "academic warning"
+        },
+        {
+          "code": "DISMISSAL_GROUNDS",
+          "description": "academic dismissal grounds",
+          "actor_scope": "SINH_VIEN",
+          "object_scope": "academic dismissal"
+        },
+        {
+          "code": "WARNING_DISMISSAL_PROCESS",
+          "description": "warning and dismissal process",
+          "actor_scope": "SINH_VIEN",
+          "object_scope": "academic status process"
+        }
+      ],
+      "authority_candidates": [
+        {
+          "document_id": "872a8149-160f-47a8-8918-8c0c83fcb32f",
+          "document_version_id": "0b8c1e4b-494f-42ef-aed5-4655354291f6",
+          "provenance_record_id": "7357e51b-b809-44f8-97e5-62744b545512",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "f5269b7a-d0bc-4e43-a41b-29c179192ee1",
+          "document_version_id": "863fe27a-90ae-4aa8-88e7-cf7045df61f8",
+          "provenance_record_id": "aa41afa1-efab-4c27-9d6a-09974272219b",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "4af979a4-9814-4a64-b39f-0963734ae5fe",
+          "document_version_id": "e76e3287-1ee3-4532-8840-c1da345b942d",
+          "provenance_record_id": "b788111d-0716-43e5-a02f-c6ff1331345a",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "e5fd1706-9f07-4658-b798-67068a202cc8",
+          "document_version_id": "73292491-dadf-486b-b098-0f763d5cbeb2",
+          "provenance_record_id": "85c8cc35-1d74-4d2d-86b0-3f911fd5d49a",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "0ff54c1b-c8f4-458b-af3d-6394d50fad4b",
+          "document_version_id": "3dae4143-8b32-4211-b695-009ba415da9d",
+          "provenance_record_id": "783a18f0-71f8-458d-8621-912be1eaa8b3",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "98ed5f80-9851-463d-8194-12ae043bba5c",
+          "document_version_id": "748217a5-e028-4643-8247-589bbaa6e9ff",
+          "provenance_record_id": "95d20014-2725-4ac7-a650-ec3584a4fb6d",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "0a62652f-f56a-4b19-a2e0-d404b28b79a9",
+          "document_version_id": "43d550fe-c5e6-4a57-bc2c-1617681dde6c",
+          "provenance_record_id": "3f2a2b8e-f6d3-4e5d-aa19-0e847702f4c2",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "0cf64e7c-82f3-4154-aa15-132c60f77945",
+          "document_version_id": "b935b2ee-6c4a-465a-8b3a-7e975642735c",
+          "provenance_record_id": "3521ceed-7ff0-4ee9-8e37-b01cf4a8ac42",
+          "source_id": "VBQPPL",
+          "role": "SUPPLEMENTARY",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "055507b7-9420-4181-b229-282ed0ec272a",
+          "document_version_id": "01407940-c5f5-4998-b515-ec0d1dd69f8a",
+          "provenance_record_id": "d577928c-17fb-44e6-bdfa-8ba430b8eee4",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "9dae9149-f8e7-47c4-83bc-dfaf2efd74bc",
+          "document_version_id": "1d90185d-8853-4989-9d7c-3784092bba5a",
+          "provenance_record_id": "707bce0b-c43c-4384-b667-b9160141745c",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "8bdaed8c-3586-4ff0-ad2f-5446153a7842",
+          "document_version_id": "13f28031-8f57-4ede-a61f-af685a51f08e",
+          "provenance_record_id": "b9244db3-8075-4790-b80b-1a8a7a64ac80",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "2db045d2-129b-433d-9ca6-7b53678b8a4e",
+          "document_version_id": "225a9f06-8cea-4ebc-b601-1e1f238b1381",
+          "provenance_record_id": "fdb2a1bc-eccb-4d12-a68b-4b94589062c9",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "65fa0e8b-12f2-41e5-ac39-772601734808",
+          "document_version_id": "0e58cde9-55c9-4c63-98ac-2525e321f6c5",
+          "provenance_record_id": "b8486069-fd40-4315-88a1-6e971764c203",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "f7d88542-c685-4ea0-bc6c-426a7a2d05ec",
+          "document_version_id": "4a3bca80-8dec-4adf-81c6-420b9b91c872",
+          "provenance_record_id": "1038be38-b358-4ad5-a261-906fd5a8b539",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "3af9c006-f150-4501-a298-9c3936a54352",
+          "document_version_id": "8c9df3c7-45ed-4042-aa89-407b6f0abea8",
+          "provenance_record_id": "2d46b608-5937-4043-b409-34363090acb4",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "dfa3a35f-5cd1-4f41-9620-25338e926fac",
+          "document_version_id": "473f874c-ae55-4cc6-909a-beddcf8537ae",
+          "provenance_record_id": "c4f87cdb-8a1d-4f15-a8b9-d0d1c8802910",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "24841ccf-ee41-40d7-aeb5-d9cced7b9f37",
+          "document_version_id": "f3c65400-5f77-407e-8bca-90e2fb6e263b",
+          "provenance_record_id": "901bf9ad-c1f9-4d13-b28e-81a09565bd30",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "4f39a4d5-0070-4971-895a-e4961fba9cbc",
+          "document_version_id": "777228ee-3aea-43f4-a8f2-a71eaefbb687",
+          "provenance_record_id": "4d2ae4fb-67b1-496b-b4c2-13f2b3b809ac",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "c7e13ce1-c9d5-44ec-af88-25ee9c27d447",
+          "document_version_id": "576cebe3-9bad-42ac-b284-afa458c46ca6",
+          "provenance_record_id": "5a817006-70db-427a-a347-e94d041d4734",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "8f547863-2b64-4d64-b233-57c6d6e303bc",
+          "document_version_id": "04b743a5-64ed-4af9-b9ab-a88495f28043",
+          "provenance_record_id": "c72baa57-be6e-4368-b5b2-3690ac9c381c",
+          "source_id": "VBQPPL",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "36ff7864-cea2-417b-a4e2-ae905713cfc9",
+          "document_version_id": "32843d2a-993e-4c2c-88b6-0ecb896674a2",
+          "provenance_record_id": "6c6d0972-42d2-4df6-bb56-3df28312a106",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "7a3ce0c2-e56f-4dcc-be03-aed921f0ed08",
+          "document_version_id": "6e6c28f9-cbce-4f8b-ab0e-9b0ff6a993df",
+          "provenance_record_id": "67e7dd14-ee9e-44d2-8899-7e0f87a79a6f",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ce6e5f56-3cc7-476f-bc55-df3b5b7ebfc7",
+          "document_version_id": "149d71a5-5905-4201-b3b2-096719bd00ac",
+          "provenance_record_id": "7366d6d8-8429-4aa9-ba1f-8dc1335d5e35",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "9fb323a6-0318-4038-b175-d46516b86a4f",
+          "document_version_id": "1dd8996e-8dcc-481e-87e8-6fde5c790cd3",
+          "provenance_record_id": "cbbc5ffe-38e1-4f10-99c0-3cf502543aa9",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "UNKNOWN",
+          "authority_state": "FILTERED_STATUS"
+        },
+        {
+          "document_id": "85f45ec6-c7d4-47af-8299-cfc117a4bcbe",
+          "document_version_id": "2c9e4cf3-63cc-4072-ad4a-807bb9e4607f",
+          "provenance_record_id": "add958a0-5157-42bb-81d9-8cb71037a2ee",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "928d9479-4ad1-4a6a-9945-8a00db887e12",
+          "document_version_id": "07fca40c-b90e-4c16-bf53-b8e46fd898d5",
+          "provenance_record_id": "62654929-aec6-405b-955a-24b8d52ad1aa",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "978882fd-fc16-491c-98bf-6cd7d49bfd30",
+          "document_version_id": "e92a0b95-e496-4173-bfef-0d4b760eb6e8",
+          "provenance_record_id": "ba19774e-4ab8-45a6-b123-4b19b4240ccb",
+          "source_id": "VNU",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "4950357d-91e7-4ba3-ac55-c1d418eecf71",
+          "document_version_id": "be782223-9fda-42f1-8864-2d88e8bb7139",
+          "provenance_record_id": "0629a8dc-47c6-4e24-8f9c-9dd7833e4314",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "ceff9506-43ff-4547-a316-ddb4e6bbe528",
+          "document_version_id": "c1113cbe-4077-480e-8ecc-403cb8713093",
+          "provenance_record_id": "0f8752fd-bd05-478c-aaf7-0d120b4625e7",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        },
+        {
+          "document_id": "2a8d1ca3-b779-4821-8b1e-f96fbb75951a",
+          "document_version_id": "0fca189e-f9af-4ecd-9d87-d2bea2ae6770",
+          "provenance_record_id": "753c8b89-ea5c-49e2-a9d7-123305d37883",
+          "source_id": "UEB",
+          "role": "IRRELEVANT",
+          "applicability": "CURRENT_EFFECT_UNVERIFIED",
+          "authority_state": "ELIGIBLE"
+        }
+      ],
+      "final_pinpoint_evidence": [
+        {
+          "document_id": "0cf64e7c-82f3-4154-aa15-132c60f77945",
+          "document_version_id": "b935b2ee-6c4a-465a-8b3a-7e975642735c",
+          "provenance_record_id": "3521ceed-7ff0-4ee9-8e37-b01cf4a8ac42",
+          "source_id": "VBQPPL",
+          "chunk_id": "00381520-d770-4b32-b7fd-5c4c08ddc19d",
+          "locator": "chunk:1",
+          "authority_role": "SUPPLEMENTARY",
+          "sub_intent_ids": [
+            "bceb6fb1-2f70-4eba-879e-bb5eda28b7e5"
+          ],
+          "content_excerpt": "u: - Bước 1: Giả danh lực lượng Công an, Viện kiểm sát, Tòa án sử dụng số điện thoại lạ gọi điện trực tiếp cho nạn nhân (thường là trẻ em, HSSV) và đưa ra các cáo buộc bịa đặt (liên quan đến ma túy, đường dây tội phạm rửa tiền, truy nã hoặc có lệnh bắt giữ của Viện kiểm sát, Tòa án…) nhằm tạo tâm lý hoảng loạn, mất bình tĩnh với nạn nhân. - Bước 2: Các đối tượng sẽ thao túng tâm lý, yêu cầu nạn nhân giữ bí mật, không được kể với bất kỳ ai, ép buộc hoặc hướng dẫn nạn nhân rời khỏi nơi ở và thuê địa điểm (nhà nghỉ, khách sạn) để ở một mình. Sau đó hướng dẫn cắt đứt liên lạc với người thân và chỉ liên lạc với các đối tượng (thay sim điện thoại, để điện thoại chế độ máy bay và sử dụng liên lạc với các đối tượng qua video call từ các ứng dụng khác), có trường hợp còn uy hiếp nạn nhân cung cấp những hình ảnh, clip nhạy cảm cho các đối tượng. - Bước 3: Các đ ối tượng có thể nhắn tin, g ọi điện trực tiếp cho gia đình thông báo về việc nạn nhân đang bị bắt cóc, đe dọa chặt ngón tay, đăng tải hình ảnh, clip nhạy cảm của nạn nhân lên mạng hoặc ép nạn nhân tự liên hệ về gia đình và thông báo bị bắt cóc để yêu cầu chuyển tiền vào tài khoản nạn nhân hơặc nhóm đối tượng. Sau khi nhậ n được tiền t"
+        },
+        {
+          "document_id": "0cf64e7c-82f3-4154-aa15-132c60f77945",
+          "document_version_id": "b935b2ee-6c4a-465a-8b3a-7e975642735c",
+          "provenance_record_id": "3521ceed-7ff0-4ee9-8e37-b01cf4a8ac42",
+          "source_id": "VBQPPL",
+          "chunk_id": "57e1edb8-d3be-4a3d-8653-693bc0db8e86",
+          "locator": "chunk:0",
+          "authority_role": "SUPPLEMENTARY",
+          "sub_intent_ids": [
+            "bceb6fb1-2f70-4eba-879e-bb5eda28b7e5"
+          ],
+          "content_excerpt": "BỘ GIÁO DỤC VÀ ĐÀO TẠO CỘNG HOÀ XÃ HỘI CHỦ NGHĨA VIỆT NAM Độc lập - Tự do - Hạnh phúc Số: /BGDĐT-HSSV V/v: Cảnh báo thủ đoạn tội phạm lợi dụng không gian mạng để dụ dỗ, lôi kéo học sinh, sinh viên Hà Nội, ngày tháng 8 năm 2025 Kính gửi: - Các sở giáo dục và đào tạo; - Các cơ sở giáo dục đại học, trường cao đẳng sư phạm - Các cơ sở giáo dục nghề nghiệp. Theo thông tin từ Cục Cảnh sát hình sự, Bộ Công an, thời gian gần đây, trên địa bàn một số tỉnh/ thành phố: Hà Nội, Quảng Ninh, TP Hồ Chí Minh liên tiếp xảy ra tình trạng các đối tượng giả danh lực lượng Công an, Viện kiểm sát, Toà án g ọi điện đe dọa, thao túng tâm lý đố i với trẻ em, học sinh, sinh viên (HSSV), thông báo bị liên quan đến vụ án đang được điều tra rồi yêu cầu thông báo cho gia đình chuyển tiền chuộc người với tên gọi là “bắt cóc online”. Trong đó, cá biệt có vụ việc đối tượng dụ dỗ, hướng dẫn trẻ em di chuyển từ Hà Nội vào TP Hồ Chí Minh để đến các địa phương giáp biên sang Campuchia “du lịch”, với các bước cụ thể như sau: - Bước 1: Giả danh lực lượng Công an, Viện kiểm sát, Tòa án sử dụng số điện thoại lạ gọi điện trực tiếp cho nạn nhân (thường là trẻ em, HSSV) và đưa ra các cáo buộc bịa đặt (liên quan đến ma túy, đ"
+        },
+        {
+          "document_id": "0cf64e7c-82f3-4154-aa15-132c60f77945",
+          "document_version_id": "b935b2ee-6c4a-465a-8b3a-7e975642735c",
+          "provenance_record_id": "3521ceed-7ff0-4ee9-8e37-b01cf4a8ac42",
+          "source_id": "VBQPPL",
+          "chunk_id": "73247426-3c99-49ad-97e3-fdd6500c49c0",
+          "locator": "chunk:2",
+          "authority_role": "SUPPLEMENTARY",
+          "sub_intent_ids": [
+            "bceb6fb1-2f70-4eba-879e-bb5eda28b7e5"
+          ],
+          "content_excerpt": "nh ảnh, clip nhạy cảm của nạn nhân lên mạng hoặc ép nạn nhân tự liên hệ về gia đình và thông báo bị bắt cóc để yêu cầu chuyển tiền vào tài khoản nạn nhân hơặc nhóm đối tượng. Sau khi nhậ n được tiền thì cắt đứt liên lạc và để lại nạn nhân tiếp tục hoảng loạn, gia đình mất tài sản lớn. Từ tình hình trên, Bộ Giáo dục và Đào tạo (GDĐT) yêu cầu các sở GDĐT, cơ sở giáo dục đại học, trường cao đẳng sư phạm, cơ sở giáo dục nghề nghiệp (gọi chung là các đơn vị) triển khai một số nhiệm vụ trọng tâm sau: 1. Phối hợp với lực lượng Công an tại địa phương tăng cường tuyên truyền, phổ biến cho nhà giáo, HSSV và gia đình HSSV biết về phương thức, thủ đoạn lừa đảo nêu trên; trao đổi, chia sẻ các chuyên đề về xu thế, tính tất yếu, lợi ích cũng như nguy cơ của không gian mạ ng, kỹ năng sử dụng mạng an toàn, nh ận"
+        }
+      ],
+      "coverage_matrix": [
+        {
+          "sub_intent_id": "a59c00c6-2b1a-4ec0-862b-9bf0e2e2f64a",
+          "state": "UNSUPPORTED",
+          "governing_authority_present": false,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        },
+        {
+          "sub_intent_id": "78ca6f63-f28b-4b50-b137-cbb9eb5ba805",
+          "state": "UNSUPPORTED",
+          "governing_authority_present": false,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        },
+        {
+          "sub_intent_id": "bceb6fb1-2f70-4eba-879e-bb5eda28b7e5",
+          "state": "PARTIALLY_SUPPORTED",
+          "governing_authority_present": false,
+          "applicability": "CURRENT_EFFECT_UNVERIFIED"
+        }
+      ],
+      "final_p9_evidence": [
+        {
+          "document_version_id": "b935b2ee-6c4a-465a-8b3a-7e975642735c",
+          "chunk_id": "00381520-d770-4b32-b7fd-5c4c08ddc19d",
+          "locator": "chunk:1",
+          "authority_role": "SUPPLEMENTARY"
+        },
+        {
+          "document_version_id": "b935b2ee-6c4a-465a-8b3a-7e975642735c",
+          "chunk_id": "57e1edb8-d3be-4a3d-8653-693bc0db8e86",
+          "locator": "chunk:0",
+          "authority_role": "SUPPLEMENTARY"
+        },
+        {
+          "document_version_id": "b935b2ee-6c4a-465a-8b3a-7e975642735c",
+          "chunk_id": "73247426-3c99-49ad-97e3-fdd6500c49c0",
+          "locator": "chunk:2",
+          "authority_role": "SUPPLEMENTARY"
+        }
+      ],
+      "p10_final_answer": "Evidence-bound diagnostic draft Issue 1: coverage=UNSUPPORTED; selected evidence locators=none. Issue 2: coverage=UNSUPPORTED; selected evidence locators=none. Issue 3: coverage=PARTIALLY_SUPPORTED; selected evidence locators=chunk:1, chunk:0, chunk:2. Limitations: this draft reports only retrieved evidence and retained coverage gaps.",
+      "claim_to_evidence_map": [
+        {
+          "claim_index": 0,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            0
+          ],
+          "evidence_indices": []
+        },
+        {
+          "claim_index": 1,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            1
+          ],
+          "evidence_indices": []
+        },
+        {
+          "claim_index": 2,
+          "kind": "LIMITATION",
+          "sub_intent_indices": [
+            2
+          ],
+          "evidence_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      ],
+      "independent_reviewer_score": null,
+      "independent_reviewer_decision": null
+    }
+  ]
+}

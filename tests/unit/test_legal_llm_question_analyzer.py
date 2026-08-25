@@ -68,7 +68,7 @@ async def test_enabled_analyzer_uses_provider_port_and_returns_bounded_proposal(
     provider = StubProvider(_valid_output())
     analyzer = LLMLegalQuestionAnalyzer(
         provider,
-        settings=LegalQuestionAnalyzerSettings(enabled=True),
+        settings=LegalQuestionAnalyzerSettings(enabled=True, deterministic_first=False),
     )
     context = create_legal_case(
         "Please explain the registration procedure.",
@@ -110,18 +110,18 @@ async def test_provider_failure_and_invalid_output_fall_back_without_leaking_err
     context = create_legal_case("What are the registration conditions?")
     failed = LLMLegalQuestionAnalyzer(
         StubProvider(TimeoutError("provider private failure")),
-        settings=LegalQuestionAnalyzerSettings(enabled=True),
+        settings=LegalQuestionAnalyzerSettings(enabled=True, deterministic_first=False),
     )
     malformed = LLMLegalQuestionAnalyzer(
         StubProvider('{"main_intent":"procedure"}'),
-        settings=LegalQuestionAnalyzerSettings(enabled=True),
+        settings=LegalQuestionAnalyzerSettings(enabled=True, deterministic_first=False),
     )
 
     failed_result = await failed.analyze(context)
     malformed_result = await malformed.analyze(context)
 
-    assert failed_result.outcome is AnalyzerOutcome.FALLBACK_PROVIDER_FAILURE
-    assert malformed_result.outcome is AnalyzerOutcome.FALLBACK_INVALID_OUTPUT
+    assert failed_result.outcome is AnalyzerOutcome.FALLBACK_PROVIDER_TIMEOUT
+    assert malformed_result.outcome is AnalyzerOutcome.FALLBACK_INVALID_STRUCTURED_OUTPUT
     assert "provider private failure" not in json.dumps(failed_result.to_public_dict())
 
 
@@ -176,7 +176,7 @@ async def test_set_b_fixture_material_sub_intent_agreement_is_at_least_ninety_pe
     provider = StubProvider(_valid_output())
     analyzer = LLMLegalQuestionAnalyzer(
         provider,
-        settings=LegalQuestionAnalyzerSettings(enabled=True),
+        settings=LegalQuestionAnalyzerSettings(enabled=True, deterministic_first=False),
     )
     paraphrases = tuple(
         create_legal_case(f"Paraphrased registration question {index}.") for index in range(30)

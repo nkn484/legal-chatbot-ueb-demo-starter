@@ -1,0 +1,37 @@
+{
+  "schema_version": "P4-LIVE-MICROBATCH-PROFILE-2",
+  "model": "gpt-5.6-sol",
+  "request_profile": {
+    "structured_output": true,
+    "per_batch_timeout_seconds": 15,
+    "concurrency": 1,
+    "fallback": "deterministic_per_failed_batch"
+  },
+  "q06_micro_batches": [
+    {"candidate_count": 1, "sub_intent_count": 4, "duration_ms": 14130.9, "outcome": "LLM_PROPOSALS", "live_assessment_count": 4, "fallback_assessment_count": 0},
+    {"candidate_count": 2, "sub_intent_count": 4, "duration_ms": 15013.0, "outcome": "PROVIDER_TIMEOUT", "live_assessment_count": 0, "fallback_assessment_count": 8},
+    {"candidate_count": 3, "sub_intent_count": 4, "duration_ms": 15015.3, "outcome": "PROVIDER_TIMEOUT", "live_assessment_count": 0, "fallback_assessment_count": 12}
+  ],
+  "q06_micro_batches_at_25_seconds": [
+    {"candidate_count": 1, "sub_intent_count": 4, "duration_ms": 12692.7, "outcome": "INVALID_STRUCTURED_OUTPUT", "live_assessment_count": 0, "fallback_assessment_count": 4},
+    {"candidate_count": 2, "sub_intent_count": 4, "duration_ms": 7261.5, "outcome": "INVALID_STRUCTURED_OUTPUT", "live_assessment_count": 0, "fallback_assessment_count": 8},
+    {"candidate_count": 3, "sub_intent_count": 4, "duration_ms": 13303.2, "outcome": "LLM_PROPOSALS", "live_assessment_count": 12, "fallback_assessment_count": 0}
+  ],
+  "q06_representative_at_25_seconds": {
+    "duration_ms": 25019.7,
+    "outcome": "PROVIDER_SUPPRESSED",
+    "total_assessment_count": 120,
+    "live_assessment_count": 0,
+    "fallback_assessment_count": 120,
+    "live_coverage_percent": 0.0,
+    "acceptance_pass": false
+  },
+  "representative_live_coverage": {
+    "target_percent": 80,
+    "achieved": "not_established",
+    "acceptance_pass": false
+  },
+  "decision": "P4_LIVE_REWORK",
+  "production_profile": "DETERMINISTIC_CLASSIFIER_FALLBACK_FOR_MATRIX_BATCHES",
+  "raw_prompt_or_response_persisted": false
+}

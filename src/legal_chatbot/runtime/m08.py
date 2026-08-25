@@ -17,6 +17,7 @@ from legal_chatbot.channels.port import (
     ChannelOutboundRepositoryPort,
     ChannelPort,
 )
+from legal_chatbot.channels.processing import ChannelProcessingStatusNotifier
 from legal_chatbot.channels.recipients import OfficialBotRecipientRegistry
 from legal_chatbot.channels.repository import (
     PostgresChannelBindingRepository,
@@ -52,6 +53,14 @@ from legal_chatbot.documents.quality_retrieval_pipeline import LegalQualityCandi
 from legal_chatbot.documents.quality_retrieval_repository import PostgresQualityRetrievalRepository
 from legal_chatbot.documents.reranked_semantic_repository import PostgresRerankedSemanticRepository
 from legal_chatbot.documents.retrieval_repository import PostgresLexicalRetrievalRepository
+from legal_chatbot.legal_evidence.analyzer import LegalQuestionAnalyzerSettings
+from legal_chatbot.legal_evidence.application import LegalChatApplication
+from legal_chatbot.legal_evidence.authority import AuthorityReviewSettings
+from legal_chatbot.legal_evidence.channel_bridge import LegalChatGroundedChatBridge
+from legal_chatbot.legal_evidence.integration_config import LegalChatIntegrationSettings
+from legal_chatbot.legal_evidence.processing import RuntimeEtaEstimator
+from legal_chatbot.legal_evidence.routing import LegalStageModelRoutingSettings, stage_provider
+from legal_chatbot.legal_evidence.vertical_slice import build_p1_p10_vertical_slice
 from legal_chatbot.providers.config import ProviderSettings
 from legal_chatbot.providers.port import LLMProviderPort
 from legal_chatbot.providers.registry import create_provider
@@ -118,9 +127,10 @@ class ChannelRuntime:
     """Owned channel composition and its narrow ingress seam."""
 
     ingress: ChannelIngressPort = field(repr=False)
-    provider: LLMProviderPort = field(repr=False)
+    provider: LLMProviderPort | None = field(repr=False)
     channel: ChannelPort = field(repr=False)
     recipients: OfficialBotRecipientRegistry = field(repr=False)
+    additional_providers: tuple[LLMProviderPort, ...] = field(default=(), repr=False)
     _closed: bool = field(default=False, init=False, repr=False)
 
     async def aclose(self) -> None:
@@ -136,7 +146,11 @@ class ChannelRuntime:
         except Exception:
             failed = True
         try:
-            await self.provider.aclose()
+            if self.provider is not None:
+                await self.provider.aclose()
+            for provider in self.additional_providers:
+                if provider is not self.provider:
+                    await provider.aclose()
         except Exception:
             failed = True
         if failed:
@@ -150,6 +164,7 @@ async def build_m08_runtime(
     provider_settings: ProviderSettings | None = None,
     chat_settings: ChatSettings | None = None,
     conversation_settings: ConversationSettings | None = None,
+    legal_chat_integration_settings: LegalChatIntegrationSettings | None = None,
     provider_factory: Callable[[ProviderSettings], LLMProviderPort] = create_provider,
     session_factory_factory: Callable[[AsyncEngine], async_sessionmaker[AsyncSession]] = (
         create_session_factory
@@ -251,6 +266,11 @@ async def build_m08_runtime(
         resolved_retrieval_settings = (
             retrieval_settings if retrieval_settings is not None else RetrievalSettings()
         )
+        resolved_legal_chat_integration = (
+            legal_chat_integration_settings
+            if legal_chat_integration_settings is not None
+            else LegalChatIntegrationSettings()
+        )
         active_source_ids = _active_source_ids_from_registry()
     except Exception:
         raise RuntimeError("M08_RUNTIME_CONSTRUCTION_FAILED") from None
@@ -286,122 +306,165 @@ async def build_m08_runtime(
     provider: LLMProviderPort | None = None
     channel: ChannelPort | None = None
     recipients: OfficialBotRecipientRegistry | None = None
+    legal_application: LegalChatApplication | None = None
+    p2_provider: LLMProviderPort | None = None
     try:
-        provider = provider_factory(resolved_provider_settings)
         session_factory = session_factory_factory(engine)
-
-        if resolved_retrieval_settings.quality_repair_enabled:
-            quality_strategy = materialize_strategy(
-                resolved_retrieval_settings.quality_strategy,
-                resolved_retrieval_settings.quality_selected_pool,
+        if resolved_legal_chat_integration.enabled:
+            stage_routing = LegalStageModelRoutingSettings()
+            p2_provider = (
+                stage_provider(resolved_provider_settings, stage_routing.p2_model, provider_factory)
+                if not stage_routing.p2_deterministic_first
+                else None
             )
-            if quality_strategy.family.reranker_enabled:
-                raise RuntimeError("M08_QUALITY_RERANK_NOT_APPROVED")
-            if not await semantic_coverage_checker(session_factory, active_source_ids):
-                raise RuntimeError("M08_SEMANTIC_COVERAGE_INCOMPLETE")
-            resolved_semantic_settings = (
-                semantic_settings if semantic_settings is not None else SemanticSettings()
+            provider = stage_provider(
+                resolved_provider_settings, stage_routing.p4_model, provider_factory
             )
-            embedder = semantic_embedder_factory(resolved_semantic_settings)
-            pipeline = LegalQualityCandidatePipeline(
-                PostgresQualityCandidateReader(session_factory),
-                embedder,
-                quality_strategy,
-                tuple(SourceId(source_id) for source_id in active_source_ids),
+            legal_investigator = build_p1_p10_vertical_slice(
+                session_factory,
+                semantic_embedder_factory(
+                    semantic_settings if semantic_settings is not None else SemanticSettings()
+                ),
+                active_source_ids,
+                p4_provider=provider,
+                p4_llm_enabled=provider is not None,
+                p2_provider=p2_provider,
+                p2_settings=LegalQuestionAnalyzerSettings(
+                    enabled=p2_provider is not None,
+                    deterministic_first=stage_routing.p2_deterministic_first,
+                    timeout_seconds=stage_routing.p2_timeout_seconds,
+                ),
+                p4_settings=AuthorityReviewSettings(
+                    enabled=provider is not None,
+                    timeout_seconds=stage_routing.p4_timeout_seconds,
+                    batch_size=stage_routing.p4_batch_size,
+                    batch_concurrency=stage_routing.p4_batch_concurrency,
+                ),
             )
-            repository = PostgresQualityRetrievalRepository(
-                session_factory, LegalQuestionAnalyzer(), pipeline
+            legal_application = LegalChatApplication(
+                legal_investigator,
+                RuntimeEtaEstimator(
+                    initial_min_seconds=resolved_legal_chat_integration.initial_eta_min_seconds,
+                    initial_max_seconds=resolved_legal_chat_integration.initial_eta_max_seconds,
+                ),
             )
-            if quality_strategy.family.dynamic_evidence_enabled:
-                resolved_chat_settings = resolved_chat_settings.model_copy(
-                    update={"max_citations": 6}
+            grounded_chat = LegalChatGroundedChatBridge(legal_application)
+        else:
+            provider = provider_factory(resolved_provider_settings)
+            if resolved_retrieval_settings.quality_repair_enabled:
+                quality_strategy = materialize_strategy(
+                    resolved_retrieval_settings.quality_strategy,
+                    resolved_retrieval_settings.quality_selected_pool,
                 )
-        elif resolved_retrieval_settings.semantic_hybrid_enabled:
-            if not await semantic_coverage_checker(session_factory, active_source_ids):
-                raise RuntimeError("M08_SEMANTIC_COVERAGE_INCOMPLETE")
-            resolved_semantic_settings = (
-                semantic_settings if semantic_settings is not None else SemanticSettings()
-            )
-            embedder = semantic_embedder_factory(resolved_semantic_settings)
-            if resolved_retrieval_settings.rerank_enabled:
-                resolved_reranker_settings = (
-                    reranker_settings if reranker_settings is not None else RerankerSettings()
+                if quality_strategy.family.reranker_enabled:
+                    raise RuntimeError("M08_QUALITY_RERANK_NOT_APPROVED")
+                if not await semantic_coverage_checker(session_factory, active_source_ids):
+                    raise RuntimeError("M08_SEMANTIC_COVERAGE_INCOMPLETE")
+                resolved_semantic_settings = (
+                    semantic_settings if semantic_settings is not None else SemanticSettings()
                 )
-                reranker = reranker_factory(resolved_reranker_settings)
-                if resolved_retrieval_settings.metadata_repair_enabled:
-                    repository = (
-                        metadata_repair_repository_factory(
-                            session_factory, active_source_ids, embedder, reranker
-                        )
-                        if metadata_repair_repository_factory is not None
-                        else PostgresMetadataRepairRetrievalRepository(
-                            session_factory,
-                            active_source_ids,
-                            embedder,
-                            reranker,
-                            timeout_seconds=getattr(
-                                resolved_reranker_settings, "timeout_seconds", 5.0
-                            ),
-                        )
+                embedder = semantic_embedder_factory(resolved_semantic_settings)
+                pipeline = LegalQualityCandidatePipeline(
+                    PostgresQualityCandidateReader(session_factory),
+                    embedder,
+                    quality_strategy,
+                    tuple(SourceId(source_id) for source_id in active_source_ids),
+                )
+                repository = PostgresQualityRetrievalRepository(
+                    session_factory, LegalQuestionAnalyzer(), pipeline
+                )
+                if quality_strategy.family.dynamic_evidence_enabled:
+                    resolved_chat_settings = resolved_chat_settings.model_copy(
+                        update={"max_citations": 6}
                     )
+            elif resolved_retrieval_settings.semantic_hybrid_enabled:
+                if not await semantic_coverage_checker(session_factory, active_source_ids):
+                    raise RuntimeError("M08_SEMANTIC_COVERAGE_INCOMPLETE")
+                resolved_semantic_settings = (
+                    semantic_settings if semantic_settings is not None else SemanticSettings()
+                )
+                embedder = semantic_embedder_factory(resolved_semantic_settings)
+                if resolved_retrieval_settings.rerank_enabled:
+                    resolved_reranker_settings = (
+                        reranker_settings if reranker_settings is not None else RerankerSettings()
+                    )
+                    reranker = reranker_factory(resolved_reranker_settings)
+                    if resolved_retrieval_settings.metadata_repair_enabled:
+                        repository = (
+                            metadata_repair_repository_factory(
+                                session_factory, active_source_ids, embedder, reranker
+                            )
+                            if metadata_repair_repository_factory is not None
+                            else PostgresMetadataRepairRetrievalRepository(
+                                session_factory,
+                                active_source_ids,
+                                embedder,
+                                reranker,
+                                timeout_seconds=getattr(
+                                    resolved_reranker_settings, "timeout_seconds", 5.0
+                                ),
+                            )
+                        )
+                    else:
+                        repository = (
+                            reranked_repository_factory(
+                                session_factory, active_source_ids, embedder, reranker
+                            )
+                            if reranked_repository_factory is not None
+                            else PostgresRerankedSemanticRepository(
+                                session_factory,
+                                active_source_ids,
+                                embedder,
+                                reranker,
+                                timeout_seconds=getattr(
+                                    resolved_reranker_settings, "timeout_seconds", 5.0
+                                ),
+                            )
+                        )
                 else:
                     repository = (
-                        reranked_repository_factory(
-                            session_factory, active_source_ids, embedder, reranker
-                        )
-                        if reranked_repository_factory is not None
-                        else PostgresRerankedSemanticRepository(
-                            session_factory,
-                            active_source_ids,
-                            embedder,
-                            reranker,
-                            timeout_seconds=getattr(
-                                resolved_reranker_settings, "timeout_seconds", 5.0
-                            ),
+                        hybrid_repository_factory(session_factory, active_source_ids, embedder)
+                        if hybrid_repository_factory is not None
+                        else PostgresHybridRetrievalRepository(
+                            session_factory, active_source_ids, embedder, mode="hybrid"
                         )
                     )
             else:
                 repository = (
-                    hybrid_repository_factory(session_factory, active_source_ids, embedder)
-                    if hybrid_repository_factory is not None
-                    else PostgresHybridRetrievalRepository(
-                        session_factory, active_source_ids, embedder, mode="hybrid"
+                    lexical_repository_factory(session_factory, active_source_ids)
+                    if lexical_repository_factory is not None
+                    else PostgresLexicalRetrievalRepository(
+                        session_factory,
+                        active_source_ids,
+                        lexical_repair_enabled=resolved_retrieval_settings.lexical_repair_enabled,
                     )
                 )
-        else:
-            repository = (
-                lexical_repository_factory(session_factory, active_source_ids)
-                if lexical_repository_factory is not None
-                else PostgresLexicalRetrievalRepository(
-                    session_factory,
-                    active_source_ids,
-                    lexical_repair_enabled=resolved_retrieval_settings.lexical_repair_enabled,
+            retrieval = retrieval_service_factory(repository)
+            grounding_evidence = grounding_evidence_factory(session_factory, resolved_chat_settings)
+            resolver = citation_resolver_factory(session_factory)
+            parser = parser_factory()
+            query_planner: QueryPlannerPort | None = None
+            canonical_anchor_resolver: CanonicalAnchorResolverPort | None = None
+            if resolved_chat_settings.retrieval_planner_enabled:
+                query_planner = query_planner_factory(
+                    provider, resolved_chat_settings, resolved_provider_settings
                 )
+                canonical_anchor_resolver = canonical_anchor_resolver_factory(
+                    session_factory, active_source_ids
+                )
+            grounded_chat = grounded_chat_service_factory(
+                retrieval,
+                grounding_evidence,
+                resolver,
+                provider,
+                parser,
+                resolved_chat_settings,
+                resolved_provider_settings,
+                query_planner,
+                canonical_anchor_resolver,
             )
-        retrieval = retrieval_service_factory(repository)
-        grounding_evidence = grounding_evidence_factory(session_factory, resolved_chat_settings)
+
         resolver = citation_resolver_factory(session_factory)
-        parser = parser_factory()
-        query_planner: QueryPlannerPort | None = None
-        canonical_anchor_resolver: CanonicalAnchorResolverPort | None = None
-        if resolved_chat_settings.retrieval_planner_enabled:
-            query_planner = query_planner_factory(
-                provider, resolved_chat_settings, resolved_provider_settings
-            )
-            canonical_anchor_resolver = canonical_anchor_resolver_factory(
-                session_factory, active_source_ids
-            )
-        grounded_chat = grounded_chat_service_factory(
-            retrieval,
-            grounding_evidence,
-            resolver,
-            provider,
-            parser,
-            resolved_chat_settings,
-            resolved_provider_settings,
-            query_planner,
-            canonical_anchor_resolver,
-        )
 
         conversation_repository = conversation_repository_factory(
             session_factory, resolved_conversation_settings
@@ -417,6 +480,14 @@ async def build_m08_runtime(
         formatter = formatter_factory(channel_settings)
         recipients = recipient_registry_factory()
         channel = channel_factory(channel_settings, recipients)
+        processing_notifier = (
+            ChannelProcessingStatusNotifier(channel, legal_application)
+            if (
+                legal_application is not None
+                and resolved_legal_chat_integration.processing_status_enabled
+            )
+            else None
+        )
         ingress = channel_service_factory(
             binding_repository,
             outbound_repository,
@@ -424,18 +495,21 @@ async def build_m08_runtime(
             channel,
             formatter,
             channel_settings,
+            processing_notifier,
         )
         return ChannelRuntime(
             ingress=ingress,
             provider=provider,
             channel=channel,
             recipients=recipients,
+            additional_providers=() if p2_provider is None else (p2_provider,),
         )
     except Exception:
         await _close_safely(channel)
         if recipients is not None:
             recipients.clear()
         await _close_safely(provider)
+        await _close_safely(p2_provider)
         raise RuntimeError("M08_RUNTIME_CONSTRUCTION_FAILED") from None
 
 

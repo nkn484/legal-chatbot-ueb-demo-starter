@@ -11,10 +11,11 @@ from .models import (
     build_families,
     marker_matches,
 )
-from .service import RelationInvestigationService
+from .service import RelationContextResult, RelationInvestigationService
 
 __all__ = [
     "RelationConflict",
+    "RelationContextResult",
     "RelationEvidence",
     "RelationEvidenceMarker",
     "RelationHintProposal",

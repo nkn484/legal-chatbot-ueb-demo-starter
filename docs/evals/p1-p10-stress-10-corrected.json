@@ -1,0 +1,194 @@
+{
+  "schema_version": "P1-P10-STRESS-10-CORRECTED-1",
+  "legal_chat_pipeline_enabled": true,
+  "p2_profile": "DETERMINISTIC_FIRST",
+  "p4_profile": "DETERMINISTIC_CLASSIFIER_FALLBACK",
+  "p11_enabled": false,
+  "input_source": "M2 Set B representative controls; question text only",
+  "case_count": 10,
+  "terminal_count": 10,
+  "exception_count": 0,
+  "completion_percent": 100.0,
+  "engineering_flow_score": 10.0,
+  "median_duration_ms": 3190.2,
+  "cases": [
+    {
+      "case_id": "Q01",
+      "terminal_status": "ANSWER_WITH_LIMITATION",
+      "engineering_pass": true,
+      "duration_ms": 7003.2,
+      "p2_sub_intent_count": 1,
+      "p3_document_count": 23,
+      "p5_family_count": 0,
+      "p6_evidence_count": 0,
+      "p7_states": [
+        "UNSUPPORTED"
+      ],
+      "p9_evidence_count": 0,
+      "p10_answer_nonempty": true,
+      "error_class": null,
+      "error_reason": null
+    },
+    {
+      "case_id": "Q02",
+      "terminal_status": "ANSWER",
+      "engineering_pass": true,
+      "duration_ms": 2901.8,
+      "p2_sub_intent_count": 1,
+      "p3_document_count": 15,
+      "p5_family_count": 2,
+      "p6_evidence_count": 5,
+      "p7_states": [
+        "SUPPORTED"
+      ],
+      "p9_evidence_count": 3,
+      "p10_answer_nonempty": true,
+      "error_class": null,
+      "error_reason": null
+    },
+    {
+      "case_id": "Q03",
+      "terminal_status": "ANSWER_WITH_LIMITATION",
+      "engineering_pass": true,
+      "duration_ms": 3152.0,
+      "p2_sub_intent_count": 2,
+      "p3_document_count": 30,
+      "p5_family_count": 0,
+      "p6_evidence_count": 0,
+      "p7_states": [
+        "UNSUPPORTED",
+        "UNSUPPORTED"
+      ],
+      "p9_evidence_count": 0,
+      "p10_answer_nonempty": true,
+      "error_class": null,
+      "error_reason": null
+    },
+    {
+      "case_id": "Q04",
+      "terminal_status": "ANSWER",
+      "engineering_pass": true,
+      "duration_ms": 2935.3,
+      "p2_sub_intent_count": 1,
+      "p3_document_count": 13,
+      "p5_family_count": 5,
+      "p6_evidence_count": 5,
+      "p7_states": [
+        "SUPPORTED"
+      ],
+      "p9_evidence_count": 3,
+      "p10_answer_nonempty": true,
+      "error_class": null,
+      "error_reason": null
+    },
+    {
+      "case_id": "Q05",
+      "terminal_status": "ANSWER",
+      "engineering_pass": true,
+      "duration_ms": 3228.4,
+      "p2_sub_intent_count": 3,
+      "p3_document_count": 30,
+      "p5_family_count": 13,
+      "p6_evidence_count": 15,
+      "p7_states": [
+        "SUPPORTED",
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "p9_evidence_count": 3,
+      "p10_answer_nonempty": true,
+      "error_class": null,
+      "error_reason": null
+    },
+    {
+      "case_id": "Q06",
+      "terminal_status": "ANSWER",
+      "engineering_pass": true,
+      "duration_ms": 3794.2,
+      "p2_sub_intent_count": 4,
+      "p3_document_count": 20,
+      "p5_family_count": 10,
+      "p6_evidence_count": 20,
+      "p7_states": [
+        "SUPPORTED",
+        "SUPPORTED",
+        "SUPPORTED",
+        "SUPPORTED"
+      ],
+      "p9_evidence_count": 4,
+      "p10_answer_nonempty": true,
+      "error_class": null,
+      "error_reason": null
+    },
+    {
+      "case_id": "Q07",
+      "terminal_status": "ANSWER",
+      "engineering_pass": true,
+      "duration_ms": 3268.6,
+      "p2_sub_intent_count": 1,
+      "p3_document_count": 16,
+      "p5_family_count": 6,
+      "p6_evidence_count": 5,
+      "p7_states": [
+        "SUPPORTED"
+      ],
+      "p9_evidence_count": 3,
+      "p10_answer_nonempty": true,
+      "error_class": null,
+      "error_reason": null
+    },
+    {
+      "case_id": "Q08",
+      "terminal_status": "ANSWER",
+      "engineering_pass": true,
+      "duration_ms": 3098.0,
+      "p2_sub_intent_count": 1,
+      "p3_document_count": 14,
+      "p5_family_count": 5,
+      "p6_evidence_count": 5,
+      "p7_states": [
+        "SUPPORTED"
+      ],
+      "p9_evidence_count": 3,
+      "p10_answer_nonempty": true,
+      "error_class": null,
+      "error_reason": null
+    },
+    {
+      "case_id": "Q09",
+      "terminal_status": "ANSWER",
+      "engineering_pass": true,
+      "duration_ms": 528.1,
+      "p2_sub_intent_count": 1,
+      "p3_document_count": 13,
+      "p5_family_count": 5,
+      "p6_evidence_count": 5,
+      "p7_states": [
+        "SUPPORTED"
+      ],
+      "p9_evidence_count": 3,
+      "p10_answer_nonempty": true,
+      "error_class": null,
+      "error_reason": null
+    },
+    {
+      "case_id": "Q10",
+      "terminal_status": "ANSWER_WITH_LIMITATION",
+      "engineering_pass": true,
+      "duration_ms": 3817.6,
+      "p2_sub_intent_count": 3,
+      "p3_document_count": 30,
+      "p5_family_count": 1,
+      "p6_evidence_count": 3,
+      "p7_states": [
+        "UNSUPPORTED",
+        "UNSUPPORTED",
+        "PARTIALLY_SUPPORTED"
+      ],
+      "p9_evidence_count": 3,
+      "p10_answer_nonempty": true,
+      "error_class": null,
+      "error_reason": null
+    }
+  ]
+}

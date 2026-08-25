@@ -1,0 +1,18 @@
+{
+  "schema_version": "ZALO-EXTERNAL-E2E-1",
+  "decision": "NOT_RUN_P2_LIVE_REWORK",
+  "webhook_received": false,
+  "inbound_deduplicated": null,
+  "correlation_id": null,
+  "p2_live_or_fallback": "NOT_RUN",
+  "p4_live_assessment_count": 0,
+  "p4_fallback_assessment_count": 0,
+  "pipeline_completed": false,
+  "p10_answer_nonempty": false,
+  "outbound_send_success": false,
+  "total_duration_ms": null,
+  "reason": "P2 live acceptance at the authorized 18-second budget was 3/5 rather than required 5/5; external Zalo send deferred to avoid a misleading DEMO_READY claim.",
+  "existing_zalo_adapter_reused": true,
+  "webhook_rebuilt": false,
+  "secrets_persisted": false
+}

@@ -34,6 +34,7 @@ def test_service_imports_only_orchestration_contracts_and_safe_logging() -> None
         "legal_chatbot.chat.policy",
         "legal_chatbot.chat.port",
         "legal_chatbot.chat.prompt",
+        "legal_chatbot.chat.quality_prompt",
         "legal_chatbot.core.logging",
         "legal_chatbot.providers.config",
         "legal_chatbot.providers.errors",
@@ -41,6 +42,7 @@ def test_service_imports_only_orchestration_contracts_and_safe_logging() -> None
         "legal_chatbot.providers.port",
         "legal_chatbot.retrieval.models",
         "legal_chatbot.retrieval.port",
+        "legal_chatbot.retrieval.quality_repair.evidence_pack",
     )
     assert all(imported.startswith(allowed_prefixes) for imported in imports)
     forbidden = (

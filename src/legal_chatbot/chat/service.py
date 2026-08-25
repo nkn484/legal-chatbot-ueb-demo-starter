@@ -327,6 +327,8 @@ class GroundedChatService:
                 provider_output_class=output_class,
             )
 
+        answer = self._apply_quality_applicability_limitation(answer, retrieval_result)
+
         try:
             citations = await self._reresolve_citations(retrieval_result, evidence)
         except Exception:
@@ -513,6 +515,21 @@ class GroundedChatService:
         return build_quality_grounded_prompt(
             request, build_quality_evidence_pack(context, evidence), self._chat_settings
         )
+
+    def _apply_quality_applicability_limitation(
+        self, answer: ProviderAnswer, retrieval_result: RetrievalResult
+    ) -> ProviderAnswer:
+        """Make unverified current-effect status explicit for every quality-path answer."""
+
+        if not isinstance(retrieval_result.quality_context, QualityRetrievalContext):
+            return answer
+        limitation = (
+            "\n\nLưu ý: hiệu lực và khả năng áp dụng hiện hành của các văn bản trên "
+            "chưa được hệ thống xác minh độc lập."
+        )
+        if len(answer.answer) + len(limitation) > self._chat_settings.answer_max_chars:
+            raise ValueError("quality limitation exceeds answer bound")
+        return ProviderAnswer(answer=f"{answer.answer}{limitation}")
 
     @staticmethod
     def _validate_grounding_evidence(

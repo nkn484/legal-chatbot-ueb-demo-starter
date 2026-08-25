@@ -25,6 +25,18 @@ def test_hybrid_stress_parser_defaults_off_and_accepts_semantic_modes() -> None:
     runner = _stress_module()
     assert runner.build_parser().parse_args([]).semantic_mode == "off"
     assert runner.build_parser().parse_args(["--semantic-mode", "hybrid"]).semantic_mode == "hybrid"
+    quality = runner.build_parser().parse_args(
+        [
+            "--semantic-mode",
+            "hybrid",
+            "--quality-strategy",
+            "quality_retrieval_evidence_repair_v1",
+            "--quality-selected-pool",
+            "8",
+        ]
+    )
+    assert quality.quality_strategy == "quality_retrieval_evidence_repair_v1"
+    assert quality.quality_selected_pool == 8
 
 
 def test_hybrid_stress_report_adds_content_free_semantic_diagnostics(tmp_path: Path) -> None:

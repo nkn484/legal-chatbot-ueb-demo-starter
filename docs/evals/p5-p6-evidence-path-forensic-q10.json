@@ -1,0 +1,3729 @@
+{
+  "schema_version": "P5-P6-EVIDENCE-PATH-FORENSIC-1",
+  "case_id": "Q10",
+  "p2_mode": "deterministic_fallback",
+  "p4_outcome": "PROVIDER_FAILURE_FALLBACK",
+  "p3_document_count": 30,
+  "p5_family_count": 3,
+  "p6_evidence_count": 10,
+  "root_cause_classification": "UPSTREAM_AUTHORITY_GAP",
+  "drop_reason_taxonomy": {
+    "p5": [
+      "P5_FILTERED_AUTHORITY_STATE",
+      "P5_ROLE_NOT_ELIGIBLE",
+      "P5_FAMILY_MERGED",
+      "P5_FAMILY_BUDGET_PRUNED",
+      "P5_DUPLICATE_VERSION",
+      "P5_SCOPE_CONFLICT",
+      "P5_PROVENANCE_REJECTED",
+      "P5_NOT_SELECTED_FOR_SUBINTENT",
+      "P5_UNKNOWN_DROP"
+    ],
+    "p6": [
+      "P6_FAMILY_NOT_AVAILABLE",
+      "P6_NO_SEARCHABLE_CHUNKS",
+      "P6_QUERY_NO_MATCH",
+      "P6_SCORE_BELOW_THRESHOLD",
+      "P6_LOCATOR_INVALID",
+      "P6_PROVENANCE_MISMATCH",
+      "P6_CHUNK_FILTERED",
+      "P6_EMPTY_CONTENT",
+      "P6_UNKNOWN_NO_HIT"
+    ]
+  },
+  "evidence_path_trace": [
+    {
+      "document_id": "872a8149-160f-47a8-8918-8c0c83fcb32f",
+      "document_version_id": "0b8c1e4b-494f-42ef-aed5-4655354291f6",
+      "provenance_record_id": "7357e51b-b809-44f8-97e5-62744b545512",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 7,
+          "score": 0.0015625000232830644
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 1,
+          "score": 0.9086148197284465
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "872a8149-160f-47a8-8918-8c0c83fcb32f",
+      "document_version_id": "0b8c1e4b-494f-42ef-aed5-4655354291f6",
+      "provenance_record_id": "7357e51b-b809-44f8-97e5-62744b545512",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 7,
+          "score": 0.0015625000232830644
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 1,
+          "score": 0.9086148197284465
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "872a8149-160f-47a8-8918-8c0c83fcb32f",
+      "document_version_id": "0b8c1e4b-494f-42ef-aed5-4655354291f6",
+      "provenance_record_id": "7357e51b-b809-44f8-97e5-62744b545512",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 7,
+          "score": 0.0015625000232830644
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 1,
+          "score": 0.9086148197284465
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "dfa3a35f-5cd1-4f41-9620-25338e926fac",
+      "document_version_id": "473f874c-ae55-4cc6-909a-beddcf8537ae",
+      "provenance_record_id": "c4f87cdb-8a1d-4f15-a8b9-d0d1c8802910",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 1,
+          "score": 0.002372761955484748
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 13,
+          "score": 0.8887307047843933
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "dfa3a35f-5cd1-4f41-9620-25338e926fac",
+      "document_version_id": "473f874c-ae55-4cc6-909a-beddcf8537ae",
+      "provenance_record_id": "c4f87cdb-8a1d-4f15-a8b9-d0d1c8802910",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 1,
+          "score": 0.002372761955484748
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 13,
+          "score": 0.8887307047843933
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "dfa3a35f-5cd1-4f41-9620-25338e926fac",
+      "document_version_id": "473f874c-ae55-4cc6-909a-beddcf8537ae",
+      "provenance_record_id": "c4f87cdb-8a1d-4f15-a8b9-d0d1c8802910",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 1,
+          "score": 0.002372761955484748
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 13,
+          "score": 0.8887307047843933
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "e5fd1706-9f07-4658-b798-67068a202cc8",
+      "document_version_id": "73292491-dadf-486b-b098-0f763d5cbeb2",
+      "provenance_record_id": "85c8cc35-1d74-4d2d-86b0-3f911fd5d49a",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 1,
+          "score": 0.035965368151664734
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 6,
+          "score": 0.8734719157218933
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "e5fd1706-9f07-4658-b798-67068a202cc8",
+      "document_version_id": "73292491-dadf-486b-b098-0f763d5cbeb2",
+      "provenance_record_id": "85c8cc35-1d74-4d2d-86b0-3f911fd5d49a",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 1,
+          "score": 0.035965368151664734
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 6,
+          "score": 0.8734719157218933
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "e5fd1706-9f07-4658-b798-67068a202cc8",
+      "document_version_id": "73292491-dadf-486b-b098-0f763d5cbeb2",
+      "provenance_record_id": "85c8cc35-1d74-4d2d-86b0-3f911fd5d49a",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 1,
+          "score": 0.035965368151664734
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 6,
+          "score": 0.8734719157218933
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "fc4a631c-5f90-4062-8cff-b175f6b06573",
+      "document_version_id": "b63fd3fd-79ed-4505-896f-c6aa63053a56",
+      "provenance_record_id": "9cf44ce0-31d1-4612-b9ff-d8dec77aa1e7",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 1,
+          "score": 0.10134228318929672
+        }
+      },
+      "p4_proposed_role": "BACKGROUND",
+      "p4_validated_role": "BACKGROUND",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": "family-02",
+      "p5_family_members": [
+        "b63fd3fd-79ed-4505-896f-c6aa63053a56"
+      ],
+      "p5_retained": true,
+      "p5_drop_reason": null,
+      "p5_priority_score_components": {
+        "authority_role": "BACKGROUND",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": true,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": true,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 8,
+      "p6_evidence_count": 2,
+      "p6_no_hit_reason": null
+    },
+    {
+      "document_id": "fc4a631c-5f90-4062-8cff-b175f6b06573",
+      "document_version_id": "b63fd3fd-79ed-4505-896f-c6aa63053a56",
+      "provenance_record_id": "9cf44ce0-31d1-4612-b9ff-d8dec77aa1e7",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 1,
+          "score": 0.10134228318929672
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": "family-02",
+      "p5_family_members": [
+        "b63fd3fd-79ed-4505-896f-c6aa63053a56"
+      ],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "fc4a631c-5f90-4062-8cff-b175f6b06573",
+      "document_version_id": "b63fd3fd-79ed-4505-896f-c6aa63053a56",
+      "provenance_record_id": "9cf44ce0-31d1-4612-b9ff-d8dec77aa1e7",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 1,
+          "score": 0.10134228318929672
+        }
+      },
+      "p4_proposed_role": "BACKGROUND",
+      "p4_validated_role": "BACKGROUND",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": "family-02",
+      "p5_family_members": [
+        "b63fd3fd-79ed-4505-896f-c6aa63053a56"
+      ],
+      "p5_retained": true,
+      "p5_drop_reason": null,
+      "p5_priority_score_components": {
+        "authority_role": "BACKGROUND",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": true,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": true,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 10,
+      "p6_evidence_count": 2,
+      "p6_no_hit_reason": null
+    },
+    {
+      "document_id": "055507b7-9420-4181-b229-282ed0ec272a",
+      "document_version_id": "01407940-c5f5-4998-b515-ec0d1dd69f8a",
+      "provenance_record_id": "d577928c-17fb-44e6-bdfa-8ba430b8eee4",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 5,
+          "score": 0.0009345794678665698
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 2,
+          "score": 0.8769242167472839
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "055507b7-9420-4181-b229-282ed0ec272a",
+      "document_version_id": "01407940-c5f5-4998-b515-ec0d1dd69f8a",
+      "provenance_record_id": "d577928c-17fb-44e6-bdfa-8ba430b8eee4",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 5,
+          "score": 0.0009345794678665698
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 2,
+          "score": 0.8769242167472839
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "055507b7-9420-4181-b229-282ed0ec272a",
+      "document_version_id": "01407940-c5f5-4998-b515-ec0d1dd69f8a",
+      "provenance_record_id": "d577928c-17fb-44e6-bdfa-8ba430b8eee4",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 5,
+          "score": 0.0009345794678665698
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 2,
+          "score": 0.8769242167472839
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "f5269b7a-d0bc-4e43-a41b-29c179192ee1",
+      "document_version_id": "863fe27a-90ae-4aa8-88e7-cf7045df61f8",
+      "provenance_record_id": "aa41afa1-efab-4c27-9d6a-09974272219b",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 5,
+          "score": 0.001818181830458343
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 2,
+          "score": 0.9053229093551636
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "f5269b7a-d0bc-4e43-a41b-29c179192ee1",
+      "document_version_id": "863fe27a-90ae-4aa8-88e7-cf7045df61f8",
+      "provenance_record_id": "aa41afa1-efab-4c27-9d6a-09974272219b",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 5,
+          "score": 0.001818181830458343
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 2,
+          "score": 0.9053229093551636
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "f5269b7a-d0bc-4e43-a41b-29c179192ee1",
+      "document_version_id": "863fe27a-90ae-4aa8-88e7-cf7045df61f8",
+      "provenance_record_id": "aa41afa1-efab-4c27-9d6a-09974272219b",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 5,
+          "score": 0.001818181830458343
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 2,
+          "score": 0.9053229093551636
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "9ce9cd38-0c20-4be1-8d55-42737763b8fa",
+      "document_version_id": "fe62e449-13fc-4994-82b9-a4dec30ec53a",
+      "provenance_record_id": "5e7a178b-b976-4d05-8391-4ff9ee9e7e8b",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 2,
+          "score": 0.0015384615398943424
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "9ce9cd38-0c20-4be1-8d55-42737763b8fa",
+      "document_version_id": "fe62e449-13fc-4994-82b9-a4dec30ec53a",
+      "provenance_record_id": "5e7a178b-b976-4d05-8391-4ff9ee9e7e8b",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 2,
+          "score": 0.0015384615398943424
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "9ce9cd38-0c20-4be1-8d55-42737763b8fa",
+      "document_version_id": "fe62e449-13fc-4994-82b9-a4dec30ec53a",
+      "provenance_record_id": "5e7a178b-b976-4d05-8391-4ff9ee9e7e8b",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 2,
+          "score": 0.0015384615398943424
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "0ff54c1b-c8f4-458b-af3d-6394d50fad4b",
+      "document_version_id": "3dae4143-8b32-4211-b695-009ba415da9d",
+      "provenance_record_id": "783a18f0-71f8-458d-8621-912be1eaa8b3",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 6,
+          "score": 0.001754386001266539
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 3,
+          "score": 0.9033005237579346
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "0ff54c1b-c8f4-458b-af3d-6394d50fad4b",
+      "document_version_id": "3dae4143-8b32-4211-b695-009ba415da9d",
+      "provenance_record_id": "783a18f0-71f8-458d-8621-912be1eaa8b3",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 6,
+          "score": 0.001754386001266539
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 3,
+          "score": 0.9033005237579346
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "0ff54c1b-c8f4-458b-af3d-6394d50fad4b",
+      "document_version_id": "3dae4143-8b32-4211-b695-009ba415da9d",
+      "provenance_record_id": "783a18f0-71f8-458d-8621-912be1eaa8b3",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 6,
+          "score": 0.001754386001266539
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 3,
+          "score": 0.9033005237579346
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "7a3ce0c2-e56f-4dcc-be03-aed921f0ed08",
+      "document_version_id": "6e6c28f9-cbce-4f8b-ab0e-9b0ff6a993df",
+      "provenance_record_id": "67e7dd14-ee9e-44d2-8899-7e0f87a79a6f",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 3,
+          "score": 0.8775365352630615
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "7a3ce0c2-e56f-4dcc-be03-aed921f0ed08",
+      "document_version_id": "6e6c28f9-cbce-4f8b-ab0e-9b0ff6a993df",
+      "provenance_record_id": "67e7dd14-ee9e-44d2-8899-7e0f87a79a6f",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 3,
+          "score": 0.8775365352630615
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "7a3ce0c2-e56f-4dcc-be03-aed921f0ed08",
+      "document_version_id": "6e6c28f9-cbce-4f8b-ab0e-9b0ff6a993df",
+      "provenance_record_id": "67e7dd14-ee9e-44d2-8899-7e0f87a79a6f",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 3,
+          "score": 0.8775365352630615
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "4af979a4-9814-4a64-b39f-0963734ae5fe",
+      "document_version_id": "e76e3287-1ee3-4532-8840-c1da345b942d",
+      "provenance_record_id": "b788111d-0716-43e5-a02f-c6ff1331345a",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 3,
+          "score": 0.8758996725082397
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "4af979a4-9814-4a64-b39f-0963734ae5fe",
+      "document_version_id": "e76e3287-1ee3-4532-8840-c1da345b942d",
+      "provenance_record_id": "b788111d-0716-43e5-a02f-c6ff1331345a",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 3,
+          "score": 0.8758996725082397
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "4af979a4-9814-4a64-b39f-0963734ae5fe",
+      "document_version_id": "e76e3287-1ee3-4532-8840-c1da345b942d",
+      "provenance_record_id": "b788111d-0716-43e5-a02f-c6ff1331345a",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 3,
+          "score": 0.8758996725082397
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "98ed5f80-9851-463d-8194-12ae043bba5c",
+      "document_version_id": "748217a5-e028-4643-8247-589bbaa6e9ff",
+      "provenance_record_id": "95d20014-2725-4ac7-a650-ec3584a4fb6d",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 4,
+          "score": 0.0029411765281111
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 5,
+          "score": 0.8995063304901123
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "98ed5f80-9851-463d-8194-12ae043bba5c",
+      "document_version_id": "748217a5-e028-4643-8247-589bbaa6e9ff",
+      "provenance_record_id": "95d20014-2725-4ac7-a650-ec3584a4fb6d",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 4,
+          "score": 0.0029411765281111
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 5,
+          "score": 0.8995063304901123
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "98ed5f80-9851-463d-8194-12ae043bba5c",
+      "document_version_id": "748217a5-e028-4643-8247-589bbaa6e9ff",
+      "provenance_record_id": "95d20014-2725-4ac7-a650-ec3584a4fb6d",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 4,
+          "score": 0.0029411765281111
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 5,
+          "score": 0.8995063304901123
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "0cf64e7c-82f3-4154-aa15-132c60f77945",
+      "document_version_id": "b935b2ee-6c4a-465a-8b3a-7e975642735c",
+      "provenance_record_id": "3521ceed-7ff0-4ee9-8e37-b01cf4a8ac42",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 4,
+          "score": 0.8754833005512749
+        }
+      },
+      "p4_proposed_role": "SUPPLEMENTARY",
+      "p4_validated_role": "SUPPLEMENTARY",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": "family-03",
+      "p5_family_members": [
+        "b935b2ee-6c4a-465a-8b3a-7e975642735c"
+      ],
+      "p5_retained": true,
+      "p5_drop_reason": null,
+      "p5_priority_score_components": {
+        "authority_role": "SUPPLEMENTARY",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": true,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": true,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_QUERY_NO_MATCH"
+    },
+    {
+      "document_id": "0cf64e7c-82f3-4154-aa15-132c60f77945",
+      "document_version_id": "b935b2ee-6c4a-465a-8b3a-7e975642735c",
+      "provenance_record_id": "3521ceed-7ff0-4ee9-8e37-b01cf4a8ac42",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 4,
+          "score": 0.8754833005512749
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": "family-03",
+      "p5_family_members": [
+        "b935b2ee-6c4a-465a-8b3a-7e975642735c"
+      ],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "0cf64e7c-82f3-4154-aa15-132c60f77945",
+      "document_version_id": "b935b2ee-6c4a-465a-8b3a-7e975642735c",
+      "provenance_record_id": "3521ceed-7ff0-4ee9-8e37-b01cf4a8ac42",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 4,
+          "score": 0.8754833005512749
+        }
+      },
+      "p4_proposed_role": "SUPPLEMENTARY",
+      "p4_validated_role": "SUPPLEMENTARY",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": "family-03",
+      "p5_family_members": [
+        "b935b2ee-6c4a-465a-8b3a-7e975642735c"
+      ],
+      "p5_retained": true,
+      "p5_drop_reason": null,
+      "p5_priority_score_components": {
+        "authority_role": "SUPPLEMENTARY",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": true,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": true,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 3,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_CHUNK_FILTERED"
+    },
+    {
+      "document_id": "c2184fd2-5ad5-419c-bd82-391bfde59780",
+      "document_version_id": "e4b18402-4d11-48f9-918e-cca6971ef6c4",
+      "provenance_record_id": "3939f797-9ecd-4f18-8f7b-eee6c1626db8",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 4,
+          "score": 0.0009708738070912659
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "c2184fd2-5ad5-419c-bd82-391bfde59780",
+      "document_version_id": "e4b18402-4d11-48f9-918e-cca6971ef6c4",
+      "provenance_record_id": "3939f797-9ecd-4f18-8f7b-eee6c1626db8",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 4,
+          "score": 0.0009708738070912659
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "c2184fd2-5ad5-419c-bd82-391bfde59780",
+      "document_version_id": "e4b18402-4d11-48f9-918e-cca6971ef6c4",
+      "provenance_record_id": "3939f797-9ecd-4f18-8f7b-eee6c1626db8",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 4,
+          "score": 0.0009708738070912659
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "8bdaed8c-3586-4ff0-ad2f-5446153a7842",
+      "document_version_id": "13f28031-8f57-4ede-a61f-af685a51f08e",
+      "provenance_record_id": "b9244db3-8075-4790-b80b-1a8a7a64ac80",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 6,
+          "score": 0.0007692307699471712
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 8,
+          "score": 0.8729933500289917
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "8bdaed8c-3586-4ff0-ad2f-5446153a7842",
+      "document_version_id": "13f28031-8f57-4ede-a61f-af685a51f08e",
+      "provenance_record_id": "b9244db3-8075-4790-b80b-1a8a7a64ac80",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 6,
+          "score": 0.0007692307699471712
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 8,
+          "score": 0.8729933500289917
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "8bdaed8c-3586-4ff0-ad2f-5446153a7842",
+      "document_version_id": "13f28031-8f57-4ede-a61f-af685a51f08e",
+      "provenance_record_id": "b9244db3-8075-4790-b80b-1a8a7a64ac80",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 6,
+          "score": 0.0007692307699471712
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 8,
+          "score": 0.8729933500289917
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "9ba8d6e2-56ad-4432-8dad-62b854a013e9",
+      "document_version_id": "8845aed2-0715-4c93-a119-92a963fa5c6d",
+      "provenance_record_id": "c5b0d160-03d0-495d-a051-d96f4f944f12",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 6,
+          "score": 0.8708347082138062
+        }
+      },
+      "p4_proposed_role": "GOVERNING",
+      "p4_validated_role": "GOVERNING",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": "family-01",
+      "p5_family_members": [
+        "8845aed2-0715-4c93-a119-92a963fa5c6d"
+      ],
+      "p5_retained": true,
+      "p5_drop_reason": null,
+      "p5_priority_score_components": {
+        "authority_role": "GOVERNING",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": true,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": true,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 29,
+      "p6_evidence_count": 3,
+      "p6_no_hit_reason": null
+    },
+    {
+      "document_id": "9ba8d6e2-56ad-4432-8dad-62b854a013e9",
+      "document_version_id": "8845aed2-0715-4c93-a119-92a963fa5c6d",
+      "provenance_record_id": "c5b0d160-03d0-495d-a051-d96f4f944f12",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 6,
+          "score": 0.8708347082138062
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": "family-01",
+      "p5_family_members": [
+        "8845aed2-0715-4c93-a119-92a963fa5c6d"
+      ],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "9ba8d6e2-56ad-4432-8dad-62b854a013e9",
+      "document_version_id": "8845aed2-0715-4c93-a119-92a963fa5c6d",
+      "provenance_record_id": "c5b0d160-03d0-495d-a051-d96f4f944f12",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 6,
+          "score": 0.8708347082138062
+        }
+      },
+      "p4_proposed_role": "GOVERNING",
+      "p4_validated_role": "GOVERNING",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": "family-01",
+      "p5_family_members": [
+        "8845aed2-0715-4c93-a119-92a963fa5c6d"
+      ],
+      "p5_retained": true,
+      "p5_drop_reason": null,
+      "p5_priority_score_components": {
+        "authority_role": "GOVERNING",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": true,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": true,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 37,
+      "p6_evidence_count": 3,
+      "p6_no_hit_reason": null
+    },
+    {
+      "document_id": "928d9479-4ad1-4a6a-9945-8a00db887e12",
+      "document_version_id": "07fca40c-b90e-4c16-bf53-b8e46fd898d5",
+      "provenance_record_id": "62654929-aec6-405b-955a-24b8d52ad1aa",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 7,
+          "score": 0.8707399368286133
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "928d9479-4ad1-4a6a-9945-8a00db887e12",
+      "document_version_id": "07fca40c-b90e-4c16-bf53-b8e46fd898d5",
+      "provenance_record_id": "62654929-aec6-405b-955a-24b8d52ad1aa",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 7,
+          "score": 0.8707399368286133
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "928d9479-4ad1-4a6a-9945-8a00db887e12",
+      "document_version_id": "07fca40c-b90e-4c16-bf53-b8e46fd898d5",
+      "provenance_record_id": "62654929-aec6-405b-955a-24b8d52ad1aa",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 7,
+          "score": 0.8707399368286133
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "82d7fdc4-1db0-4aeb-b70a-7aaa1580f775",
+      "document_version_id": "766f5d88-b5f3-4894-b989-2273dd8ed231",
+      "provenance_record_id": "3c42c21e-8ff1-467a-8526-9dd42db26593",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 7,
+          "score": 0.0007462686626240611
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "82d7fdc4-1db0-4aeb-b70a-7aaa1580f775",
+      "document_version_id": "766f5d88-b5f3-4894-b989-2273dd8ed231",
+      "provenance_record_id": "3c42c21e-8ff1-467a-8526-9dd42db26593",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 7,
+          "score": 0.0007462686626240611
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "82d7fdc4-1db0-4aeb-b70a-7aaa1580f775",
+      "document_version_id": "766f5d88-b5f3-4894-b989-2273dd8ed231",
+      "provenance_record_id": "3c42c21e-8ff1-467a-8526-9dd42db26593",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 7,
+          "score": 0.0007462686626240611
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "9dae9149-f8e7-47c4-83bc-dfaf2efd74bc",
+      "document_version_id": "1d90185d-8853-4989-9d7c-3784092bba5a",
+      "provenance_record_id": "707bce0b-c43c-4384-b667-b9160141745c",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 8,
+          "score": 0.0013186720898374915
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 23,
+          "score": 0.8668494820594788
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "9dae9149-f8e7-47c4-83bc-dfaf2efd74bc",
+      "document_version_id": "1d90185d-8853-4989-9d7c-3784092bba5a",
+      "provenance_record_id": "707bce0b-c43c-4384-b667-b9160141745c",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 8,
+          "score": 0.0013186720898374915
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 23,
+          "score": 0.8668494820594788
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "9dae9149-f8e7-47c4-83bc-dfaf2efd74bc",
+      "document_version_id": "1d90185d-8853-4989-9d7c-3784092bba5a",
+      "provenance_record_id": "707bce0b-c43c-4384-b667-b9160141745c",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 8,
+          "score": 0.0013186720898374915
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 23,
+          "score": 0.8668494820594788
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "a03614ba-13a5-44ab-b597-3f5070a91f92",
+      "document_version_id": "376f1a24-7310-4cc8-a25a-9ea03a93d508",
+      "provenance_record_id": "e77f372c-c399-400e-9115-3450c53a1797",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 8,
+          "score": 0.8699723482131958
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "a03614ba-13a5-44ab-b597-3f5070a91f92",
+      "document_version_id": "376f1a24-7310-4cc8-a25a-9ea03a93d508",
+      "provenance_record_id": "e77f372c-c399-400e-9115-3450c53a1797",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 8,
+          "score": 0.8699723482131958
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "a03614ba-13a5-44ab-b597-3f5070a91f92",
+      "document_version_id": "376f1a24-7310-4cc8-a25a-9ea03a93d508",
+      "provenance_record_id": "e77f372c-c399-400e-9115-3450c53a1797",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 8,
+          "score": 0.8699723482131958
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "0f081ae5-105a-4256-b8a6-ed6877ae19fa",
+      "document_version_id": "9bda8ca9-1c78-43f7-8e7c-5a9b3ab271bf",
+      "provenance_record_id": "2575867a-9cf2-413f-8fcc-7c014b2db1d2",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 8,
+          "score": 0.0006578947650268674
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "0f081ae5-105a-4256-b8a6-ed6877ae19fa",
+      "document_version_id": "9bda8ca9-1c78-43f7-8e7c-5a9b3ab271bf",
+      "provenance_record_id": "2575867a-9cf2-413f-8fcc-7c014b2db1d2",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 8,
+          "score": 0.0006578947650268674
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "0f081ae5-105a-4256-b8a6-ed6877ae19fa",
+      "document_version_id": "9bda8ca9-1c78-43f7-8e7c-5a9b3ab271bf",
+      "provenance_record_id": "2575867a-9cf2-413f-8fcc-7c014b2db1d2",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 8,
+          "score": 0.0006578947650268674
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "3af9c006-f150-4501-a298-9c3936a54352",
+      "document_version_id": "8c9df3c7-45ed-4042-aa89-407b6f0abea8",
+      "provenance_record_id": "2d46b608-5937-4043-b409-34363090acb4",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 9,
+          "score": 0.0012499999720603228
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 21,
+          "score": 0.8855698704719543
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "3af9c006-f150-4501-a298-9c3936a54352",
+      "document_version_id": "8c9df3c7-45ed-4042-aa89-407b6f0abea8",
+      "provenance_record_id": "2d46b608-5937-4043-b409-34363090acb4",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 9,
+          "score": 0.0012499999720603228
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 21,
+          "score": 0.8855698704719543
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "3af9c006-f150-4501-a298-9c3936a54352",
+      "document_version_id": "8c9df3c7-45ed-4042-aa89-407b6f0abea8",
+      "provenance_record_id": "2d46b608-5937-4043-b409-34363090acb4",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 9,
+          "score": 0.0012499999720603228
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 21,
+          "score": 0.8855698704719543
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "455021c3-72a0-49c1-b570-99ea461888cf",
+      "document_version_id": "23d4fa9e-0dee-4fb4-809b-a25b3706435e",
+      "provenance_record_id": "9329ba73-abdb-4654-9711-ba4bfc3960a3",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 10,
+          "score": 0.0009090909152291715
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "455021c3-72a0-49c1-b570-99ea461888cf",
+      "document_version_id": "23d4fa9e-0dee-4fb4-809b-a25b3706435e",
+      "provenance_record_id": "9329ba73-abdb-4654-9711-ba4bfc3960a3",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 10,
+          "score": 0.0009090909152291715
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "455021c3-72a0-49c1-b570-99ea461888cf",
+      "document_version_id": "23d4fa9e-0dee-4fb4-809b-a25b3706435e",
+      "provenance_record_id": "9329ba73-abdb-4654-9711-ba4bfc3960a3",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 10,
+          "score": 0.0009090909152291715
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "24841ccf-ee41-40d7-aeb5-d9cced7b9f37",
+      "document_version_id": "f3c65400-5f77-407e-8bca-90e2fb6e263b",
+      "provenance_record_id": "901bf9ad-c1f9-4d13-b28e-81a09565bd30",
+      "source_id": "VNU",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 10,
+          "score": 0.8696345090866089
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "24841ccf-ee41-40d7-aeb5-d9cced7b9f37",
+      "document_version_id": "f3c65400-5f77-407e-8bca-90e2fb6e263b",
+      "provenance_record_id": "901bf9ad-c1f9-4d13-b28e-81a09565bd30",
+      "source_id": "VNU",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 10,
+          "score": 0.8696345090866089
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "24841ccf-ee41-40d7-aeb5-d9cced7b9f37",
+      "document_version_id": "f3c65400-5f77-407e-8bca-90e2fb6e263b",
+      "provenance_record_id": "901bf9ad-c1f9-4d13-b28e-81a09565bd30",
+      "source_id": "VNU",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 10,
+          "score": 0.8696345090866089
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "f34300b9-0ebe-4f5b-8bae-2b9c2949eb48",
+      "document_version_id": "4918f62b-4fa1-4dca-99cc-e2cd1e62ed03",
+      "provenance_record_id": "72a97cc9-2f8c-457a-8185-c285c7ef5817",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 11,
+          "score": 0.0007874015718698502
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "f34300b9-0ebe-4f5b-8bae-2b9c2949eb48",
+      "document_version_id": "4918f62b-4fa1-4dca-99cc-e2cd1e62ed03",
+      "provenance_record_id": "72a97cc9-2f8c-457a-8185-c285c7ef5817",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 11,
+          "score": 0.0007874015718698502
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "f34300b9-0ebe-4f5b-8bae-2b9c2949eb48",
+      "document_version_id": "4918f62b-4fa1-4dca-99cc-e2cd1e62ed03",
+      "provenance_record_id": "72a97cc9-2f8c-457a-8185-c285c7ef5817",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 11,
+          "score": 0.0007874015718698502
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "9f4d9f79-f85f-4e1f-8e00-ac56a387989f",
+      "document_version_id": "b5cc9fd3-e3b3-4702-bd05-cf09252733d8",
+      "provenance_record_id": "66289cfa-7c9a-4c8c-a20e-2a4116b3c808",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 11,
+          "score": 0.000606060610152781
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "9f4d9f79-f85f-4e1f-8e00-ac56a387989f",
+      "document_version_id": "b5cc9fd3-e3b3-4702-bd05-cf09252733d8",
+      "provenance_record_id": "66289cfa-7c9a-4c8c-a20e-2a4116b3c808",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 11,
+          "score": 0.000606060610152781
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "9f4d9f79-f85f-4e1f-8e00-ac56a387989f",
+      "document_version_id": "b5cc9fd3-e3b3-4702-bd05-cf09252733d8",
+      "provenance_record_id": "66289cfa-7c9a-4c8c-a20e-2a4116b3c808",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 11,
+          "score": 0.000606060610152781
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "0a62652f-f56a-4b19-a2e0-d404b28b79a9",
+      "document_version_id": "43d550fe-c5e6-4a57-bc2c-1617681dde6c",
+      "provenance_record_id": "3f2a2b8e-f6d3-4e5d-aa19-0e847702f4c2",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 12,
+          "score": 0.8891768455505371
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "0a62652f-f56a-4b19-a2e0-d404b28b79a9",
+      "document_version_id": "43d550fe-c5e6-4a57-bc2c-1617681dde6c",
+      "provenance_record_id": "3f2a2b8e-f6d3-4e5d-aa19-0e847702f4c2",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 12,
+          "score": 0.8891768455505371
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "0a62652f-f56a-4b19-a2e0-d404b28b79a9",
+      "document_version_id": "43d550fe-c5e6-4a57-bc2c-1617681dde6c",
+      "provenance_record_id": "3f2a2b8e-f6d3-4e5d-aa19-0e847702f4c2",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 12,
+          "score": 0.8891768455505371
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "69f08ce1-b3c0-4468-b0a2-ce8f3866dee7",
+      "document_version_id": "307cb9de-946e-4c2b-ae81-a23394134486",
+      "provenance_record_id": "1029d1ea-27dd-4a06-a5d7-f374d0eb0292",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 13,
+          "score": 0.8687446117401123
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "69f08ce1-b3c0-4468-b0a2-ce8f3866dee7",
+      "document_version_id": "307cb9de-946e-4c2b-ae81-a23394134486",
+      "provenance_record_id": "1029d1ea-27dd-4a06-a5d7-f374d0eb0292",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 13,
+          "score": 0.8687446117401123
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "69f08ce1-b3c0-4468-b0a2-ce8f3866dee7",
+      "document_version_id": "307cb9de-946e-4c2b-ae81-a23394134486",
+      "provenance_record_id": "1029d1ea-27dd-4a06-a5d7-f374d0eb0292",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 13,
+          "score": 0.8687446117401123
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "ceff9506-43ff-4547-a316-ddb4e6bbe528",
+      "document_version_id": "c1113cbe-4077-480e-8ecc-403cb8713093",
+      "provenance_record_id": "0f8752fd-bd05-478c-aaf7-0d120b4625e7",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 13,
+          "score": 0.00046948358067311347
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 23,
+          "score": 0.8845311403274536
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "ceff9506-43ff-4547-a316-ddb4e6bbe528",
+      "document_version_id": "c1113cbe-4077-480e-8ecc-403cb8713093",
+      "provenance_record_id": "0f8752fd-bd05-478c-aaf7-0d120b4625e7",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 13,
+          "score": 0.00046948358067311347
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 23,
+          "score": 0.8845311403274536
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "ceff9506-43ff-4547-a316-ddb4e6bbe528",
+      "document_version_id": "c1113cbe-4077-480e-8ecc-403cb8713093",
+      "provenance_record_id": "0f8752fd-bd05-478c-aaf7-0d120b4625e7",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS",
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 13,
+          "score": 0.00046948358067311347
+        },
+        "SEMANTIC_VECTOR": {
+          "rank": 23,
+          "score": 0.8845311403274536
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "d359fac7-91eb-4945-9c3c-61a73cdaa7ae",
+      "document_version_id": "dc8ca6b7-a533-4782-9798-e360ad0fe5cc",
+      "provenance_record_id": "e0b18dc7-79e4-4253-bccd-6428c5058470",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 13,
+          "score": 0.0005714285653084517
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "d359fac7-91eb-4945-9c3c-61a73cdaa7ae",
+      "document_version_id": "dc8ca6b7-a533-4782-9798-e360ad0fe5cc",
+      "provenance_record_id": "e0b18dc7-79e4-4253-bccd-6428c5058470",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 13,
+          "score": 0.0005714285653084517
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "d359fac7-91eb-4945-9c3c-61a73cdaa7ae",
+      "document_version_id": "dc8ca6b7-a533-4782-9798-e360ad0fe5cc",
+      "provenance_record_id": "e0b18dc7-79e4-4253-bccd-6428c5058470",
+      "source_id": "VBQPPL",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "CONTENT_FTS"
+      ],
+      "p3_rank_or_scores": {
+        "CONTENT_FTS": {
+          "rank": 13,
+          "score": 0.0005714285653084517
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "ELIGIBLE",
+      "p4_applicability": "CURRENT_EFFECT_UNVERIFIED",
+      "p4_filter_reason": null,
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_ROLE_NOT_ELIGIBLE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "CURRENT_EFFECT_UNVERIFIED",
+        "provenance": "STRICT_VALID",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "e28831bf-1e88-4c35-8fe2-761870d7319d",
+      "document_version_id": "c1df2175-958d-4c60-9173-cbd938ff8ced",
+      "provenance_record_id": "36b8d221-b535-49bd-8ff1-a9b85a68b598",
+      "source_id": "UEB",
+      "sub_intent_id": "480350ec-5fe4-4572-900d-5bbcfc9e3c6c",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 15,
+          "score": 0.8697397708892822
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "e28831bf-1e88-4c35-8fe2-761870d7319d",
+      "document_version_id": "c1df2175-958d-4c60-9173-cbd938ff8ced",
+      "provenance_record_id": "36b8d221-b535-49bd-8ff1-a9b85a68b598",
+      "source_id": "UEB",
+      "sub_intent_id": "6302d85d-388f-4cf9-8536-4d86eb074310",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 15,
+          "score": 0.8697397708892822
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    },
+    {
+      "document_id": "e28831bf-1e88-4c35-8fe2-761870d7319d",
+      "document_version_id": "c1df2175-958d-4c60-9173-cbd938ff8ced",
+      "provenance_record_id": "36b8d221-b535-49bd-8ff1-a9b85a68b598",
+      "source_id": "UEB",
+      "sub_intent_id": "ceaf4feb-e72a-45e1-a673-34743cf68eca",
+      "discovered_in_p3": true,
+      "p3_lanes": [
+        "SEMANTIC_VECTOR"
+      ],
+      "p3_rank_or_scores": {
+        "SEMANTIC_VECTOR": {
+          "rank": 15,
+          "score": 0.8697397708892822
+        }
+      },
+      "p4_proposed_role": "IRRELEVANT",
+      "p4_validated_role": "IRRELEVANT",
+      "p4_authority_state": "FILTERED_STATUS",
+      "p4_applicability": "UNKNOWN",
+      "p4_filter_reason": "FILTERED_STATUS",
+      "p4_scope_conflict": false,
+      "p5_family_id": null,
+      "p5_family_members": [],
+      "p5_retained": false,
+      "p5_drop_reason": "P5_FILTERED_AUTHORITY_STATE",
+      "p5_priority_score_components": {
+        "authority_role": "IRRELEVANT",
+        "applicability": "UNKNOWN",
+        "provenance": "REJECTED",
+        "sub_intent_relevant": false,
+        "policy": "pre-correction-p3-order-first-15"
+      },
+      "p6_searched": false,
+      "p6_query_strategy": "dimension_aware_within_family_fts_or",
+      "p6_candidate_chunk_count": 0,
+      "p6_evidence_count": 0,
+      "p6_no_hit_reason": "P6_FAMILY_NOT_AVAILABLE"
+    }
+  ]
+}

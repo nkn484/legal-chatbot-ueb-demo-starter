@@ -1,4 +1,4 @@
-"""Deterministic structural claim-to-evidence validation without provider review."""
+"""Deterministic structural claim-to-evidence validation without model review."""
 
 from __future__ import annotations
 

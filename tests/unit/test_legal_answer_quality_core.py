@@ -38,6 +38,7 @@ from legal_chatbot.retrieval.quality_repair.models import (
     LaneObservation,
     ProvenanceType,
     RetrievalLane,
+    SourceBinding,
     SourceId,
     SourceScopeObservation,
 )
@@ -76,6 +77,9 @@ def _candidate(
         source_id=SourceId.VBQPPL,
         external_id=f"external-{name}",
         version_number=1,
+        document_type="Quyết định",
+        issuing_authority="Cơ quan ban hành",
+        legal_status="Còn hiệu lực",
         provenance_record_id=_uuid(f"provenance-{name}"),
         provenance_type=provenance_type,
         latest_ingested=True,
@@ -155,6 +159,36 @@ def test_manual_provenance_is_never_promoted_to_direct_authority() -> None:
 
     assert selection.assessments[0].role is AuthorityRole.SUPPLEMENTARY_AUTHORITY
     assert coverage.entries[0].status is EvidenceCoverageStatus.PARTIALLY_SUPPORTED
+
+
+def test_direct_authority_rejects_an_explicit_source_mismatch() -> None:
+    candidate = _candidate("authority", "u01")
+    unknown = AnalyzerObservation(
+        intent=GenericIntent.GENERAL,
+        complexity=QueryComplexity.SIMPLE,
+        source_scope=SourceScope.NONE,
+        units=(AnalyzerUnit(unit_id="u01", source_scope=SourceScope.NONE),),
+    )
+    mismatched = AnalyzerObservation(
+        intent=GenericIntent.GENERAL,
+        complexity=QueryComplexity.SIMPLE,
+        source_scope=SourceScope.EXPLICIT_SOURCE,
+        units=(
+            AnalyzerUnit(
+                unit_id="u01",
+                source_scope=SourceScope.EXPLICIT_SOURCE,
+                source_ids=(SourceId.VNU,),
+                source_binding=SourceBinding.VNU,
+            ),
+        ),
+    )
+
+    unknown_selection = select_evidence((candidate,), unknown, dynamic=True)
+    mismatched_selection = select_evidence((candidate,), mismatched, dynamic=True)
+
+    assert unknown_selection.assessments[0].role is AuthorityRole.DIRECT_AUTHORITY
+    assert mismatched_selection.assessments[0].role is AuthorityRole.IMPLEMENTING_OR_INTERNAL_RULE
+    assert mismatched_selection.assessments[0].source_binding_aligned is False
 
 
 def test_repair_is_single_gap_targeted_and_private() -> None:

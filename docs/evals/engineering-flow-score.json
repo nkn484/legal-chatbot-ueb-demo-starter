@@ -1,0 +1,9 @@
+{
+  "schema_version": "ENGINEERING-FLOW-SCORE-1",
+  "terminal_count": 10,
+  "exception_count": 0,
+  "completion_percent": 100.0,
+  "engineering_flow_score": 10.0,
+  "decision": "ENGINEERING_PASS",
+  "legal_quality_score": "NOT_MEASURED_PENDING_INDEPENDENT_REVIEW"
+}

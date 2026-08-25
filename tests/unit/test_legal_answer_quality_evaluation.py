@@ -90,6 +90,7 @@ def test_quality_prompt_accepts_six_evidence_items_only_when_settings_allow_it()
     prompt = build_quality_grounded_prompt(ChatRequest(question="Câu hỏi"), pack, settings)
 
     assert "STRUCTURED_EVIDENCE_PACK" in prompt
+    assert "current applicability and legal effect were not independently verified" in prompt
     assert '"authority_count"' not in prompt
     with pytest.raises(ChatError):
         build_quality_grounded_prompt(ChatRequest(question="Câu hỏi"), pack, ChatSettings())

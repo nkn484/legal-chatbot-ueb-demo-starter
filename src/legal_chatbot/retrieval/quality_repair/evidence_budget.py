@@ -103,13 +103,18 @@ def select_evidence(
     """
 
     material_unit_ids = tuple(unit.unit_id for unit in analysis.units)
+    unit_source_bindings = {unit.unit_id: unit.source_binding for unit in analysis.units}
     candidate_list = tuple(candidates)
     if len({candidate.identity.document_version_id for candidate in candidate_list}) != len(
         candidate_list
     ):
         raise ValueError("candidate input must be collapsed by document version")
     assessments = tuple(
-        assess_candidate_role(candidate, material_unit_ids=material_unit_ids)
+        assess_candidate_role(
+            candidate,
+            material_unit_ids=material_unit_ids,
+            unit_source_bindings=unit_source_bindings,
+        )
         for candidate in candidate_list
     )
     pairs = tuple(zip(candidate_list, assessments, strict=True))

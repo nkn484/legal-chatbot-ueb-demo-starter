@@ -1,0 +1,131 @@
+{
+  "schema_version": "LEGAL-QUALITY-PROVISIONAL-RUBRIC-SCORE-1",
+  "evaluation_timestamp": "2026-08-25T16:53:59.9756879+07:00",
+  "evaluation_type": "CODING_AGENT_PROVISIONAL_RUBRIC_APPLICATION",
+  "independent_full_text_legal_review": false,
+  "eligible_to_establish_release_target": false,
+  "source_artifact": {
+    "path": "docs/evals/legal-quality-review-input.json",
+    "sha256": "6717452D862BEC3FDE3D7538D31ED2EAC86724785FFE66F07648FEA1B81A2533"
+  },
+  "rubric": {
+    "correctness_max": 4.0,
+    "authority_applicability_max": 2.5,
+    "completeness_max": 2.5,
+    "traceability_inference_discipline_max": 1.0,
+    "total_max": 10.0,
+    "case_pass_threshold": 7.0,
+    "release_target_average": 8.5,
+    "release_target_pass_count": 9
+  },
+  "preregistered_measurement_rules": {
+    "correctness": "A P10 output that merely states coverage and locators, and states no legal rule, condition, procedure, exception, or conclusion responsive to the question, is capped at 0.4/4.0. The 0.4 credit recognizes a non-fabricated limitation statement only.",
+    "authority_applicability": "A final governing evidence role not named or explained in the user-visible P10 output receives 0.6/2.5; final supplementary-only evidence receives 0.2/2.5; no final evidence receives 0.0/2.5. No applicability/current-effect point is awarded without a visible verification or qualified treatment.",
+    "completeness": "Reporting that every measured issue is SUPPORTED but giving no substantive legal content receives at most 0.6/2.5; a single such issue receives 0.5/2.5. Unsupported-only diagnostic output receives 0.2/2.5 for explicit gap disclosure. Partial-only coverage receives 0.2/2.5.",
+    "traceability": "A claim-to-evidence map with only chunk locators and no visible document title, identifier, provision, or link receives 0.4/1.0 when evidence exists. A limitation map without retained evidence receives 0.3/1.0.",
+    "scope": "Scores measure the actual P10 output and its linked evidence record. They do not infer legal correctness from engineering PASS, authority labels, coverage states, or retrieval success."
+  },
+  "cases": [
+    {
+      "case_id": "Q01",
+      "terminal_status": "ANSWER_WITH_LIMITATION",
+      "observed_output": "One unsupported issue, no retained final evidence, and no substantive legal answer.",
+      "scores": {"correctness": 0.4, "authority_applicability": 0.0, "completeness": 0.2, "traceability_inference_discipline": 0.3, "total": 0.9},
+      "pass": false,
+      "finding": "The limitation is safe, but the output supplies neither applicable conditions nor an authority."
+    },
+    {
+      "case_id": "Q02",
+      "terminal_status": "ANSWER",
+      "observed_output": "One supported issue with governing-role evidence, represented only by three chunk locators; no legal rule is stated.",
+      "scores": {"correctness": 0.4, "authority_applicability": 0.6, "completeness": 0.5, "traceability_inference_discipline": 0.4, "total": 1.9},
+      "pass": false,
+      "finding": "The evidence role cannot substitute for an answer identifying the governing requirements for data handling."
+    },
+    {
+      "case_id": "Q03",
+      "terminal_status": "ANSWER_WITH_LIMITATION",
+      "observed_output": "Two unsupported issues, no retained final evidence, and no substantive legal answer.",
+      "scores": {"correctness": 0.4, "authority_applicability": 0.0, "completeness": 0.2, "traceability_inference_discipline": 0.3, "total": 0.9},
+      "pass": false,
+      "finding": "The output accurately preserves the evidence gap but does not provide the requested criteria or procedure."
+    },
+    {
+      "case_id": "Q04",
+      "terminal_status": "ANSWER",
+      "observed_output": "One supported issue with governing-role evidence, represented only by three chunk locators; no legal rule is stated.",
+      "scores": {"correctness": 0.4, "authority_applicability": 0.6, "completeness": 0.5, "traceability_inference_discipline": 0.4, "total": 1.9},
+      "pass": false,
+      "finding": "The output does not identify the competent authority, applicability conditions, or controlling provision."
+    },
+    {
+      "case_id": "Q05",
+      "terminal_status": "ANSWER",
+      "observed_output": "Three supported issues with governing-role evidence, represented only by chunk locators; no legal rule is stated.",
+      "scores": {"correctness": 0.4, "authority_applicability": 0.6, "completeness": 0.6, "traceability_inference_discipline": 0.4, "total": 2.0},
+      "pass": false,
+      "finding": "All measured issues are covered in the diagnostic record, but the user receives no substantive answer about the requested regime."
+    },
+    {
+      "case_id": "Q06",
+      "terminal_status": "ANSWER",
+      "observed_output": "Four supported issues with governing-role evidence, represented only by chunk locators; no legal rule is stated.",
+      "scores": {"correctness": 0.4, "authority_applicability": 0.6, "completeness": 0.6, "traceability_inference_discipline": 0.4, "total": 2.0},
+      "pass": false,
+      "finding": "The diagnostic records four covered issues but does not answer the operational legal question or expose an authority chain."
+    },
+    {
+      "case_id": "Q07",
+      "terminal_status": "ANSWER",
+      "observed_output": "One supported issue with governing-role evidence, represented only by three chunk locators; no legal rule is stated.",
+      "scores": {"correctness": 0.4, "authority_applicability": 0.6, "completeness": 0.5, "traceability_inference_discipline": 0.4, "total": 1.9},
+      "pass": false,
+      "finding": "The output provides no eligibility, duration, or current-effect conclusion."
+    },
+    {
+      "case_id": "Q08",
+      "terminal_status": "ANSWER",
+      "observed_output": "One supported issue with governing-role evidence, represented only by three chunk locators; no legal rule is stated.",
+      "scores": {"correctness": 0.4, "authority_applicability": 0.6, "completeness": 0.5, "traceability_inference_discipline": 0.4, "total": 1.9},
+      "pass": false,
+      "finding": "The visible text cannot establish the governing training rule or answer the question."
+    },
+    {
+      "case_id": "Q09",
+      "terminal_status": "ANSWER",
+      "observed_output": "One supported issue with governing-role evidence, represented only by three chunk locators; no legal rule is stated.",
+      "scores": {"correctness": 0.4, "authority_applicability": 0.6, "completeness": 0.5, "traceability_inference_discipline": 0.4, "total": 1.9},
+      "pass": false,
+      "finding": "Despite retained evidence, the response does not state the records/archives rule, its scope, or its caveats."
+    },
+    {
+      "case_id": "Q10",
+      "terminal_status": "ANSWER_WITH_LIMITATION",
+      "observed_output": "Two unsupported issues and one partially supported issue with supplementary-only evidence; no substantive legal answer.",
+      "scores": {"correctness": 0.3, "authority_applicability": 0.2, "completeness": 0.2, "traceability_inference_discipline": 0.4, "total": 1.1},
+      "pass": false,
+      "finding": "The limitation is safer than inventing a rule, but supplementary evidence and chunk-only references cannot answer the request."
+    }
+  ],
+  "aggregate": {
+    "case_count": 10,
+    "total_score": 16.4,
+    "average_score": 1.64,
+    "pass_count": 0,
+    "fail_count": 10,
+    "average_target_met": false,
+    "pass_count_target_met": false,
+    "legal_quality_status": "NOT_MET",
+    "release_decision": "NO_GO_FOR_LEGAL_QUALITY"
+  },
+  "comparison": {
+    "historical_independent_review": {
+      "candidate": "stress-2026-08-25-hybrid-provider-healthy.xlsx",
+      "average_score": 5.85,
+      "pass_count": 2,
+      "source": "docs/legal-review-scorecard-reviewed-2026-08-25.md"
+    },
+    "interpretation": "This is a different candidate and a provisional coding-agent application, so it is not a valid independent-review trend. The current score identifies that the present P10 output is diagnostic metadata rather than a legal answer."
+  },
+  "required_next_evaluation": "Run P12 with independent full-text legal review after P10 produces substantive, evidence-bound legal answers with visible authority and provision-level citations."
+}

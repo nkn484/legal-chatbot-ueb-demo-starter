@@ -1,0 +1,57 @@
+{
+  "phase_id": "P11",
+  "phase_name": "Independent Legal Reviewer",
+  "implementation_status": "COMPLETE",
+  "gate_status": "PASS",
+  "decision": "KEEP",
+  "next_phase_allowed": true,
+  "next_phase_scope": "P12_EVALUATION_ONLY",
+  "files_changed": [
+    "src/legal_chatbot/legal_evidence/review/__init__.py",
+    "src/legal_chatbot/legal_evidence/review/models.py",
+    "src/legal_chatbot/legal_evidence/review/parser.py",
+    "src/legal_chatbot/legal_evidence/review/prompt.py",
+    "src/legal_chatbot/legal_evidence/review/release_guard.py",
+    "src/legal_chatbot/legal_evidence/review/service.py",
+    "tests/unit/test_legal_answer_review.py",
+    "docs/review/phases/P11-independent-legal-reviewer.md",
+    "docs/review/phases/P11-independent-legal-reviewer.json"
+  ],
+  "tests_run": [
+    {
+      "scope": "P11 unit pack",
+      "result": "8 passed"
+    },
+    {
+      "scope": "P11/P10/vertical-slice/M08 targeted regression",
+      "result": "12 passed"
+    },
+    {
+      "scope": "full suite with import isolation",
+      "result": "951 passed, 39 skipped, 1 non-failing OpenPyXL warning"
+    },
+    {
+      "scope": "ruff and compile",
+      "result": "passed"
+    }
+  ],
+  "gate_assertions": {
+    "claim_evidence_review": "PASS",
+    "unsupported_material_claim_cannot_pass": "PASS",
+    "rewrite_count_maximum": 1,
+    "reviewer_cannot_add_evidence": "PASS",
+    "unexpected_database_writes": 0,
+    "runtime_feature_default": "OFF"
+  },
+  "release_boundary": {
+    "p11_success_outcome": "P12_CANDIDATE_ONLY",
+    "legal_quality_established": false,
+    "human_legal_release_approved": false
+  },
+  "known_limitations": [
+    "P11 is default-off and is not integrated into M08 while LEGAL_CHAT_PIPELINE_ENABLED=false.",
+    "No P11 live-provider run was performed.",
+    "P11 engineering PASS does not change the current legal-quality NO_GO result."
+  ],
+  "engineering_legal_quality_note": "P11 PASS does not establish legal quality or the P12 release target."
+}

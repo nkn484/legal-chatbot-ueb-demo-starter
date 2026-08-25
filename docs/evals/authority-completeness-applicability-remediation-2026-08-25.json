@@ -1,0 +1,30 @@
+{
+  "run_date": "2026-08-25",
+  "scope": [
+    "DIRECT_AUTHORITY_SELECTION",
+    "EVIDENCE_COMPLETENESS",
+    "APPLICABILITY_VERSION_DISCIPLINE"
+  ],
+  "strategy": "quality_retrieval_evidence_repair_v1",
+  "selected_pool": 8,
+  "set_a": {
+    "grounded_answers": 10,
+    "provider_failures": 0,
+    "citations_per_case": 3,
+    "unique_document_versions_per_case": 3,
+    "expected_document_hit_cases": 5,
+    "mean_source_coverage_percent": 43.33,
+    "applicability_limitation_cases": 10,
+    "route_p95_ms": 63686.2
+  },
+  "corpus_blockers": {
+    "not_in_catalog": 2,
+    "quarantined": 1
+  },
+  "legal_quality": {
+    "measurement_state": "NOT_MEASURED_PENDING_INDEPENDENT_REVIEW",
+    "target_average": 8.5,
+    "target_pass_count": 9,
+    "technical_decision": "HOLD_PENDING_LEGAL_REVIEW"
+  }
+}

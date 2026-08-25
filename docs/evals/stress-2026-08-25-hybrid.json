@@ -1,0 +1,43 @@
+{
+  "run_date": "2026-08-25",
+  "set": "A",
+  "configuration": {
+    "semantic_mode": "hybrid",
+    "planner_enabled": false,
+    "reranker_enabled": false,
+    "quality_strategy": "disabled"
+  },
+  "runtime": {
+    "migration": "0012_reviewed_legal_effects",
+    "documents": 670,
+    "chunks": 21349,
+    "embeddings": 42690,
+    "api_live_status": 200,
+    "api_ready_status": 200,
+    "public_tunnel_live_status": 200,
+    "api_network_errors": 0
+  },
+  "provider": {
+    "health": "unhealthy",
+    "error_code": "unavailable",
+    "cases_attempted": 10,
+    "answer_calls": 10,
+    "answer_successes": 0,
+    "answer_failures": 10
+  },
+  "chat": {
+    "refusal_count": 10,
+    "provider_failure_count": 10,
+    "citations_per_case": 3,
+    "p50_ms": 1130.28,
+    "p95_ms": 2118.21
+  },
+  "legal_quality": {
+    "measurement_state": "NOT_MEASURED",
+    "baseline_average": 5.49,
+    "baseline_pass_count": 4,
+    "target_average": 8.5,
+    "target_pass_count": 9,
+    "decision": "BLOCKED_EXTERNAL"
+  }
+}

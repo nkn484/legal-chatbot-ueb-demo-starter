@@ -1,4 +1,4 @@
-"""Structured, provider-neutral legal evidence-pack contracts."""
+"""Structured, external-model-neutral legal evidence-pack contracts."""
 
 from __future__ import annotations
 
@@ -21,6 +21,7 @@ class EvidencePackLimitation(StrEnum):
     SOURCE_ACCESS_UNAVAILABLE = "SOURCE_ACCESS_UNAVAILABLE"
     SOURCE_AMBIGUOUS = "SOURCE_AMBIGUOUS"
     APPLICABILITY_UNCERTAIN = "APPLICABILITY_UNCERTAIN"
+    VERSION_UNVERIFIED = "VERSION_UNVERIFIED"
     MANUAL_PROVENANCE = "MANUAL_PROVENANCE"
 
 
@@ -110,6 +111,7 @@ def derive_limitations(
         limitations.append(EvidencePackLimitation.SOURCE_AMBIGUOUS)
     if any(entry.applicability_uncertain for entry in coverage.entries):
         limitations.append(EvidencePackLimitation.APPLICABILITY_UNCERTAIN)
+        limitations.append(EvidencePackLimitation.VERSION_UNVERIFIED)
     if any(
         authority.citation.provenance_type.value == "manual_snapshot" for authority in authorities
     ):

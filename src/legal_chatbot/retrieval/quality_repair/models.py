@@ -64,6 +64,9 @@ class DocumentIdentity(_FrozenContract):
     )
     title: str | None = Field(default=None, max_length=4_096, exclude=True, repr=False)
     version_number: int = Field(ge=1)
+    document_type: str | None = Field(default=None, max_length=512, exclude=True, repr=False)
+    issuing_authority: str | None = Field(default=None, max_length=1_024, exclude=True, repr=False)
+    legal_status: str | None = Field(default=None, max_length=256, exclude=True, repr=False)
     provenance_record_id: UUID = Field(exclude=True, repr=False)
     provenance_type: ProvenanceType
     transport_trust_mode: TransportTrustMode = TransportTrustMode.STRICT_TLS

@@ -1,0 +1,78 @@
+{
+  "schema_version": "P5-P6-CORRECTIVE-1",
+  "decision": "UPSTREAM_BLOCKED",
+  "root_cause_classification": "UPSTREAM_AUTHORITY_GAP",
+  "scope": {
+    "p2": "FROZEN_DETERMINISTIC_FALLBACK",
+    "p4": "FROZEN_SUBINTENT_AWARE_CLASSIFIER",
+    "p11": "OFF",
+    "p3_reader": "REAL_POSTGRESQL",
+    "p6_reader": "REAL_POSTGRESQL",
+    "p8_reader": "REAL_POSTGRESQL",
+    "max_repair_cycles": 1
+  },
+  "forensic_artifact": "docs/evals/p5-p6-evidence-path-forensic-q10.json",
+  "corrections": {
+    "p5": [
+      "Prioritize retained candidates by material sub-intent coverage, authority role, applicability, and original P3 order only as a deterministic tie-break.",
+      "Keep the existing fifteen-family boundary; do not rank by source ID.",
+      "Consolidate multiple versions of the same stable legal document identity without inferring legal relations."
+    ],
+    "p6": [
+      "Search P5-retained document versions when the P4 assessment is relevant for the material sub-intent, rather than requiring a separate P3 sub-intent match.",
+      "Build bounded dimension-aware OR FTS queries inside retained families only."
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "Q10",
+      "p3_discovered_documents": 30,
+      "p5_families": 3,
+      "p6_evidence": 10,
+      "warning_grounds": {
+        "p4_eligible_relevant_candidates": 3,
+        "p5_retained_candidates": 3,
+        "p6_documents_with_evidence": 2
+      },
+      "dismissal_grounds": {
+        "p4_eligible_relevant_candidates": 0,
+        "classification": "UPSTREAM_AUTHORITY_GAP"
+      },
+      "warning_dismissal_process": {
+        "p4_eligible_relevant_candidates": 3,
+        "p5_retained_candidates": 3,
+        "p6_documents_with_evidence": 2
+      }
+    },
+    {
+      "case_id": "Q05",
+      "stage": "ANSWER_DRAFTED",
+      "p5_families": 15,
+      "p5_retained_candidates": 15,
+      "p5_budget_pruned_candidates": 2,
+      "p6_evidence": 15,
+      "p7_states": ["SUPPORTED", "SUPPORTED", "SUPPORTED"],
+      "p9_final_evidence": 3
+    },
+    {
+      "case_id": "Q06",
+      "stage": "ANSWER_DRAFTED",
+      "p5_families": 11,
+      "p5_retained_candidates": 11,
+      "p5_budget_pruned_candidates": 0,
+      "p6_evidence": 20,
+      "p7_states": ["SUPPORTED", "SUPPORTED", "SUPPORTED", "SUPPORTED"],
+      "p9_final_evidence": 4
+    }
+  ],
+  "verification": {
+    "full_regression": "930 passed, 39 skipped, 1 warning",
+    "ruff": "PASS",
+    "compileall": "PASS",
+    "dependency_check": "PASS",
+    "unexpected_db_writes": false,
+    "document_version_count_after": 672,
+    "document_chunk_count_after": 21349
+  },
+  "release_statement": "This result does not establish legal quality, P12 PASS, release readiness, or P1-P10 FLOW_PASS."
+}

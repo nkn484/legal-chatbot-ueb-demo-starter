@@ -36,6 +36,10 @@ class ChannelPort(Protocol):
         """Return one normalized receipt without exposing channel SDK details."""
         ...
 
+
+class ProcessingStatusNotifierPort(Protocol):
+    async def notify(self, message: ChannelInboundMessage) -> None: ...
+
     async def aclose(self) -> None:
         """Release adapter-owned asynchronous resources."""
         ...

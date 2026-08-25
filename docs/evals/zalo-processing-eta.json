@@ -1,0 +1,24 @@
+{
+  "schema_version": "ZALO-PROCESSING-ETA-1",
+  "local_controlled_case": {
+    "events": ["PROCESSING", "FINAL"],
+    "correlation_preserved": true,
+    "eta_min_seconds": 30,
+    "eta_max_seconds": 60,
+    "eta_source": "CONFIGURED_FALLBACK",
+    "final_status": "ANSWER",
+    "answer_nonempty": true,
+    "actual_total_duration_ms": 7464.6,
+    "eta_error_seconds": -37.5
+  },
+  "processing_policy": {
+    "max_processing_messages_per_delivery": 1,
+    "final_message_required": true,
+    "status_send_failure_blocks_final": false,
+    "technical_terms_exposed_to_user": false
+  },
+  "eta_metric": {
+    "eta_range_hit_rate": null,
+    "reason": "One local sample is insufficient for a range-hit rate."
+  }
+}

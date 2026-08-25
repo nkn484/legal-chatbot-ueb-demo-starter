@@ -1,0 +1,40 @@
+{
+  "schema_version": "P2-LIVE-LATENCY-PROFILE-2",
+  "model": "gpt-5.6-terra",
+  "request_profile": {
+    "structured_output": true,
+    "reasoning": "minimal",
+    "verbosity": "low",
+    "max_output_tokens": 512
+  },
+  "latency_characterization": [
+    {"timeout_seconds": 3, "duration_ms": 3027.4, "outcome": "PROVIDER_TIMEOUT", "schema_valid": false},
+    {"timeout_seconds": 5, "duration_ms": 5004.2, "outcome": "PROVIDER_TIMEOUT", "schema_valid": false},
+    {"timeout_seconds": 8, "duration_ms": 8009.3, "outcome": "PROVIDER_TIMEOUT", "schema_valid": false},
+    {"timeout_seconds": 12, "duration_ms": 9996.5, "outcome": "COMPLETE", "schema_valid": true, "sub_intent_count": 3}
+  ],
+  "acceptance_at_12_seconds": {
+    "attempts": 5,
+    "complete": 1,
+    "schema_valid": 1,
+    "durations_ms": [12016.0, 9139.7, 12017.6, 12018.5, 12022.3],
+    "p50_ms": 12017.6,
+    "p95_ms": null,
+    "max_ms": 12022.3,
+    "acceptance_pass": false
+  },
+  "acceptance_at_18_seconds": {
+    "attempts": 5,
+    "complete": 3,
+    "schema_valid": 3,
+    "durations_ms": [8885.3, 18005.2, 8376.7, 17987.3, 8962.3],
+    "p50_ms": 8962.3,
+    "p95_ms": null,
+    "max_ms": 18005.2,
+    "semantic_dimension_acceptance": false,
+    "acceptance_pass": false
+  },
+  "decision": "P2_LIVE_REWORK",
+  "production_profile": "P2_DETERMINISTIC_FIRST",
+  "raw_prompt_or_response_persisted": false
+}

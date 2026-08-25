@@ -1,0 +1,31 @@
+{
+  "phase_id": "P6",
+  "phase_name": "Pinpoint Evidence Reader",
+  "implementation_status": "COMPLETE",
+  "files_changed": [
+    "src/legal_chatbot/legal_evidence/pinpoint/__init__.py",
+    "src/legal_chatbot/legal_evidence/pinpoint/models.py",
+    "src/legal_chatbot/legal_evidence/pinpoint/service.py",
+    "tests/unit/test_legal_pinpoint_evidence.py",
+    "docs/review/phases/P6-pinpoint-evidence-reader.md",
+    "docs/review/phases/P6-pinpoint-evidence-reader.json"
+  ],
+  "tests_run": [
+    {"scope": "P6 family restriction/locator/provenance/no-padding tests", "result": "2 passed"},
+    {"scope": "full suite with --import-mode=importlib", "result": "904 passed, 39 skipped, 1 non-failing OpenPyXL warning"},
+    {"scope": "ruff check src tests", "result": "passed"},
+    {"scope": "compileall src/legal_chatbot", "result": "passed"}
+  ],
+  "tests_passed": {"p6_targeted": 2, "full_suite": 904},
+  "tests_failed": [],
+  "gate_status": "PASS",
+  "known_limitations": [
+    "P6 reader is default-off; PostgreSQL clause/paragraph reader adapter remains later work.",
+    "Pinpoint-versus-flat quality is diagnostic-only until a pre-registered reader comparator exists.",
+    "P6 makes no completeness, authority, applicability, citation-release, answer, or legal-quality claim."
+  ],
+  "rollback_status": "NOT_APPLIED; P6 is additive, default-off, and has no migration.",
+  "decision": "KEEP",
+  "next_phase_allowed": true,
+  "engineering_legal_quality_note": "P6 engineering checks do not establish the P12 legal-quality release target."
+}

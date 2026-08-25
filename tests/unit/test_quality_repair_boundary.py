@@ -18,13 +18,16 @@ def test_quality_repair_package_has_no_runtime_or_adapter_imports() -> None:
         assert not any(term in content for term in forbidden), path
 
 
-def test_phase_a_runtime_and_repositories_do_not_import_quality_repair() -> None:
-    paths = [
-        *Path("src/legal_chatbot/runtime").rglob("*.py"),
-        Path("src/legal_chatbot/retrieval/service.py"),
-    ]
-    for path in paths:
-        assert "quality_repair" not in path.read_text(encoding="utf-8"), path
+def test_quality_runtime_is_bound_only_in_the_composition_root() -> None:
+    runtime = Path("src/legal_chatbot/runtime/m08.py").read_text(encoding="utf-8")
+    assert "quality_repair" in runtime
+    assert "LegalQualityCandidatePipeline" in runtime
+    assert "PostgresQualityRetrievalRepository" in runtime
+
+    retrieval_service = Path("src/legal_chatbot/retrieval/service.py").read_text(
+        encoding="utf-8"
+    )
+    assert "quality_repair" not in retrieval_service
 
 
 def test_quality_config_does_not_import_legacy_planner_provider_or_llm() -> None:

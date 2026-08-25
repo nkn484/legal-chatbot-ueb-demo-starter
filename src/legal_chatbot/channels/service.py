@@ -26,6 +26,7 @@ from legal_chatbot.channels.port import (
     ChannelConversationPort,
     ChannelOutboundRepositoryPort,
     ChannelPort,
+    ProcessingStatusNotifierPort,
 )
 from legal_chatbot.conversation.errors import ConversationError, ConversationErrorCode
 from legal_chatbot.conversation.models import (
@@ -50,6 +51,7 @@ class ChannelService:
         channel: ChannelPort,
         formatter: ChannelFormatter,
         settings: ChannelSettings,
+        processing_notifier: ProcessingStatusNotifierPort | None = None,
     ) -> None:
         self._binding_repository = binding_repository
         self._outbound_repository = outbound_repository
@@ -57,6 +59,8 @@ class ChannelService:
         self._channel = channel
         self._formatter = formatter
         self._settings = settings
+        self._processing_notifier = processing_notifier
+        self._processing_deliveries: set[str] = set()
         self._logger = get_logger()
 
     async def handle_inbound(
@@ -100,6 +104,7 @@ class ChannelService:
             delivery_id=message.delivery_hmac,
             text=message.text,
         )
+        await self._notify_processing_once(message)
         try:
             result = self._validated(
                 await self._conversation.respond(request, now), ConversationResult
@@ -205,6 +210,17 @@ class ChannelService:
         if completed.status is ChannelOutboundReservationStatus.SENT:
             return self._receipt(message, ChannelIngressStatus.ACKNOWLEDGED, started_at)
         return self._receipt(message, ChannelIngressStatus.TERMINAL_NO_RETRY, started_at)
+
+    async def _notify_processing_once(self, message: ChannelInboundMessage) -> None:
+        notifier = self._processing_notifier
+        if notifier is None or message.delivery_hmac in self._processing_deliveries:
+            return
+        self._processing_deliveries.add(message.delivery_hmac)
+        try:
+            await notifier.notify(message)
+        except Exception:
+            # A status-send problem cannot block the existing terminal response path.
+            return
 
     async def _activate_binding(
         self,

@@ -48,6 +48,15 @@ async def test_default_relation_investigation_creates_singleton_families_without
 
 
 @pytest.mark.asyncio
+async def test_relation_investigation_respects_the_existing_fifteen_family_boundary() -> None:
+    candidates = tuple(_candidate(f"source-{index}") for index in range(16))
+
+    result = await RelationInvestigationService(None).investigate(candidates)
+
+    assert len(result.families) == 15
+
+
+@pytest.mark.asyncio
 async def test_only_matching_explicit_evidence_marker_verifies_and_joins_family() -> None:
     candidates = (_candidate("one"), _candidate("two"))
     hint = RelationHint(

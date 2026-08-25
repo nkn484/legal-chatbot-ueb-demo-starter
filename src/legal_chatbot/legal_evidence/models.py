@@ -14,6 +14,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator, model_valida
 
 _MAX_SUB_INTENTS = 4
 _MAX_CANDIDATES = 30
+_MAX_AUTHORITY_ASSESSMENTS = _MAX_CANDIDATES * _MAX_SUB_INTENTS
 _MAX_FAMILIES = 15
 _MAX_RELATIONS = 30
 _MAX_EVIDENCE_UNITS = 20
@@ -107,6 +108,13 @@ class AnalyzerOutcome(StrEnum):
     FALLBACK_PROVIDER_UNAVAILABLE = "FALLBACK_PROVIDER_UNAVAILABLE"
     FALLBACK_PROVIDER_FAILURE = "FALLBACK_PROVIDER_FAILURE"
     FALLBACK_INVALID_OUTPUT = "FALLBACK_INVALID_OUTPUT"
+    FALLBACK_INSUFFICIENT_DECOMPOSITION = "FALLBACK_INSUFFICIENT_DECOMPOSITION"
+    FALLBACK_PROVIDER_TIMEOUT = "FALLBACK_PROVIDER_TIMEOUT"
+    FALLBACK_PROVIDER_CONNECTION_FAILURE = "FALLBACK_PROVIDER_CONNECTION_FAILURE"
+    FALLBACK_PROVIDER_RATE_LIMIT = "FALLBACK_PROVIDER_RATE_LIMIT"
+    FALLBACK_PROVIDER_SERVER_ERROR = "FALLBACK_PROVIDER_SERVER_ERROR"
+    FALLBACK_INVALID_STRUCTURED_OUTPUT = "FALLBACK_INVALID_STRUCTURED_OUTPUT"
+    FALLBACK_PROVIDER_SUPPRESSED = "FALLBACK_PROVIDER_SUPPRESSED"
 
 
 class PreferredSourceTier(StrEnum):
@@ -208,17 +216,38 @@ class SubIntent(_FrozenLegalEvidenceModel):
     """One material legal issue, described only in private request state."""
 
     sub_intent_id: UUID = Field(default_factory=uuid4, exclude=True, repr=False)
+    code: str | None = Field(default=None, max_length=64, exclude=True, repr=False)
     description: str = Field(min_length=1, max_length=512, exclude=True, repr=False)
+    actor_scope: str | None = Field(default=None, max_length=128, exclude=True, repr=False)
+    object_scope: str | None = Field(default=None, max_length=128, exclude=True, repr=False)
     material: bool = True
     retrieval_concepts: tuple[str, ...] = Field(default=(), max_length=8, exclude=True, repr=False)
     preferred_source_tiers: tuple[PreferredSourceTier, ...] = Field(
         default=(), max_length=3, exclude=True, repr=False
     )
+    decomposition_reason_codes: tuple[str, ...] = Field(default=(), max_length=8)
+
+    @field_validator("code")
+    @classmethod
+    def validate_code(cls, value: str | None) -> str | None:
+        if value is None:
+            return None
+        normalized = _private_text(value, maximum=64)
+        if any(
+            character not in "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_" for character in normalized
+        ):
+            raise ValueError("sub-intent code must use uppercase ASCII identifiers")
+        return normalized
 
     @field_validator("description")
     @classmethod
     def validate_description(cls, value: str) -> str:
         return _private_text(value, maximum=512)
+
+    @field_validator("actor_scope", "object_scope")
+    @classmethod
+    def validate_optional_scope(cls, value: str | None) -> str | None:
+        return None if value is None else _private_text(value, maximum=128)
 
     @field_validator("retrieval_concepts")
     @classmethod
@@ -235,6 +264,13 @@ class SubIntent(_FrozenLegalEvidenceModel):
         if len(set(value)) != len(value):
             raise ValueError("sub-intent source tiers must be unique")
         return value
+
+    @field_validator("decomposition_reason_codes")
+    @classmethod
+    def validate_reason_codes(cls, value: tuple[str, ...]) -> tuple[str, ...]:
+        if len(set(value)) != len(value):
+            raise ValueError("sub-intent decomposition reason codes must be unique")
+        return tuple(_private_text(item, maximum=64) for item in value)
 
 
 class LegalQuestionAnalysisResult(_FrozenLegalEvidenceModel):
@@ -281,7 +317,7 @@ class CandidateDocument(_FrozenLegalEvidenceModel):
 
 
 class AuthorityCandidate(_FrozenLegalEvidenceModel):
-    """A role proposal kept distinct from verified authority conclusions."""
+    """P4-owned authority state carried unchanged into P5 and P6."""
 
     authority_candidate_id: UUID = Field(default_factory=uuid4, exclude=True, repr=False)
     document: DocumentVersionReference = Field(exclude=True, repr=False)
@@ -289,6 +325,19 @@ class AuthorityCandidate(_FrozenLegalEvidenceModel):
     state: AuthorityState
     applicability: ApplicabilityState = ApplicabilityState.UNKNOWN
     proposal_only: bool = True
+    matched_sub_intent_ids: tuple[UUID, ...] = Field(
+        default=(), max_length=_MAX_SUB_INTENTS, exclude=True, repr=False
+    )
+    filter_reason: AuthorityState | None = None
+    scope_conflict: bool = False
+    catalog_state: AuthorityState = AuthorityState.ELIGIBLE
+
+    @field_validator("matched_sub_intent_ids")
+    @classmethod
+    def validate_matched_sub_intent_ids(cls, value: tuple[UUID, ...]) -> tuple[UUID, ...]:
+        if len(set(value)) != len(value):
+            raise ValueError("authority-candidate sub-intent identifiers must be unique")
+        return value
 
     @model_validator(mode="after")
     def validate_proposal_state(self) -> AuthorityCandidate:
@@ -296,6 +345,32 @@ class AuthorityCandidate(_FrozenLegalEvidenceModel):
             raise ValueError("a proposal cannot assert verified applicability")
         if self.state is AuthorityState.QUARANTINED and self.role is AuthorityRole.GOVERNING:
             raise ValueError("quarantined evidence cannot be governing")
+        if self.state is AuthorityState.ELIGIBLE and self.filter_reason is not None:
+            raise ValueError("eligible authority candidates cannot have a filter reason")
+        return self
+
+
+class AuthorityAssessment(_FrozenLegalEvidenceModel):
+    """P4's validated authority role for one candidate and one material sub-intent."""
+
+    document: DocumentVersionReference = Field(exclude=True, repr=False)
+    sub_intent_id: UUID = Field(exclude=True, repr=False)
+    proposed_role: AuthorityRole
+    role: AuthorityRole
+    state: AuthorityState
+    applicability: ApplicabilityState = ApplicabilityState.UNKNOWN
+    proposal_only: bool = True
+    scope_conflict: bool = False
+    filter_reason: AuthorityState | None = None
+
+    @model_validator(mode="after")
+    def validate_assessment_state(self) -> AuthorityAssessment:
+        if self.state is not AuthorityState.ELIGIBLE and self.role is not AuthorityRole.IRRELEVANT:
+            raise ValueError("filtered authority assessments must be irrelevant")
+        if self.state is AuthorityState.ELIGIBLE and self.filter_reason is not None:
+            raise ValueError("eligible authority assessments cannot have a filter reason")
+        if self.scope_conflict and self.role is not AuthorityRole.IRRELEVANT:
+            raise ValueError("scope-conflicted authority assessments must be irrelevant")
         return self
 
 
@@ -456,6 +531,9 @@ class LegalCaseContext(_FrozenLegalEvidenceModel):
     authority_candidates: tuple[AuthorityCandidate, ...] = Field(
         default=(), max_length=_MAX_CANDIDATES, exclude=True
     )
+    authority_assessments: tuple[AuthorityAssessment, ...] = Field(
+        default=(), max_length=_MAX_AUTHORITY_ASSESSMENTS, exclude=True
+    )
     authority_families: tuple[AuthorityFamily, ...] = Field(
         default=(), max_length=_MAX_FAMILIES, exclude=True
     )
@@ -492,6 +570,16 @@ class LegalCaseContext(_FrozenLegalEvidenceModel):
             raise ValueError("sub-intent identifiers must be unique")
         if any(not item.material for item in value):
             raise ValueError("case context can contain only material sub-intents")
+        return value
+
+    @field_validator("authority_assessments")
+    @classmethod
+    def validate_authority_assessments(
+        cls, value: tuple[AuthorityAssessment, ...]
+    ) -> tuple[AuthorityAssessment, ...]:
+        keys = {(item.document.document_version_id, item.sub_intent_id) for item in value}
+        if len(keys) != len(value):
+            raise ValueError("authority assessments must be unique per document and sub-intent")
         return value
 
     @field_validator("limitations")
@@ -536,6 +624,7 @@ class LegalCaseContext(_FrozenLegalEvidenceModel):
             "sub_intent_count": len(self.sub_intents),
             "candidate_document_count": len(self.candidate_documents),
             "authority_candidate_count": len(self.authority_candidates),
+            "authority_assessment_count": len(self.authority_assessments),
             "authority_family_count": len(self.authority_families),
             "relation_hint_count": len(self.relation_hints),
             "verified_relation_count": len(self.verified_relations),
@@ -558,6 +647,7 @@ __all__ = [
     "AnswerDraft",
     "ApplicabilityState",
     "AuthorityCandidate",
+    "AuthorityAssessment",
     "AuthorityFamily",
     "AuthorityRole",
     "AuthorityState",

@@ -1,0 +1,72 @@
+{
+  "schema_version": "ZALO-LEGAL-CHAT-INTEGRATION-1",
+  "decision": "LLM_REWORK",
+  "existing_zalo_adapter_reused": true,
+  "webhook_rebuilt": false,
+  "webhook_path": "/webhooks/zalo-bot",
+  "application_entrypoint": "LegalChatApplication.ask(question, correlation_id)",
+  "integration_seam": "existing ChannelService -> ConversationService -> LegalChatGroundedChatBridge -> LegalChatApplication",
+  "p2_live_status": {
+    "status": "NOT_READY",
+    "model": "gpt-5.6-terra",
+    "caller_timeout_seconds": 3,
+    "representative_runs": 5,
+    "complete_runs": 0,
+    "schema_valid_runs": 0,
+    "failure_class": "PROVIDER_TIMEOUT",
+    "duration_ms_range": [3011.7, 3031.0]
+  },
+  "p2_fallback_status": {
+    "status": "READY",
+    "sub_intents": [
+      "PURCHASE_AUTHORITY",
+      "PURCHASE_PROCEDURE",
+      "POST_PURCHASE_MANAGEMENT",
+      "INVENTORY"
+    ]
+  },
+  "p4_live_status": {
+    "status": "PARTIAL_LIVE_READY",
+    "model": "gpt-5.6-sol",
+    "one_candidate_one_subintent": {
+      "structured_valid": true,
+      "duration_ms": 3334.5,
+      "live_assessment_count": 1,
+      "fallback_assessment_count": 0
+    },
+    "three_candidate_batch": {
+      "structured_valid": false,
+      "duration_ms": 15009.2,
+      "failure_class": "PROVIDER_TIMEOUT",
+      "live_assessment_count": 0,
+      "fallback_assessment_count": 12
+    },
+    "representative_batch": {
+      "structured_valid": false,
+      "duration_ms": 15013.6,
+      "failure_class": "PROVIDER_TIMEOUT",
+      "live_assessment_count": 0,
+      "fallback_assessment_count": 32
+    }
+  },
+  "p4_fallback_status": "READY",
+  "postgres_real_readers": ["P3", "P6", "P8"],
+  "local_application_integration": {
+    "case": "controlled legal request",
+    "status": "ANSWER",
+    "answer_nonempty": true,
+    "answer_length": 379,
+    "limitation_count": 0,
+    "correlation_id_preserved": true
+  },
+  "legal_pipeline_completed": true,
+  "zalo_reply_sent": false,
+  "end_to_end_duration_ms": null,
+  "external_e2e_status": "NOT_RUN_P2_LIVE_ACCEPTANCE_FAILED",
+  "safety": {
+    "p11_enabled": false,
+    "unexpected_db_writes": false,
+    "tokens_or_secrets_persisted": false,
+    "benchmark_hardcoding": false
+  }
+}

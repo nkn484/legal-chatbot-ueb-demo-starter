@@ -65,6 +65,10 @@ class RelationInvestigationResult(_FrozenRelationModel):
     hints: tuple[RelationHint, ...] = Field(default=(), max_length=30, exclude=True)
     verified: tuple[VerifiedRelation, ...] = Field(default=(), max_length=30, exclude=True)
     conflicts: tuple[RelationConflict, ...] = Field(default=(), max_length=30)
+    retained_document_version_ids: tuple[UUID, ...] = Field(default=(), max_length=15, exclude=True)
+    budget_pruned_document_version_ids: tuple[UUID, ...] = Field(
+        default=(), max_length=30, exclude=True
+    )
     outcome: RelationInvestigationOutcome
 
     def to_public_dict(self) -> dict[str, object]:
@@ -74,6 +78,8 @@ class RelationInvestigationResult(_FrozenRelationModel):
             "hint_count": len(self.hints),
             "verified_count": len(self.verified),
             "conflict_count": len(self.conflicts),
+            "retained_document_count": len(self.retained_document_version_ids),
+            "budget_pruned_document_count": len(self.budget_pruned_document_version_ids),
         }
 
 
@@ -88,6 +94,14 @@ def build_families(
         candidate.document.document_version_id: candidate.document.document_version_id
         for candidate in candidates
     }
+
+    # Stable document identity is deterministic evidence for a multi-version family.
+    first_version_by_document: dict[UUID, UUID] = {}
+    for candidate in candidates:
+        version_id = candidate.document.document_version_id
+        document_id = candidate.document.document_id
+        first = first_version_by_document.setdefault(document_id, version_id)
+        parent[version_id] = first
 
     def find(value: UUID) -> UUID:
         while parent[value] != value:

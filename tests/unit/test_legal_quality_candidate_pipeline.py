@@ -10,7 +10,10 @@ from legal_chatbot.documents.quality_candidate_reader import (
     FTSQueryMode,
     QualityCandidateReadResult,
 )
-from legal_chatbot.documents.quality_retrieval_pipeline import LegalQualityCandidatePipeline
+from legal_chatbot.documents.quality_retrieval_pipeline import (
+    LegalQualityCandidatePipeline,
+    _best_same_lane,
+)
 from legal_chatbot.documents.quality_retrieval_repository import PostgresQualityRetrievalRepository
 from legal_chatbot.retrieval.quality_repair.analyzer import LegalQuestionAnalyzer
 from legal_chatbot.retrieval.quality_repair.models import (
@@ -39,6 +42,9 @@ def _candidate(index: int) -> CandidateEvidence:
         source_id=SourceId.VBQPPL,
         external_id=f"external-{index}",
         version_number=1,
+        document_type="Quyết định",
+        issuing_authority="Cơ quan ban hành",
+        legal_status="Còn hiệu lực",
         provenance_record_id=_uuid(f"provenance-{index}"),
         provenance_type=ProvenanceType.SOURCE_FETCH,
         latest_ingested=True,
@@ -149,3 +155,17 @@ def test_persistence_adapter_rejects_invalid_score_contracts_before_writing() ->
 
     with pytest.raises(ValueError, match="semantic score"):
         PostgresQualityRetrievalRepository._selected(collapsed)
+
+
+def test_multi_unit_merge_discards_query_specific_supporting_semantic_diagnostics() -> None:
+    first = _candidate(1).model_copy(
+        update={"unit_ids": ("u01",), "supporting_semantic_score": 0.1}
+    )
+    second = first.model_copy(
+        update={"unit_ids": ("u02",), "supporting_semantic_score": 0.2}
+    )
+
+    merged = _best_same_lane((first, second))
+
+    assert merged[0].unit_ids == ("u01", "u02")
+    assert merged[0].supporting_semantic_score is None

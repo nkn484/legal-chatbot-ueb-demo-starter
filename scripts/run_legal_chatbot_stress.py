@@ -58,6 +58,15 @@ from legal_chatbot.documents.orm import (  # noqa: E402
     RetrievalRun,
     SourceProvenanceRecord,
 )
+from legal_chatbot.documents.quality_candidate_reader import (  # noqa: E402
+    PostgresQualityCandidateReader,
+)
+from legal_chatbot.documents.quality_retrieval_pipeline import (  # noqa: E402
+    LegalQualityCandidatePipeline,
+)
+from legal_chatbot.documents.quality_retrieval_repository import (  # noqa: E402
+    PostgresQualityRetrievalRepository,
+)
 from legal_chatbot.documents.reranked_semantic_repository import (  # noqa: E402
     PostgresRerankedSemanticRepository,
     RerankedRetrievalDiagnostics,
@@ -79,6 +88,9 @@ from legal_chatbot.retrieval.models import (  # noqa: E402
     coerce_transport_trust_mode,
     evidence_trust_label_for,
 )
+from legal_chatbot.retrieval.quality_repair.analyzer import LegalQuestionAnalyzer  # noqa: E402
+from legal_chatbot.retrieval.quality_repair.models import SourceId  # noqa: E402
+from legal_chatbot.retrieval.quality_repair.strategy import materialize_strategy  # noqa: E402
 from legal_chatbot.retrieval.service import RetrievalService  # noqa: E402
 from legal_chatbot.semantic.config import SemanticSettings  # noqa: E402
 from legal_chatbot.semantic.constants import SEMANTIC_PROFILE_ID  # noqa: E402
@@ -89,6 +101,15 @@ DEFAULT_INPUT = Path("docs/Stress_test_Legal_Chatbot_UEB_10_cau.xlsx")
 DEFAULT_OUTPUT = Path("docs/Stress_test_Legal_Chatbot_UEB_10_cau_Ket_qua.xlsx")
 SOURCES = ("VBQPPL", "VNU", "UEB")
 CASE_IDS = tuple(f"Q{number:02d}" for number in range(1, 11))
+QUALITY_EVALUATION_PROFILES = frozenset(
+    {
+        "quality_retrieval_document_collapse_v1",
+        "quality_retrieval_hybrid_v1",
+        "quality_retrieval_analyzer_protected_v1",
+        "quality_retrieval_dynamic_evidence_v1",
+        "quality_retrieval_evidence_repair_v1",
+    }
+)
 
 
 @dataclass(frozen=True)
@@ -1171,6 +1192,8 @@ def write_report(
     reranker_records: dict[str, RerankerRecord] | None = None,
     metadata_repair_enabled: bool = False,
     metadata_repair_records: dict[str, MetadataRepairRecord] | None = None,
+    quality_strategy: str = "disabled",
+    quality_selected_pool: int | None = None,
 ) -> None:
     """Write the fixed report sheets; credentials are intentionally not accepted."""
 
@@ -1257,6 +1280,11 @@ def write_report(
             ("Cleanup", cleanup_status),
             ("Runner infrastructure", infrastructure_status),
             ("Lexical repair", "enabled" if lexical_repair_enabled else "disabled"),
+            ("Quality strategy", quality_strategy),
+            (
+                "Quality selected pool",
+                quality_selected_pool if quality_selected_pool is not None else "NOT_USED",
+            ),
             ("Planner enabled", "enabled" if planner_enabled else "disabled"),
             ("Semantic mode", semantic_mode),
             ("Semantic profile", semantic_profile_id if semantic_mode != "off" else "NOT_USED"),
@@ -1514,6 +1542,16 @@ async def run(args: argparse.Namespace) -> int:
         return 2
     if args.metadata_repair_enabled and not args.rerank_enabled:
         return 2
+    if args.quality_strategy != "disabled" and (
+        args.semantic_mode == "off"
+        or args.rerank_enabled
+        or args.metadata_repair_enabled
+        or args.lexical_repair_enabled
+        or args.planner_enabled
+        or args.quality_selected_pool is None
+        or args.quality_strategy not in QUALITY_EVALUATION_PROFILES
+    ):
+        return 2
     cases = parse_stress_workbook(args.input)
     mechanical: list[CallRow] = []
     real: list[CallRow] = []
@@ -1539,6 +1577,8 @@ async def run(args: argparse.Namespace) -> int:
     reranker_counters = RerankerCounters()
     reranker_records: dict[str, RerankerRecord] = {}
     metadata_repair_records: dict[str, MetadataRepairRecord] = {}
+    quality_strategy: Any | None = None
+    quality_reader: Any | None = None
     try:
         provider_settings = ProviderSettings()
         mechanical_settings = ChatSettings(retrieval_planner_enabled=False)
@@ -1563,6 +1603,17 @@ async def run(args: argparse.Namespace) -> int:
             )
             if not await repository.coverage_complete():
                 raise RuntimeError("SEMANTIC_COVERAGE_INCOMPLETE")
+        if args.quality_strategy != "disabled":
+            assert semantic_embedder is not None
+            quality_strategy = materialize_strategy(
+                args.quality_strategy, args.quality_selected_pool
+            )
+            if quality_strategy.family.reranker_enabled:
+                raise RuntimeError("QUALITY_RERANK_NOT_APPROVED")
+            quality_reader = PostgresQualityCandidateReader(session_factory)
+            if quality_strategy.family.dynamic_evidence_enabled:
+                mechanical_settings = mechanical_settings.model_copy(update={"max_citations": 6})
+                real_settings = real_settings.model_copy(update={"max_citations": 6})
         retrieval = RetrievalService(repository)
         resolver = PostgresCitationResolver(session_factory)
 
@@ -1575,6 +1626,18 @@ async def run(args: argparse.Namespace) -> int:
                 case_id=case_id,
                 records=semantic_records if case_id is not None else None,
             )
+            if quality_strategy is not None:
+                quality_pipeline = LegalQualityCandidatePipeline(
+                    quality_reader,
+                    embedder,
+                    quality_strategy,
+                    tuple(SourceId(source_id) for source_id in SOURCES),
+                )
+                return RetrievalService(
+                    PostgresQualityRetrievalRepository(
+                        session_factory, LegalQuestionAnalyzer(), quality_pipeline
+                    )
+                )
             if reranker is not None and args.metadata_repair_enabled:
                 return RetrievalService(
                     PostgresMetadataRepairRetrievalRepository(
@@ -1729,6 +1792,8 @@ async def run(args: argparse.Namespace) -> int:
             reranker_records=reranker_records,
             metadata_repair_enabled=args.metadata_repair_enabled,
             metadata_repair_records=metadata_repair_records,
+            quality_strategy=args.quality_strategy,
+            quality_selected_pool=args.quality_selected_pool,
         )
     return 0 if infrastructure_status == "COMPLETED" else 2
 
@@ -1745,6 +1810,12 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--semantic-mode", choices=("off", "semantic", "hybrid"), default="off")
     parser.add_argument("--rerank-enabled", action="store_true")
     parser.add_argument("--metadata-repair-enabled", action="store_true")
+    parser.add_argument(
+        "--quality-strategy",
+        choices=("disabled", *sorted(QUALITY_EVALUATION_PROFILES)),
+        default="disabled",
+    )
+    parser.add_argument("--quality-selected-pool", type=int, choices=(8, 12, 16, 20))
     parser.add_argument("--api-base-url", default="http://127.0.0.1:8000")
     return parser
 

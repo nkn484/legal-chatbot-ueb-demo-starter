@@ -1,0 +1,112 @@
+{
+  "report_schema_version": "p2-set-b-material-subintent-execution-v3",
+  "status": "BLOCKED_PROVIDER_EXECUTION",
+  "manifest": {
+    "oracle_canonical_sha256": "4280261908FC01C57715D63B5981CF5490D975D77D1CEE9F17F5CC40314AE7D8",
+    "evaluation_set_sha256": "BCA94A3D6C6114F6E44C8A21A4A0B8B20D72E0B632CF2D1560679AA4D928CF73",
+    "provider": "shineshop",
+    "model": "gpt-5.6-sol",
+    "analyzer_version": "p2-legal-question-analyzer-v1",
+    "prompt_version": "p2-legal-question-analyzer-prompt-v2",
+    "normalizer_version": "set-b-material-subintent-normalizer-v1",
+    "structured_output_mode": "json_schema",
+    "structured_output_schema_version": "p2-legal-question-analyzer-schema-v1",
+    "reasoning_effort": "minimal",
+    "verbosity": "low",
+    "execution": {
+      "concurrency": 1,
+      "request_timeout_seconds": 55.0,
+      "hard_case_timeout_seconds": 60.0,
+      "retry_limit": 0,
+      "retry_backoff_seconds": 0.5,
+      "output_token_budget": 512
+    },
+    "selected_case_ids": [
+      "B-Q05-01",
+      "B-Q06-01",
+      "B-Q10-01"
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "B-Q05-01",
+      "parent_case_id": "Q05",
+      "status": "TIMEOUT",
+      "attempts": 1,
+      "generation_duration_ms": 55073.69,
+      "output_tokens": null,
+      "reasoning_tokens": null,
+      "visible_output_tokens": null,
+      "finish_reason": null,
+      "invalid_output_reason": null,
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "STRATEGIC_RND_FINANCE",
+        "STRATEGIC_RND_TASK_APPLICABILITY",
+        "STRATEGIC_RND_TASK_MANAGEMENT"
+      ],
+      "exact_set_match": null
+    },
+    {
+      "case_id": "B-Q06-01",
+      "parent_case_id": "Q06",
+      "status": "COMPLETE",
+      "attempts": 1,
+      "generation_duration_ms": 8304.35,
+      "output_tokens": 341,
+      "reasoning_tokens": 0,
+      "visible_output_tokens": 341,
+      "finish_reason": "completed",
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ASSET_INVENTORY",
+        "ASSET_POST_PURCHASE_MANAGEMENT",
+        "ASSET_PURCHASE_AUTHORITY",
+        "ASSET_PURCHASE_PROCEDURE"
+      ],
+      "exact_set_match": false
+    },
+    {
+      "case_id": "B-Q10-01",
+      "parent_case_id": "Q10",
+      "status": "COMPLETE",
+      "attempts": 1,
+      "generation_duration_ms": 23420.51,
+      "output_tokens": 331,
+      "reasoning_tokens": 0,
+      "visible_output_tokens": 331,
+      "finish_reason": "completed",
+      "normalized_sub_intents": null,
+      "parent_gold_set": [
+        "ACADEMIC_DISMISSAL_GROUNDS",
+        "ACADEMIC_WARNING_DISMISSAL_PROCESS",
+        "ACADEMIC_WARNING_GROUNDS"
+      ],
+      "exact_set_match": false
+    }
+  ],
+  "generation_metrics": {
+    "completed_count": 3,
+    "duration_ms": {
+      "p50": 23420.51,
+      "p95": 55073.69,
+      "max": 55073.69
+    },
+    "output_tokens": {
+      "p50": 331.0,
+      "p95": 341.0,
+      "max": 341
+    },
+    "reasoning_tokens": [
+      0
+    ],
+    "visible_output_tokens": [
+      331,
+      341
+    ],
+    "finish_reasons": [
+      "completed"
+    ]
+  },
+  "measurement": null
+}

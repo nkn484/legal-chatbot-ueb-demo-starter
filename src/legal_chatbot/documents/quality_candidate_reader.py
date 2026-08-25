@@ -484,6 +484,9 @@ class PostgresQualityCandidateReader:
             DocumentVersion.document_number_normalized.label("document_number_normalized"),
             DocumentVersion.title.label("title"),
             DocumentVersion.version_number.label("version_number"),
+            DocumentVersion.document_type.label("document_type"),
+            DocumentVersion.issuing_authority.label("issuing_authority"),
+            DocumentVersion.legal_status.label("legal_status"),
             SourceProvenanceRecord.id.label("provenance_record_id"),
             SourceProvenanceRecord.provenance_type.label("provenance_type"),
             SourceProvenanceRecord.transport_trust_mode.label("transport_trust_mode"),
@@ -625,10 +628,10 @@ class PostgresQualityCandidateReader:
         candidates: list[CandidateEvidence] = []
         for rank, row in enumerate(rows, start=1):
             observation_rank, score = (
-                scores[row[3]] if scores is not None else (rank, float(row[12]))
+                scores[row[3]] if scores is not None else (rank, float(row[15]))
             )
             supporting_semantic_score = (
-                float(row[12])
+                float(row[15])
                 if lane in (RetrievalLane.SEMANTIC, RetrievalLane.TITLE_FTS)
                 else None
             )
@@ -643,9 +646,12 @@ class PostgresQualityCandidateReader:
                         document_number_normalized=row[6],
                         title=row[7],
                         version_number=row[8],
-                        provenance_record_id=row[9],
-                        provenance_type=ProvenanceType(row[10]),
-                        transport_trust_mode=TransportTrustMode(row[11]),
+                        document_type=row[9],
+                        issuing_authority=row[10],
+                        legal_status=row[11],
+                        provenance_record_id=row[12],
+                        provenance_type=ProvenanceType(row[13]),
+                        transport_trust_mode=TransportTrustMode(row[14]),
                         latest_ingested=True,
                     ),
                     ordinal=row[1],
