@@ -41,8 +41,8 @@ def test_repository_demo_data_has_the_approved_1104_rows() -> None:
         source: sum(entry.source_id == source for entry in entries)
         for source in {"VBQPPL", "VNU", "UEB"}
     } == {
-        "VBQPPL": 454,
-        "VNU": 305,
+        "VBQPPL": 452,
+        "VNU": 307,
         "UEB": 345,
     }
     assert len({entry.external_id for entry in entries}) == 1_104

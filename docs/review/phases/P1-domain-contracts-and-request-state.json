@@ -1,0 +1,62 @@
+{
+  "phase_id": "P1",
+  "phase_name": "Domain Contracts and Request State",
+  "implementation_status": "COMPLETE",
+  "files_changed": [
+    "src/legal_chatbot/legal_evidence/__init__.py",
+    "src/legal_chatbot/legal_evidence/compatibility.py",
+    "src/legal_chatbot/legal_evidence/context.py",
+    "src/legal_chatbot/legal_evidence/models.py",
+    "src/legal_chatbot/legal_evidence/ports.py",
+    "src/legal_chatbot/legal_evidence/transitions.py",
+    "tests/unit/test_legal_case_context.py",
+    "tests/unit/test_legal_case_privacy.py",
+    "tests/unit/test_legal_truth_transitions.py",
+    "tests/unit/test_demo_corpus.py",
+    "docs/review/phases/P1-domain-contracts-and-request-state.md",
+    "docs/review/phases/P1-domain-contracts-and-request-state.json"
+  ],
+  "tests_run": [
+    {
+      "scope": "P1 contracts, privacy, and transitions",
+      "result": "12 passed"
+    },
+    {
+      "scope": "P1 plus related existing quality contracts and boundaries",
+      "result": "50 passed"
+    },
+    {
+      "scope": "full suite with --import-mode=importlib",
+      "result": "875 passed, 39 skipped, 1 non-failing OpenPyXL warning"
+    },
+    {
+      "scope": "ruff check src tests",
+      "result": "passed"
+    },
+    {
+      "scope": "compileall src/legal_chatbot",
+      "result": "passed"
+    },
+    {
+      "scope": "pip check",
+      "result": "passed"
+    }
+  ],
+  "tests_passed": {
+    "p1_targeted": 12,
+    "p1_related_regression": 50,
+    "full_suite": 875
+  },
+  "tests_failed": [],
+  "gate_status": "PASS",
+  "known_limitations": [
+    "Current approved demo-workbook distribution is VBQPPL=452, VNU=307, UEB=345, with 1,104 total rows.",
+    "Historical corpus-import reports retain the prior distribution as historical evidence.",
+    "LegalCaseContext is intentionally not wired into runtime behavior in P1.",
+    "No P1 evidence verifier reads legal document text."
+  ],
+  "rollback_status": "NOT_APPLIED; P1 source changes are additive and there is no migration.",
+  "decision": "KEEP",
+  "next_phase_allowed": true,
+  "engineering_legal_quality_note": "P1 engineering checks do not establish the P12 legal-quality release target."
+}

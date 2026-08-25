@@ -1,0 +1,62 @@
+{
+  "phase_id": "P2",
+  "phase_name": "LLM Legal Question Analyzer",
+  "implementation_status": "COMPLETE",
+  "files_changed": [
+    "src/legal_chatbot/legal_evidence/__init__.py",
+    "src/legal_chatbot/legal_evidence/context.py",
+    "src/legal_chatbot/legal_evidence/models.py",
+    "src/legal_chatbot/legal_evidence/ports.py",
+    "src/legal_chatbot/legal_evidence/analyzer/__init__.py",
+    "src/legal_chatbot/legal_evidence/analyzer/models.py",
+    "src/legal_chatbot/legal_evidence/analyzer/parser.py",
+    "src/legal_chatbot/legal_evidence/analyzer/prompt.py",
+    "src/legal_chatbot/legal_evidence/analyzer/service.py",
+    "tests/unit/test_legal_case_privacy.py",
+    "tests/unit/test_legal_llm_question_analyzer.py",
+    "docs/review/phases/P2-llm-legal-question-analyzer.md",
+    "docs/review/phases/P2-llm-legal-question-analyzer.json"
+  ],
+  "tests_run": [
+    {
+      "scope": "P1/P2 context, transition, privacy, and analyzer tests",
+      "result": "19 passed"
+    },
+    {
+      "scope": "30-paraphrase fake-provider contract fixture",
+      "result": "30/30 matching material-sub-intent signatures, 100%"
+    },
+    {
+      "scope": "full suite with --import-mode=importlib",
+      "result": "882 passed, 39 skipped, 1 non-failing OpenPyXL warning"
+    },
+    {
+      "scope": "ruff check src tests",
+      "result": "passed"
+    },
+    {
+      "scope": "compileall src/legal_chatbot",
+      "result": "passed"
+    },
+    {
+      "scope": "pip check",
+      "result": "passed"
+    }
+  ],
+  "tests_passed": {
+    "p1_p2_targeted": 19,
+    "contract_fixture_paraphrases": 30,
+    "full_suite": 882
+  },
+  "tests_failed": [],
+  "gate_status": "BLOCKED",
+  "known_limitations": [
+    "Canonical Set B has 30 paraphrases but no independently annotated parent material-sub-intent sets, so the required >=90% agreement metric cannot be computed.",
+    "The 30-paraphrase fake-provider fixture verifies schema/service stability only and cannot replace canonical Set B measurement.",
+    "The default-off analyzer has no runtime composition or live provider quality assertion."
+  ],
+  "rollback_status": "NOT_APPLIED; P2 code is additive, default-off, and has no migration.",
+  "decision": "REWORK",
+  "next_phase_allowed": false,
+  "engineering_legal_quality_note": "P2 engineering checks do not establish the P12 legal-quality release target."
+}
